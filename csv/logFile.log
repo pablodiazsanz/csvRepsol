@@ -1,6 +1,0 @@
-DEBUG   2021-04-13 16:59:42,852 [main] csvRepsol.MainClass  - this is a debug log message
-INFO    2021-04-13 16:59:42,858 [main] csvRepsol.MainClass  - this is a information log message
-WARN    2021-04-13 16:59:42,859 [main] csvRepsol.MainClass  - this is a warning log message
-DEBUG   2021-04-13 17:02:41,610 [main] csvRepsol.MainClass  - this is a debug log message
-INFO    2021-04-13 17:02:41,612 [main] csvRepsol.MainClass  - this is a information log message
-WARN    2021-04-13 17:02:41,612 [main] csvRepsol.MainClass  - this is a warning log message

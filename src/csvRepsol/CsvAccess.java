@@ -8,7 +8,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.apache.log4j.Logger;
+
 public class CsvAccess {
+	
+	private static Logger log = Logger.getLogger(CsvAccess.class);
 	
 	//private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
     //private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
@@ -23,6 +27,7 @@ public class CsvAccess {
     public HashMap<String, Employee> readCSV(String nameCSV) {
         HashMap<String, Employee> map = new HashMap<>();
         File f = new File(path + nameCSV + ".csv");
+        log.info("Ruta del fichero" + f.getPath());
         FileReader reader = null;
         BufferedReader br = null;
 
@@ -71,19 +76,23 @@ public class CsvAccess {
                             data_employee[5].trim(), data_employee[6].trim());
                     map.put(emp.getId(), emp);
                 } catch (Exception e) {
+                	log.error("Fallo al leer la siguiente linea del CSV obtenido", e);
                     line = null;
                 }
             }
 
         } catch (FileNotFoundException e) {
+        	log.error("Fallo a la hora de encontrar el fichero con los datos", e);
             e.printStackTrace();
         } catch (IOException e) {
+        	log.error("Fallo de entrada o salida", e);
             e.printStackTrace();
         } finally {
             try {
                 br.close();
                 reader.close();
             } catch (IOException e) {
+            	log.error("Fallo de entrada o salida", e);
                 e.printStackTrace();
             }
         }

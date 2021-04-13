@@ -2,7 +2,12 @@ package csvRepsol;
 
 import java.util.HashMap;
 
+import org.apache.log4j.Logger;
+
 public class Manager {
+	
+	private static Logger log = Logger.getLogger(Manager.class);
+	
 	private static CsvAccess dao;
 
     /**
@@ -27,6 +32,7 @@ public class Manager {
                         !clientData.get(i).getSurname2().equalsIgnoreCase(serverData.get(i).getSurname2()) || !clientData.get(i).getTlf().equalsIgnoreCase(serverData.get(i).getTlf()) ||
                         !clientData.get(i).getMail().equalsIgnoreCase(serverData.get(i).getMail()) || !clientData.get(i).getJob().equalsIgnoreCase(serverData.get(i).getJob())) {
                     Employee emp = updatedEmployee(clientData.get(i), serverData.get(i));
+                    log.info("Modificando al empleado: " + clientData.get(i).toString());
                     dao.writeCSV(emp, "UPDATE");
                 }
 
@@ -34,12 +40,14 @@ public class Manager {
             } else {
                 // Aquí, si no se ha modificado, como el empleado no está en la lista del servidor
                 // lo pasamos al tercer CSV como un nuevo empleado que se ha creado.
+            	log.info("Creando al empleado: " + clientData.get(i).toString());
                 dao.writeCSV(clientData.get(i), "CREATE");
             }
         }
         // Aquí pasamos al tercer CSV los empleados que se encuentran en la lista del servidor pero
         // que han sido eliminados de la lista del cliente, por lo tanto los que se van a eliminar.
         for (String i : serverData.keySet()) {
+        	log.info("Eliminando al empleado: " + serverData.get(i).toString());
             dao.writeCSV(serverData.get(i), "DELETE");
         }
     }
