@@ -206,7 +206,7 @@ public class CsvAccess {
 	 */
 	public void createCSV() {
 		try {
-			FileWriter fw = new FileWriter(path + "result.csv");
+			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 		} catch (IOException e) {
@@ -223,7 +223,7 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) {
 		try {
-			FileWriter fw = new FileWriter(path + "result.csv", true);
+			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
 		} catch (IOException e) {
@@ -271,7 +271,7 @@ public class CsvAccess {
 				hiringDate + ";" + yearSalary + ";" + sickLeave;
 
 		try {
-			FileWriter fw = new FileWriter(path + "result.csv", true);
+			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			

@@ -7,19 +7,19 @@ import java.util.HashMap;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 public class MainClass {
 	
 	private static Logger log = Logger.getLogger(MainClass.class);
-	public static Properties prop;
+	public static Properties prop = null;
 
 	public static void main(String[] args) {
 		prop = new Properties();
 		FileInputStream ip;
 		
 		try {
-			ip = new FileInputStream("C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\config.properties");
+			//ip = new FileInputStream("C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\config.properties");
+			ip = new FileInputStream("C:\\Users\\mparrap\\git\\csvRepsol\\src\\config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
