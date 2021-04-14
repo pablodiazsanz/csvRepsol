@@ -1,47 +1,47 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave
-H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;1/10/2015;18000;NO
-H3;Miguel;Perez;      Perez;666222333;utyrfuytf@email.com;Recepcionista;1/10/2015;18000;NO
-H4;Xavier;Garcia;Diaz;666111999;utgfuf@email.com;Responsable Tienda;1/10/2015;18000;NO
-H6;Paula;Campos;Fernandez;666444222        ;opi9uiyh@email.com;Comercial;1/10/2015;20000;SI
-H7;Esther;Alin  ;Avila;666888333;tydf@email.com;Responsable Tienda;1/10/2015;18000;NO
-H8;Antonio;Perez;Perez;666000888;pok@email.com;Cajero;1/10/2015;12000;NO
-H9;Juan;Garcia;Garcia;666222888;ytd@email.com;Responsable Tienda;1/10/2015;12000;NO
-H10;Francisco;Perez;Agudo;654888999;oekjioh@email.com;Abogado Laboralista;1/10/2015;15000;NO
-H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;1/10/2015;18000;NO
-H12;Alba;Martinez;Alin      ;622445511;szxd@email.com;Jefe de Marketing;1/10/2015;18000;NO
-H13;Javier;Serrano;Perez;;iuyfc@email.com;Gerente Tienda;1/10/2015;19000;NO
-H14;Álvaro;Turdasan;"";;hjgfcv@email.com;Responsable Tienda;1/10/2015;18000;SI
-H15;Andrés;Casillas;Perez;;ggtr@email.com;Gerente;1/10/2015;18000;NO
-H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;de calidad";1/10/2015;18000;NO
-H18;Manuel;Gallego;Serrano;654238942;kjhhg@email.com;"Responsable;Tienda";1/10/2015;18000;NO
-H19;Sergio;Perez;Turdasan;612378454;jhgfg@email.com;Gerente;1/10/2015;18000;NO
-H21;Iker;Diaz;Casillas;698745321;yyyyuy@email.com;Becario;1/10/2015;18000;NO
-H22;Carlos;Vivar;Garcia;689452136;plol@email.com;Becario;1/10/2015;18000;SI
-H23;Alfredo;Escobar;Pintado;655656767;alfred@email.com;"Encargado ;de Mantenimiento";1/10/2015;18000;NO
-H24;Ana;Caballero;del Castillo;682783723;anacc@email.com;Administrativo;1/10/2015;18000;NO
-H25;Marta;Salamanca;Gimenez;602836862;;Jefe de Proyecto IT;1/10/2015;18000;NO
-H26;Andrea;Fernández;Sanchez;617638627;andreafsa@email.com;RRHH;1/10/2015;18000;NO
-H27;Elisa;Gómez;Sevilla;643342369;elisags@email.com;Encargado de Publicidad;1/10/2015;18000;SI
-H29;Ainhoa;Segovia;Garcia;697538627;ainhoasgar@email.com;Responsable Tienda;1/10/2015;18000;NO
-H31;Juan Manuel;Romero;Estrella;677792687;juanmare@email.com;Jefe de Publicidad;1/10/2015;18000;NO
-H33;Elena;de Pablos;"";688889265;helenpj@email.com;"Encargado ;de Mantenimiento";1/10/2015;18000;NO
-H35;Pablo;Díaz;Salinas;632642642;pdiazs@email.com;Analista;1/10/2015;18000;SI
-H36;Maria Luisa;Gutierrez;del Rosario;688225362;mariluigr@email.com;Cajero;1/10/2015;18000;NO
-H37;Ruth;Delgado;Rey;668761152;rudere@email.com;Encargado de Limpieza;1/10/2015;18000;NO
-H39;Maria del Mar;González;Gutierrez;665825681;marimargogu@email.com;Administrativo;1/10/2015;18000;NO
-H40;      Adrian; Lomillo; Casillas ;621459870; yjjyuy@email.com;Comercial;1/10/2015;18000;NO
-H43;Pelayo;Pelaez;Casillas;126987413;haqwhdj@email.com;Quimico;1/10/2015;18000;NO
-H44;Diego;Sobarzo;Sojunio;632159874;;Gerente;1/10/2015;18000;NO
-H45;Maria;Casado;Millan;632145987;cambiaso@email.com;Mantenimiento;1/10/2015;18000;SI
-H46;Sonia;Puertas;Moran;654789152;yqwter@email.com;Quimico;1/10/2015;18000;NO
-H47;Beatriz;Rosado;Huertas;635987415;aasxz@email.com;Quimico;1/10/2015;18000;NO
-H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;1/10/2015;18000;NO
-H49;Sara;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;1/10/2015;18000;NO
-H50;Fabiola;Decena;Centena;652169743;ghjjhey@email.com;Seguridad;1/10/2015;18000;SI
-H51;Lorena;Garcia;Moreno;63897421;gwtdgw@email.com;Becario;1/10/2015;18000;NO
-H53;Lidia;Turdasan;Alin;655442536;fgwegd@email.com;Comercial;1/10/2015;18000;NO
-H54;Alicia;Garcia;Montero;62589746;fgwegd@email.com;Comercial;1/10/2015;18000;NO
-H55;Manolo;Rey;Del Bombo;6158974236;fgwegd@email.com;Comercial;1/10/2015;18000;NO
-H56;Carmen;Fernandez;Hernandez;698532471;;Portero;1/10/2015;18000;NO
-H57;Elisa;Casas;Vacias;623987415;pqiorgh@email.com;Programador Senior;1/10/2015;18000;NO
-H58;Isabel;Iniesta;Pantoja;6329874561;jfjugi@email.com;Gerente;1/10/2015;18000;NO
+H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;1/10/2015;18000;false
+H3;Miguel;Perez;      Perez;666222333;utyrfuytf@email.com;Recepcionista;1/10/2015;18000;false
+H4;Xavier;Garcia;Diaz;666111999;utgfuf@email.com;Responsable Tienda;1/10/2015;18000;false
+H6;Paula;Campos;Fernandez;666444222        ;opi9uiyh@email.com;Comercial;1/10/2015;20000;true
+H7;Esther;Alin  ;Avila;666888333;tydf@email.com;Responsable Tienda;1/10/2015;18000;false
+H8;Antonio;Perez;Perez;666000888;pok@email.com;Cajero;1/10/2015;12000;false
+H9;Juan;Garcia;Garcia;666222888;ytd@email.com;Responsable Tienda;1/10/2015;12000;false
+H10;Francisco;Perez;Agudo;654888999;oekjioh@email.com;Abogado Laboralista;1/10/2015;15000;false
+H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;1/10/2015;18000;false
+H12;Alba;Martinez;Alin      ;622445511;szxd@email.com;Jefe de Marketing;1/10/2015;18000;false
+H13;Javier;Serrano;Perez;;iuyfc@email.com;Gerente Tienda;1/10/2015;19000;false
+H14;Álvaro;Turdasan;"";;hjgfcv@email.com;Responsable Tienda;1/10/2015;18000;true
+H15;Andrés;Casillas;Perez;;ggtr@email.com;Gerente;1/10/2015;18000;false
+H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;de calidad";1/10/2015;18000;false
+H18;Manuel;Gallego;Serrano;654238942;kjhhg@email.com;"Responsable;Tienda";1/10/2015;18000;false
+H19;Sergio;Perez;Turdasan;612378454;jhgfg@email.com;Gerente;1/10/2015;18000;false
+H21;Iker;Diaz;Casillas;698745321;yyyyuy@email.com;Becario;1/10/2015;18000;false
+H22;Carlos;Vivar;Garcia;689452136;plol@email.com;Becario;1/10/2015;18000;true
+H23;Alfredo;Escobar;Pintado;655656767;alfred@email.com;"Encargado ;de Mantenimiento";1/10/2015;18000;false
+H24;Ana;Caballero;del Castillo;682783723;anacc@email.com;Administrativo;1/10/2015;18000;false
+H25;Marta;Salamanca;Gimenez;602836862;;Jefe de Proyecto IT;1/10/2015;18000;false
+H26;Andrea;Fernández;Sanchez;617638627;andreafsa@email.com;RRHH;1/10/2015;18000;false
+H27;Elisa;Gómez;Sevilla;643342369;elisags@email.com;Encargado de Publicidad;1/10/2015;18000;true
+H29;Ainhoa;Segovia;Garcia;697538627;ainhoasgar@email.com;Responsable Tienda;1/10/2015;18000;false
+H31;Juan Manuel;Romero;Estrella;677792687;juanmare@email.com;Jefe de Publicidad;1/10/2015;18000;false
+H33;Elena;de Pablos;"";688889265;helenpj@email.com;"Encargado ;de Mantenimiento";1/10/2015;18000;false
+H35;Pablo;Díaz;Salinas;632642642;pdiazs@email.com;Analista;1/10/2015;18000;true
+H36;Maria Luisa;Gutierrez;del Rosario;688225362;mariluigr@email.com;Cajero;1/10/2015;18000;false
+H37;Ruth;Delgado;Rey;668761152;rudere@email.com;Encargado de Limpieza;1/10/2015;18000;false
+H39;Maria del Mar;González;Gutierrez;665825681;marimargogu@email.com;Administrativo;1/10/2015;18000;false
+H40;      Adrian; Lomillo; Casillas ;621459870; yjjyuy@email.com;Comercial;1/10/2015;18000;false
+H43;Pelayo;Pelaez;Casillas;126987413;haqwhdj@email.com;Quimico;1/10/2015;18000;false
+H44;Diego;Sobarzo;Sojunio;632159874;;Gerente;1/10/2015;18000;false
+H45;Maria;Casado;Millan;632145987;cambiaso@email.com;Mantenimiento;1/10/2015;18000;true
+H46;Sonia;Puertas;Moran;654789152;yqwter@email.com;Quimico;1/10/2015;18000;false
+H47;Beatriz;Rosado;Huertas;635987415;aasxz@email.com;Quimico;1/10/2015;18000;false
+H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;1/10/2015;18000;false
+H49;Sara;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;1/10/2015;18000;false
+H50;Fabiola;Decena;Centena;652169743;ghjjhey@email.com;Seguridad;1/10/2015;18000;true
+H51;Lorena;Garcia;Moreno;63897421;gwtdgw@email.com;Becario;1/10/2015;18000;false
+H53;Lidia;Turdasan;Alin;655442536;fgwegd@email.com;Comercial;1/10/2015;18000;false
+H54;Alicia;Garcia;Montero;62589746;fgwegd@email.com;Comercial;1/10/2015;18000;false
+H55;Manolo;Rey;Del Bombo;6158974236;fgwegd@email.com;Comercial;1/10/2015;18000;false
+H56;Carmen;Fernandez;Hernandez;698532471;;Portero;1/10/2015;18000;false
+H57;Elisa;Casas;Vacias;623987415;pqiorgh@email.com;Programador Senior;1/10/2015;18000;false
+H58;Isabel;Iniesta;Pantoja;6329874561;jfjugi@email.com;Gerente;1/10/2015;18000;false
