@@ -32,9 +32,8 @@ public class CsvAccess {
 
 	// private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
 	// private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	// private String path =
-	// "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	// private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
@@ -44,102 +43,152 @@ public class CsvAccess {
 	 * @return HasMap De los empleados con su id como key
 	 */
 	public HashMap<String, Employee> readCSV(String nameCSV) {
+
+		// Creamos el HashMap y obtenemos el fichero CSV
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(path + nameCSV + ".csv");
+
 		log.info("Ruta del fichero" + f.getPath());
+
 		FileReader reader = null;
 		BufferedReader br = null;
+
+		// Utilizamos un contador de lineas del fichero para obtener informacion
+		// acerca de la linea que nos da un error o una excepcion
 		int contLine = 2;
+
 		try {
 			reader = new FileReader(f);
 			br = new BufferedReader(reader);
+
+			// Leemos la primera linea, que es la informacion de las columnas
 			String line = br.readLine();
-			
+
+			// Con el bucle while recorremos linea por linea el fichero
 			while (line != null) {
 				try {
 					line = br.readLine();
-					/*
-					 * Separamos los valores para separar y eliminar por ";" asi solo separa por los
-					 * ; que sabemos que son final de dato
-					 */
-					List<String> dataEmployee = new ArrayList<String>();
-					dataEmployee.add("");
-					boolean comillasAbiertas = false;
-					int employeeValue = 0;
-					for (int i = 0; i < line.length(); i++) {
-						/* Aqui observo si tengo una comillas abiertas */
-						if (line.charAt(i) == '"') {
-							if (comillasAbiertas) {
-								comillasAbiertas = false;
-							} else {
-								comillasAbiertas = true;
-							}
 
+					// Creamos un ArrayList para obtener los datos de la linea
+					List<String> dataEmployee = new ArrayList<String>();
+
+					// Añadimos el primer dato
+					dataEmployee.add("");
+
+					// Utilizamos este booleano para saber si abrimos o cerramos las comillas
+					boolean openQuotes = false;
+
+					// Utilizamos un valor auxiliar para saber cuando cambiamos de dato
+					int employeeValue = 0;
+
+					// Con este bucle for recorremos caracter por caracter para sacar los datos uno
+					// a uno
+					for (int i = 0; i < line.length(); i++) {
+
+						/*
+						 * Aqui observo si el caracter es una comilla. Si lo es, hago una comprobación
+						 * para saber si inicio el dato o lo finalizo
+						 */
+						if (line.charAt(i) == '"') {
+							if (openQuotes) {
+								openQuotes = false;
+							} else {
+								openQuotes = true;
+							}
 						}
-						/* aqui decido si salto de valor */
-						if (line.charAt(i) == ';' && comillasAbiertas == false) {
+
+						/*
+						 * Aqui decido si hay un cambio de valor o si no lo hay. Si lo hay, añado un
+						 * nuevo valor vacio al ArrayList, y si no lo hay, sumo lo que contiene el valor
+						 * del ArrayList actual a lo existente
+						 */
+						if (line.charAt(i) == ';' && openQuotes == false) {
 							employeeValue++;
 							dataEmployee.add("");
+
+							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
+							// ArrayList que es un valor nulo
 							if (dataEmployee.get(employeeValue - 1).length() == 0) {
 								dataEmployee.set(employeeValue - 1, "NULL");
 							}
+
 						} else {
 							dataEmployee.set(employeeValue, dataEmployee.get(employeeValue) + line.charAt(i));
 						}
 
 					}
-					Date hiringDate = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmployee.get(HIRING_DATE));
+
+					/*
+					 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
+					 * tipo Date
+					 */
+					Date hiringDate = new SimpleDateFormat("DD/MM/YYYY").parse(dataEmployee.get(HIRING_DATE));
+
+					// Aquí comprobamos si el empleado está dado de baja o no
 					boolean sickLeave = false;
 					if (dataEmployee.get(SICK_LEAVE).equals("true")) {
 						sickLeave = true;
 					}
-					int yearSalary = -1;
-					try {
-						yearSalary = Integer.parseInt(dataEmployee.get(YEAR_SALARY));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+
+					// Aqui formateamos el salario anual a numero entero
+					int yearSalary = Integer.parseInt(dataEmployee.get(YEAR_SALARY));
+
 					/*
 					 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
-					 * espacion al principìo y al final y eliminamos la primera comilla de la linea
-					 * y la ultima
+					 * espacios al principìo y al final
 					 */
 					Employee emp = new Employee(dataEmployee.get(ID).trim().toUpperCase(),
 							dataEmployee.get(NAME).trim(), dataEmployee.get(SURNAME1).trim(),
 							dataEmployee.get(SURNAME2).trim(), dataEmployee.get(TLF).trim(),
 							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
 							sickLeave);
+
+					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
+					// empleado
 					map.put(emp.getId(), emp);
+
 				} catch (NullPointerException e) {
 					log.error("La linea " + contLine + " del CSV " + nameCSV + " esta vacia", e);
 
-				}catch (IndexOutOfBoundsException e) {
-					log.error("Fallo al leer la siguiente linea: " + contLine + " del CSV:" + nameCSV + " obtenido por falta de columnas", e);
+				} catch (IndexOutOfBoundsException e) {
+					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
+							+ ". Error causado por falta de columnas", e);
 
-				}catch (ParseException e) {
-					log.error("Fallo paseado:" + contLine + " del CSV:" + nameCSV + ". Comprobar si el formato es correcto o faltan columnas", e);
-				}catch (Exception e) {
-					log.error("Fallo generico en linea:" + contLine + " del CSV:" + nameCSV, e);
+				} catch (ParseException e) {
+					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
+							+ ". Comprobar si el formato es correcto o faltan columnas", e);
+
+				} catch (NumberFormatException e) {
+					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
+							+ ". Comprobar que el numero introducido sea el correcto", e);
+
+				} catch (Exception e) {
+					log.error("Fallo generico en la linea " + contLine + " del fichero " + nameCSV, e);
+
 				}
+
+				// Cambiamos la linea del contador
 				contLine++;
 			}
 
 		} catch (FileNotFoundException e) {
 			log.error("Fallo a la hora de encontrar el fichero con los datos", e);
-			e.printStackTrace();
+
 		} catch (IOException e) {
 			log.error("Fallo de entrada o salida", e);
-			e.printStackTrace();
+
 		} finally {
 			try {
 				br.close();
 				reader.close();
-				log.info("Lectura finalizada con " + (contLine-2) + " lineas leidas en fichero " + nameCSV);
+				log.info("Lectura finalizada con " + (contLine - 2) + " lineas leidas en fichero " + nameCSV);
+
 			} catch (IOException e) {
 				log.error("Fallo de entrada o salida", e);
-				e.printStackTrace();
+
 			}
 		}
+
 		return map;
 	}
 

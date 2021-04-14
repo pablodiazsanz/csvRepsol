@@ -40,12 +40,18 @@ public class Manager {
 						|| !clientData.get(i).getSurname2().equalsIgnoreCase(serverData.get(i).getSurname2())
 						|| !clientData.get(i).getTlf().equalsIgnoreCase(serverData.get(i).getTlf())
 						|| !clientData.get(i).getMail().equalsIgnoreCase(serverData.get(i).getMail())
-						|| !clientData.get(i).getJob().equalsIgnoreCase(serverData.get(i).getJob())) {
+						|| !clientData.get(i).getJob().equalsIgnoreCase(serverData.get(i).getJob())
+						|| clientData.get(i).getHiringDate().compareTo(serverData.get(i).getHiringDate()) == 0
+						|| clientData.get(i).getYearSalary() != serverData.get(i).getYearSalary()
+						|| clientData.get(i).isSickLeave() != serverData.get(i).isSickLeave()) {
+					
 					Employee emp = updatedEmployee(clientData.get(i), serverData.get(i));
 					log.info("Modificando al empleado: " + clientData.get(i).toString());
 					dao.writeCSV(emp, "UPDATE");
+					
 				} else {
 					log.info("El empleado con identificador " + clientData.get(i).getId() + " no se cambia, se mantiene igual");
+					
 				}
 
 				serverData.remove(i);
@@ -85,32 +91,32 @@ public class Manager {
 		// En los if, comparamos dato a dato para saber cuales han sido modificados, y
 		// si
 		// se han modificado, metemos el dato del cliente en el empleado que devolvemos.
-		if (!clientEmployee.getName().equals(serverEmployee.getName())) {
+		if (!clientEmployee.getName().equalsIgnoreCase(serverEmployee.getName())) {
 			updatedEmployee.setName(clientEmployee.getName());
 		}
-		if (!clientEmployee.getSurname1().equals(serverEmployee.getSurname1())) {
+		if (!clientEmployee.getSurname1().equalsIgnoreCase(serverEmployee.getSurname1())) {
 			updatedEmployee.setSurname1(clientEmployee.getSurname1());
 		}
-		if (!clientEmployee.getSurname2().equals(serverEmployee.getSurname2())) {
+		if (!clientEmployee.getSurname2().equalsIgnoreCase(serverEmployee.getSurname2())) {
 			updatedEmployee.setSurname2(clientEmployee.getSurname2());
 		}
-		if (!clientEmployee.getTlf().equals(serverEmployee.getTlf())) {
+		if (!clientEmployee.getTlf().equalsIgnoreCase(serverEmployee.getTlf())) {
 			updatedEmployee.setTlf(clientEmployee.getTlf());
 		}
-		if (!clientEmployee.getMail().equals(serverEmployee.getMail())) {
+		if (!clientEmployee.getMail().equalsIgnoreCase(serverEmployee.getMail())) {
 			updatedEmployee.setMail(clientEmployee.getMail());
 		}
-		if (!clientEmployee.getJob().equals(serverEmployee.getJob())) {
+		if (!clientEmployee.getJob().equalsIgnoreCase(serverEmployee.getJob())) {
 			updatedEmployee.setJob(clientEmployee.getJob());
 		}
-		if (clientEmployee.getFecha_contratacion().compareTo(serverEmployee.getFecha_contratacion()) != 0) {
-			updatedEmployee.setFecha_contratacion(clientEmployee.getFecha_contratacion());
+		if (clientEmployee.getHiringDate().compareTo(serverEmployee.getHiringDate()) != 0) {
+			updatedEmployee.setHiringDate(clientEmployee.getHiringDate());
 		}
-		if (clientEmployee.getSalario_bruto_anual() != serverEmployee.getSalario_bruto_anual()) {
-			updatedEmployee.setSalario_bruto_anual(clientEmployee.getSalario_bruto_anual());
+		if (clientEmployee.getYearSalary() != serverEmployee.getYearSalary()) {
+			updatedEmployee.setYearSalary(clientEmployee.getYearSalary());
 		}
-		if (clientEmployee.isBaja() == serverEmployee.isBaja()) {
-			updatedEmployee.setBaja(clientEmployee.isBaja());
+		if (clientEmployee.isSickLeave() != serverEmployee.isSickLeave()) {
+			updatedEmployee.setSickLeave(clientEmployee.isSickLeave());
 		}
 		return updatedEmployee;
 	}

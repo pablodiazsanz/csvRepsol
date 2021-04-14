@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class Employee {
 	private String id, name, surname1, surname2, tlf, mail, job;
-	private Date fecha_contratacion;
-	private int salario_bruto_anual;
-	private boolean baja;
+	private Date hiringDate;
+	private int yearSalary;
+	private boolean sickLeave;
 
 	public Employee() {
 	}
 
 	public Employee(String id, String name, String surname1, String surname2, String tlf, String mail, String job,
-			Date fecha_contratacion, int salario_bruto_anual, boolean baja) {
+			Date hiringDate, int yearSalary, boolean sickLeave) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -21,10 +21,12 @@ public class Employee {
 		this.tlf = tlf;
 		this.mail = mail;
 		this.job = job;
-		this.fecha_contratacion = fecha_contratacion;
-		this.salario_bruto_anual = salario_bruto_anual;
-		this.baja = baja;
+		this.hiringDate = hiringDate;
+		this.yearSalary = yearSalary;
+		this.sickLeave = sickLeave;
 	}
+
+	
 
 	public String getId() {
 		return id;
@@ -82,35 +84,35 @@ public class Employee {
 		this.job = job;
 	}
 
-	public Date getFecha_contratacion() {
-		return fecha_contratacion;
+	public Date getHiringDate() {
+		return hiringDate;
 	}
 
-	public void setFecha_contratacion(Date fecha_contratacion) {
-		this.fecha_contratacion = fecha_contratacion;
+	public void setHiringDate(Date hiringDate) {
+		this.hiringDate = hiringDate;
 	}
 
-	public int getSalario_bruto_anual() {
-		return salario_bruto_anual;
+	public int getYearSalary() {
+		return yearSalary;
 	}
 
-	public void setSalario_bruto_anual(int salario_bruto_anual) {
-		this.salario_bruto_anual = salario_bruto_anual;
+	public void setYearSalary(int yearSalary) {
+		this.yearSalary = yearSalary;
 	}
 
-	public boolean isBaja() {
-		return baja;
+	public boolean isSickLeave() {
+		return sickLeave;
 	}
 
-	public void setBaja(boolean baja) {
-		this.baja = baja;
+	public void setSickLeave(boolean sickLeave) {
+		this.sickLeave = sickLeave;
 	}
 
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", surname1=" + surname1 + ", surname2=" + surname2 + ", tlf="
-				+ tlf + ", mail=" + mail + ", job=" + job + ", fecha_contratacion=" + fecha_contratacion
-				+ ", salario_bruto_anual=" + salario_bruto_anual + ", baja=" + baja + "]";
+				+ tlf + ", mail=" + mail + ", job=" + job + ", fecha_contratacion=" + hiringDate
+				+ ", salario_bruto_anual=" + yearSalary + ", baja=" + sickLeave + "]";
 	}
 
 	/**
@@ -122,6 +124,6 @@ public class Employee {
 	public String toCSV() {
 
 		return id + ";" + name + ";" + surname1 + ";" + surname2 + ";" + tlf + ";" + mail + ";" + job +
-				";" + fecha_contratacion + ";" + salario_bruto_anual + ";" + baja;
+				";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 	}
 }
