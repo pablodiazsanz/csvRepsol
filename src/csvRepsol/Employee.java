@@ -1,6 +1,8 @@
 package csvRepsol;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class Employee {
 	private String id, name, surname1, surname2, tlf, mail, job;
@@ -108,9 +110,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
+		
+		String hiringDateFormatted = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(hiringDate);
+		
 		return "Employee [id=" + id + ", name=" + name + ", surname1=" + surname1 + ", surname2=" + surname2 + ", tlf="
-				+ tlf + ", mail=" + mail + ", job=" + job + ", fecha_contratacion=" + hiringDate
-				+ ", salario_bruto_anual=" + yearSalary + ", baja=" + sickLeave + "]";
+				+ tlf + ", mail=" + mail + ", job=" + job + ", hiringDate=" + hiringDateFormatted
+				+ ", yearSalary=" + yearSalary + ", sickLeave=" + sickLeave + "]";
 	}
 
 	/**
@@ -120,8 +125,10 @@ public class Employee {
 	 * @return String con la linea en csv
 	 */
 	public String toCSV() {
+		
+		String hiringDateFormatted = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(hiringDate);
 
 		return id + ";" + name + ";" + surname1 + ";" + surname2 + ";" + tlf + ";" + mail + ";" + job +
-				";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
+				";" + hiringDateFormatted + ";" + yearSalary + ";" + sickLeave;
 	}
 }
