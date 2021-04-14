@@ -1,52 +1,34 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status
-H40;;;;;;;null;0;false;UPDATE
-H21;;;;;;;null;0;false;UPDATE
-H43;;;;;;;null;0;false;UPDATE
-H23;;;;;;"Encargado ;de Mantenimiento";null;0;false;UPDATE
+H21;;;;;;;Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
+H23;;;;;;"Encargado ;de Mantenimiento";Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
 H45;;;;;cambiaso@email.com;;null;0;true;UPDATE
 H22;;;;;;;null;0;true;UPDATE
 H44;;;;;NULL;;null;0;false;UPDATE
-H25;;;;;NULL;;null;0;false;UPDATE
-H24;;;;;;;null;0;false;UPDATE
-H27;;;;;;;null;0;true;UPDATE
-H49;;;;;;;null;0;false;UPDATE
-H26;;;;;;;null;0;false;UPDATE
-H48;;;;;;;null;0;false;UPDATE
-H29;;;;;;;null;0;false;UPDATE
+H25;;;;;NULL;;Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
+H27;;;;;;;Tue Jan 01 00:10:00 CET 2019;0;true;UPDATE
 H50;;;;;;;null;0;true;UPDATE
-H51;;;;;;;null;0;false;UPDATE
-H10;;;;;;;null;15000;false;UPDATE
-H54;Alicia;Garcia;Montero;62589746;fgwegd@email.com;Comercial;Mon Dec 29 00:00:00 CET 2014;18000;false;CREATE
-H31;;;;;;;null;0;false;UPDATE
-H53;;;;;;;null;0;false;UPDATE
-H12;;;;;;;null;0;false;UPDATE
-H56;Carmen;Fernandez;Hernandez;698532471;NULL;Portero;Mon Dec 29 00:00:00 CET 2014;18000;false;CREATE
-H1;;;;;;;null;0;false;UPDATE
-H11;;;;;;;null;0;false;UPDATE
-H33;;;"";;;"Encargado ;de Mantenimiento";null;0;false;UPDATE
-H55;Manolo;Rey;Del Bombo;6158974236;fgwegd@email.com;Comercial;Mon Dec 29 00:00:00 CET 2014;18000;false;CREATE
+H10;;;;;;;Tue Jan 01 00:10:00 CET 2019;15000;false;UPDATE
+H54;Alicia;Garcia;Montero;62589746;fgwegd@email.com;Comercial;Thu Jan 01 00:10:00 CET 2015;18000;false;CREATE
+H31;;;;;;;Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
+H56;Carmen;Fernandez;Hernandez;698532471;NULL;Portero;Thu Jan 01 00:10:00 CET 2015;18000;false;CREATE
+H33;;;"";;;"Encargado ;de Mantenimiento";Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
+H55;Manolo;Rey;Del Bombo;6158974236;fgwegd@email.com;Comercial;Thu Jan 01 00:10:00 CET 2015;18000;false;CREATE
 H14;;;"";NULL;;;null;0;true;UPDATE
-H36;;;;;;;null;0;false;UPDATE
-H58;Isabel;Iniesta;Pantoja;6329874561;jfjugi@email.com;Gerente;Mon Dec 29 00:00:00 CET 2014;18000;false;CREATE
-H3;;;;;;;null;0;false;UPDATE
+H58;Isabel;Iniesta;Pantoja;6329874561;jfjugi@email.com;Gerente;Thu Jan 01 00:10:00 CET 2015;18000;false;CREATE
+H3;;;;;;;Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
 H13;;;;NULL;;;null;19000;false;UPDATE
 H35;;;;;;;null;0;true;UPDATE
-H57;Elisa;Casas;Vacias;623987415;pqiorgh@email.com;Programador Senior;Mon Dec 29 00:00:00 CET 2014;18000;false;CREATE
-H4;;;;;;;null;0;false;UPDATE
-H16;;;;;;"Inspector;de calidad";null;0;false;UPDATE
+H57;Elisa;Casas;Vacias;623987415;pqiorgh@email.com;Programador Senior;Thu Jan 01 00:10:00 CET 2015;18000;false;CREATE
+H16;;;;;;"Inspector;de calidad";Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
 H15;;;;NULL;;;null;0;false;UPDATE
-H37;;;;;;;null;0;false;UPDATE
 H6;;;;;;;null;20000;true;UPDATE
-H18;;;;;;"Responsable;Tienda";null;0;false;UPDATE
-H7;;;;;;;null;0;false;UPDATE
-H39;;;;;;;null;0;false;UPDATE
+H18;;;;;;"Responsable;Tienda";Tue Jan 01 00:10:00 CET 2019;0;false;UPDATE
 H8;;;;;;;null;12000;false;UPDATE
 H9;;;;;;;null;12000;false;UPDATE
-H19;;;;;;;null;0;false;UPDATE
-H47;Beatriz;Rosado;Huertas;635987415;aasxz@email.com;Quimico;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H46;Sonia;Puertas;Moran;654789152;yqwter@email.com;Quimico;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H52;Diego;Fernandez;Grande;652653623;ppwqñwkl@email.com;Seguridad;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H38;Nerea;Gonzalez;López;620338982;neregonlo@email.com;Cajero;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H5;Alicia;Agudo;Vivar;666555444;opiju@email.com;Jefe de Ventas;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
-H17;Nerea;Garcia;Martinez;693985264;hgf@email.com;Becario;Mon Dec 29 00:00:00 CET 2014;18000;false;DELETE
+H47;Beatriz;Rosado;Huertas;635987415;aasxz@email.com;Quimico;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H46;Sonia;Puertas;Moran;654789152;yqwter@email.com;Quimico;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H52;Diego;Fernandez;Grande;652653623;ppwqñwkl@email.com;Seguridad;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H38;Nerea;Gonzalez;López;620338982;neregonlo@email.com;Cajero;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H5;Alicia;Agudo;Vivar;666555444;opiju@email.com;Jefe de Ventas;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE
+H17;Nerea;Garcia;Martinez;693985264;hgf@email.com;Becario;Thu Jan 01 00:10:00 CET 2015;18000;false;DELETE

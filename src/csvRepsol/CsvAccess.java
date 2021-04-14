@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import org.apache.log4j.Logger;
 
@@ -125,8 +127,10 @@ public class CsvAccess {
 					 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
 					 * tipo Date
 					 */
-					Date hiringDate = new SimpleDateFormat("DD/MM/YYYY").parse(dataEmployee.get(HIRING_DATE));
-
+					//Date hiringDate = new SimpleDateFormat("DD/MM/YYYY").parse(dataEmployee.get(HIRING_DATE));
+					SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH);
+					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
 					// Aquí comprobamos si el empleado está dado de baja o no
 					boolean sickLeave = false;
 					if (dataEmployee.get(SICK_LEAVE).equals("true")) {

@@ -34,14 +34,14 @@ public class Manager {
 			 * para saber cuales han sido eliminados de la lista de cliente, y asi saber los
 			 * que hay que borrar.
 			 */
-			if (serverData.containsKey(i)) {
+			if (serverData.containsKey(i)) {				
 				if (!clientData.get(i).getName().equalsIgnoreCase(serverData.get(i).getName().toLowerCase())
 						|| !clientData.get(i).getSurname1().equalsIgnoreCase(serverData.get(i).getSurname1())
 						|| !clientData.get(i).getSurname2().equalsIgnoreCase(serverData.get(i).getSurname2())
 						|| !clientData.get(i).getTlf().equalsIgnoreCase(serverData.get(i).getTlf())
 						|| !clientData.get(i).getMail().equalsIgnoreCase(serverData.get(i).getMail())
 						|| !clientData.get(i).getJob().equalsIgnoreCase(serverData.get(i).getJob())
-						|| clientData.get(i).getHiringDate().compareTo(serverData.get(i).getHiringDate()) == 0
+						|| clientData.get(i).getHiringDate().compareTo(serverData.get(i).getHiringDate()) != 0
 						|| clientData.get(i).getYearSalary() != serverData.get(i).getYearSalary()
 						|| clientData.get(i).isSickLeave() != serverData.get(i).isSickLeave()) {
 					
