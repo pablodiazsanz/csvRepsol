@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import org.apache.log4j.Logger;
@@ -16,7 +18,8 @@ public class CsvAccess {
 	
 	//private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
     //private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\mparrap\\eclipse-workspace\\csvRepsol\\csv\\";
 
     /**
      * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por <id del empledado, objeto empleado>
@@ -68,12 +71,16 @@ public class CsvAccess {
 
 
                     }
-
+                    Date fecha = new SimpleDateFormat("dd/MM/yyyy").parse(data_employee[7]);
+                    boolean baja = false;
+                    if(data_employee[9].equals("SI")) {
+                    	baja = true;
+                    }
                     /*Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los espacion al principìo y al final y eliminamos
                      * la primera comilla de la linea y la ultima*/
                     Employee emp = new Employee(data_employee[0].trim().toUpperCase(),data_employee[1].trim(), data_employee[2].trim(),
                             data_employee[3].trim(), data_employee[4].trim(),
-                            data_employee[5].trim(), data_employee[6].trim());
+                            data_employee[5].trim(), data_employee[6].trim(), fecha, Integer.parseInt(data_employee[8]), baja);
                     map.put(emp.getId(), emp);
                 } catch (Exception e) {
                 	log.error("Fallo al leer la siguiente linea del CSV obtenido", e);
