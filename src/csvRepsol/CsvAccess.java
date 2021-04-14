@@ -18,8 +18,8 @@ public class CsvAccess {
 	
 	//private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
     //private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	//private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
+	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
     /**
      * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por <id del empledado, objeto empleado>
@@ -73,7 +73,7 @@ public class CsvAccess {
                     }
                     Date fecha = new SimpleDateFormat("dd/MM/yyyy").parse(data_employee[7]);
                     boolean baja = false;
-                    if(data_employee[9].equals("SI")) {
+                    if(data_employee[9].equals("true")) {
                     	baja = true;
                     }
                     /*Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los espacion al principìo y al final y eliminamos
