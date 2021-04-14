@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.TimeZone;
 
 import org.apache.log4j.Logger;
@@ -34,8 +33,8 @@ public class CsvAccess {
 
 	// private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
 	// private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	// private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
@@ -121,17 +120,20 @@ public class CsvAccess {
 
 					}
 					log.info("separamos datos de una linea");
+
 					id = dataEmployee.get(ID).trim().toUpperCase();
 
 					/*
 					 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
 					 * tipo Date
 					 */
-					//Date hiringDate = new SimpleDateFormat("DD/MM/YYYY").parse(dataEmployee.get(HIRING_DATE));
-					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
+
+					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
 					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
+
 					log.info("analizamos fecha");
+
 					// Aquí comprobamos si el empleado está dado de baja o no
 					boolean sickLeave = false;
 					if (dataEmployee.get(SICK_LEAVE).equals("true")) {
@@ -145,8 +147,7 @@ public class CsvAccess {
 					 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
 					 * espacios al principìo y al final
 					 */
-					Employee emp = new Employee(id,
-							dataEmployee.get(NAME).trim(), dataEmployee.get(SURNAME1).trim(),
+					Employee emp = new Employee(id, dataEmployee.get(NAME).trim(), dataEmployee.get(SURNAME1).trim(),
 							dataEmployee.get(SURNAME2).trim(), dataEmployee.get(TLF).trim(),
 							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
 							sickLeave);
@@ -160,15 +161,18 @@ public class CsvAccess {
 
 				} catch (IndexOutOfBoundsException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Error causado por falta de columnas en el id["+id+"] - csvline: {"+ line +"}", e);
+							+ ".\n Error causado por falta de columnas en el id[" + id + "] - csvline: {" + line + "}",
+							e);
 
 				} catch (ParseException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Comprobar si el formato es correcto o faltan columnas en id["+id+"] - csvline: {"+ line +"}\"", e);
+							+ ".\n Comprobar si el formato es correcto o faltan columnas en id[" + id + "] - csvline: {"
+							+ line + "}\"", e);
 
 				} catch (NumberFormatException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Comprobar que el numero introducido sea el correcto id["+id+"] - csvline: {"+ line +"}", e);
+							+ ".\n Comprobar que el numero introducido sea el correcto id[" + id + "] - csvline: {"
+							+ line + "}", e);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea " + contLine + " del fichero " + nameCSV, e);
@@ -228,5 +232,56 @@ public class CsvAccess {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void writeUpdatedEmployeeCSV(Employee updatedEmployee, List<String> extraData, String status) {
+
+		String updatedData;
+		String hiringDate = "", yearSalary = "", sickLeave = "";
+		int hdAux = 0, ysAux = 0, slAux = 0;
+
+		if (!extraData.isEmpty()) {
+			for (int i = 0; i < extraData.size(); i++) {
+
+				if (extraData.get(i).equals("hiringDate")) {
+					hdAux = 1;
+				}
+
+				if (extraData.get(i).equals("yearSalary")) {
+					ysAux = 1;
+				}
+
+				if (extraData.get(i).equals("sickLeave")) {
+					slAux = 1;
+				}
+
+			}
+		}
+
+		if (hdAux == 0) {
+			hiringDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(updatedEmployee.getHiringDate());
+			;
+		}
+		if (ysAux == 0) {
+			yearSalary = String.valueOf(updatedEmployee.getYearSalary());
+		}
+		if (slAux == 0) {
+			sickLeave = String.valueOf(updatedEmployee.isSickLeave());
+		}
+
+		updatedData = updatedEmployee.getId() + ";" + updatedEmployee.getName() + ";" + updatedEmployee.getSurname1()
+				+ ";" + updatedEmployee.getSurname2() + ";" + updatedEmployee.getTlf() + ";" + updatedEmployee.getMail()
+				+ ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
+
+		try {
+			FileWriter fw = new FileWriter(path + "result.csv", true);
+			fw.write("\n" + updatedData + ";" + status);
+			fw.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+
 	}
 }

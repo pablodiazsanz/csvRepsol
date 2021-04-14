@@ -1,6 +1,8 @@
 package csvRepsol;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -45,9 +47,8 @@ public class Manager {
 						|| clientData.get(i).getYearSalary() != serverData.get(i).getYearSalary()
 						|| clientData.get(i).isSickLeave() != serverData.get(i).isSickLeave()) {
 					
-					Employee emp = updatedEmployee(clientData.get(i), serverData.get(i));
+					updateEmployee(clientData.get(i), serverData.get(i));
 					log.info("Modificando al empleado: " + clientData.get(i).toString());
-					dao.writeCSV(emp, "UPDATE");
 					
 				} else {
 					log.info("El empleado con identificador " + clientData.get(i).getId() + " no se cambia, se mantiene igual");
@@ -84,9 +85,10 @@ public class Manager {
 	 * @return Devuelve el empleado con el identificador y con las modificaciones
 	 *         que tiene.
 	 */
-	private static Employee updatedEmployee(Employee clientEmployee, Employee serverEmployee) {
+	private static void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
-		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, 0, false);
+		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
+		List<String> extraData = new ArrayList<String>();
 
 		// En los if, comparamos dato a dato para saber cuales han sido modificados, y
 		// si
@@ -111,13 +113,20 @@ public class Manager {
 		}
 		if (clientEmployee.getHiringDate().compareTo(serverEmployee.getHiringDate()) != 0) {
 			updatedEmployee.setHiringDate(clientEmployee.getHiringDate());
+		} else {
+			extraData.add("hiringDate");
 		}
 		if (clientEmployee.getYearSalary() != serverEmployee.getYearSalary()) {
 			updatedEmployee.setYearSalary(clientEmployee.getYearSalary());
+		} else {
+			extraData.add("yearSalary");
 		}
 		if (clientEmployee.isSickLeave() != serverEmployee.isSickLeave()) {
 			updatedEmployee.setSickLeave(clientEmployee.isSickLeave());
+		} else {
+			extraData.add("sickLeave");
 		}
-		return updatedEmployee;
+
+		dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
 	}
 }
