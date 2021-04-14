@@ -62,7 +62,7 @@ public class CsvAccess {
 		try {
 			reader = new FileReader(f);
 			br = new BufferedReader(reader);
-
+			log.info("accedemos al fichero");
 			// Leemos la primera linea, que es la informacion de las columnas
 			String line = br.readLine();
 
@@ -71,7 +71,7 @@ public class CsvAccess {
 				String id = "";
 				try {
 					line = br.readLine();
-
+					log.info("leemos linea{"+contLine+"}");
 					// Creamos un ArrayList para obtener los datos de la linea
 					List<String> dataEmployee = new ArrayList<String>();
 
@@ -120,7 +120,7 @@ public class CsvAccess {
 						}
 
 					}
-					
+					log.info("separamos datos de una linea");
 					id = dataEmployee.get(ID).trim().toUpperCase();
 
 					/*
@@ -131,6 +131,7 @@ public class CsvAccess {
 					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
 					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
 					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
+					log.info("analizamos fecha");
 					// Aquí comprobamos si el empleado está dado de baja o no
 					boolean sickLeave = false;
 					if (dataEmployee.get(SICK_LEAVE).equals("true")) {

@@ -34,7 +34,7 @@ public class Manager {
 			 * para saber cuales han sido eliminados de la lista de cliente, y asi saber los
 			 * que hay que borrar.
 			 */
-			if (serverData.containsKey(i)) {				
+			if (serverData.containsKey(i)) {
 				if (!clientData.get(i).getName().equalsIgnoreCase(serverData.get(i).getName().toLowerCase())
 						|| !clientData.get(i).getSurname1().equalsIgnoreCase(serverData.get(i).getSurname1())
 						|| !clientData.get(i).getSurname2().equalsIgnoreCase(serverData.get(i).getSurname2())
