@@ -87,7 +87,7 @@ public class Manager {
 	 */
 	private static void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
-		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
+		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, 0, false);
 		List<String> extraData = new ArrayList<String>();
 
 		// En los if, comparamos dato a dato para saber cuales han sido modificados, y
