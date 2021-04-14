@@ -47,7 +47,7 @@ public class CsvAccess {
 
 		// Creamos el HashMap y obtenemos el fichero CSV
 		HashMap<String, Employee> map = new HashMap<>();
-		File f = new File(path + nameCSV + ".csv");
+		File f = new File(nameCSV);
 
 		log.info("Ruta del fichero" + f.getPath());
 
