@@ -1,29 +1,29 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave
-H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;1/10/2015;18000;false
-H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;1/10/2015;18000;false
-H3;Miguel;Perez;Perez;666222333;utyrfuytf@email.com;Recepcionista;1/10/2015;18000;false
-H4;Xavier;Garcia;Diaz;666111999;utgfuf@email.com;Responsable Tienda;1/10/2015;18000;false
-H5;Alicia;Agudo;Vivar;666555444;opiju@email.com;Jefe de Ventas;1/10/2015;18000;false
-H6;Paula;Campos;Fernandez;666444222;opi9uiyh@email.com;Comercial;1/10/2015;18000;false
-H7;Esther;Alin  ;Avila;666888333;tydf@email.com;Responsable Tienda;1/10/2015;18000;false
-H8;Antonio;Perez;Perez;666000888;pok@email.com;Cajero;1/10/2015;18000;false
-H9;Juan;Garcia;Garcia;666222888;ytd@email.com;Responsable Tienda;1/10/2015;18000;false
+H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;01/10/2015;18000;false
+H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;01/10/2015;18000;false
+H3;Miguel;Perez;Perez;666222333;utyrfuytf@email.com;Recepcionista;01/10/2015;18000;false
+H4;Xavier;Garcia;Diaz;666111999;utgfuf@email.com;Responsable Tienda;01/10/2015;18000;false
+H5;Alicia;Agudo;Vivar;666555444;opiju@email.com;Jefe de Ventas;01/10/2015;18000;false
+H6;Paula;Campos;Fernandez;666444222;opi9uiyh@email.com;Comercial;01/10/2015;18000;false
+H7;Esther;Alin  ;Avila;666888333;tydf@email.com;Responsable Tienda;01/10/2015;18000;false
+H8;Antonio;Perez;Perez;666000888;pok@email.com;Cajero;01/10/2015;18000;false
+H9;Juan;Garcia;Garcia;666222888;ytd@email.com;Responsable Tienda;01/10/2015;18000;false
 H10;Francisco;Perez;Agudo;654888999;oekjioh@email.com;Abogado Laboralista;1/10/2015;18000;false
-H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;1/10/2015;18000;false
-H12;Alba;Martinez;Alin;622445511;szxd@email.com;Jefe de Marketing;1/10/2015;18000;false
-H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;1/10/2015;18000;false
-H14;Álvaro;Turdasan;Garcia;689745123;hjgfcv@email.com;Responsable Tienda;1/10/2015;18000;false
-H15;Andrés;Casillas;Perez;687456213;ggtr@email.com;Gerente;1/10/2015;18000;false
+H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;01/10/2015;18000;false
+H12;Alba;Martinez;Alin;622445511;szxd@email.com;Jefe de Marketing;01/10/2015;18000;false
+H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;01/10/2015;18000;false
+H14;Álvaro;Turdasan;Garcia;689745123;hjgfcv@email.com;Responsable Tienda;01/10/2015;18000;false
+H15;Andrés;Casillas;Perez;687456213;ggtr@email.com;Gerente;01/10/2015;18000;false
 H16;María;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false
-H17;Nerea;Garcia;Martinez;693985264;hgf@email.com;Becario;1/10/2015;18000;false
-H18;Manuel;Gallego;Serrano;654238942;kjhhg@email.com;Responsable Tienda;1/10/2015;18000;false
-H19;Sergio;Perez;Turdasan;612378454;jhgfg@email.com;Gerente;1/10/2015;18000;false
-H21;Iker;Diaz;Casillas;698745321;yyyyuy@email.com;Becario;1/10/2015;18000;false
-H22;Carlos;Vivar;Garcia;689452136;plol@email.com;Becario;1/10/2015;18000;false
-H23;Alfredo;Escobar;Pintado;655656767;alfred@email.com;Encargado de Mantenimiento;1/10/2015;18000;false
-H24;Ana;Caballero;del Castillo;682783723;anacc@email.com;Administrativo;1/10/2015;18000;false
-H25;Marta;Salamanca;Gimenez;602836862;martasg@email.com;Jefe de Proyecto IT;1/10/2015;18000;false
-H26;Andrea;Fernández;Sanchez;617638627;andreafsa@email.com;RRHH;1/10/2015;18000;false
+H17;Nerea;Garcia;Martinez;693985264;hgf@email.com;Becario;01/10/2015;18000;false
+H18;Manuel;Gallego;Serrano;654238942;kjhhg@email.com;Responsable Tienda;01/10/2015;18000;false
+H19;Sergio;Perez;Turdasan;612378454;jhgfg@email.com;Gerente;01/10/2015;18000;false
+H21;Iker;Diaz;Casillas;698745321;yyyyuy@email.com;Becario;01/10/2015;18000;false
+H22;Carlos;Vivar;Garcia;689452136;plol@email.com;Becario0;1/10/2015;18000;false
+H23;Alfredo;Escobar;Pintado;655656767;alfred@email.com;Encargado de Mantenimiento;01/10/2015;18000;false
+H24;Ana;Caballero;del Castillo;682783723;anacc@email.com;Administrativo;01/10/2015;18000;false
+H25;Marta;Salamanca;Gimenez;602836862;martasg@email.com;Jefe de Proyecto IT;01/10/2015;18000;false
+H26;Andrea;Fernández;Sanchez;617638627;andreafsa@email.com;RRHH0;1/10/2015;18000;false
 H27;Elisa;Gómez;Sevilla;643342369;elisags@email.com;Encargado de Publicidad;1/10/2015;18000;false
 H29;Ainhoa;Segovia;Garcia;697538627;ainhoasgar@email.com;Responsable Tienda;1/10/2015;18000;false
 H31;Juan Manuel;Romero;Estrella;677792687;juanmare@email.com;Jefe de Publicidad;1/10/2015;18000;false

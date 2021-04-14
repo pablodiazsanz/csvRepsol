@@ -128,7 +128,7 @@ public class CsvAccess {
 					 * tipo Date
 					 */
 					//Date hiringDate = new SimpleDateFormat("DD/MM/YYYY").parse(dataEmployee.get(HIRING_DATE));
-					SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy", Locale.ENGLISH);
+					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yy");
 					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
 					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
 					// Aquí comprobamos si el empleado está dado de baja o no
