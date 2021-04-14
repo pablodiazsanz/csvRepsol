@@ -32,8 +32,8 @@ public class CsvAccess {
 
 	// private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
 	// private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	// private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
+	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
@@ -66,6 +66,7 @@ public class CsvAccess {
 
 			// Con el bucle while recorremos linea por linea el fichero
 			while (line != null) {
+				String id = "";
 				try {
 					line = br.readLine();
 
@@ -117,6 +118,8 @@ public class CsvAccess {
 						}
 
 					}
+					
+					id = dataEmployee.get(ID).trim().toUpperCase();
 
 					/*
 					 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
@@ -137,7 +140,7 @@ public class CsvAccess {
 					 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
 					 * espacios al principìo y al final
 					 */
-					Employee emp = new Employee(dataEmployee.get(ID).trim().toUpperCase(),
+					Employee emp = new Employee(id,
 							dataEmployee.get(NAME).trim(), dataEmployee.get(SURNAME1).trim(),
 							dataEmployee.get(SURNAME2).trim(), dataEmployee.get(TLF).trim(),
 							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
@@ -148,19 +151,19 @@ public class CsvAccess {
 					map.put(emp.getId(), emp);
 
 				} catch (NullPointerException e) {
-					log.error("La linea " + contLine + " del CSV " + nameCSV + " esta vacia", e);
+					log.error("La linea " + contLine + " del CSV " + nameCSV + " esta vacia - ", e);
 
 				} catch (IndexOutOfBoundsException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ". Error causado por falta de columnas", e);
+							+ ".\n Error causado por falta de columnas en el id["+id+"] - csvline: {"+ line +"}", e);
 
 				} catch (ParseException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ". Comprobar si el formato es correcto o faltan columnas", e);
+							+ ".\n Comprobar si el formato es correcto o faltan columnas en id["+id+"] - csvline: {"+ line +"}\"", e);
 
 				} catch (NumberFormatException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ". Comprobar que el numero introducido sea el correcto", e);
+							+ ".\n Comprobar que el numero introducido sea el correcto id["+id+"] - csvline: {"+ line +"}", e);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea " + contLine + " del fichero " + nameCSV, e);

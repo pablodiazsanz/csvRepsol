@@ -26,8 +26,6 @@ public class Employee {
 		this.sickLeave = sickLeave;
 	}
 
-	
-
 	public String getId() {
 		return id;
 	}
