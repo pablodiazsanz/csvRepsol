@@ -54,3 +54,162 @@ java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
 INFO    2021-04-14 10:17:08,758 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
 INFO    2021-04-14 10:17:08,764 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
 DEBUG   2021-04-14 10:17:08,764 [main] csvRepsol.MainClass  - Finaliza la aplicación
+DEBUG   2021-04-14 10:21:55,157 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:21:55,164 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:21:55,165 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:21:55,171 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:64)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:21:55,175 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv
+ERROR   2021-04-14 10:21:55,178 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:64)
+	at csvRepsol.MainClass.main(MainClass.java:20)
+INFO    2021-04-14 10:21:55,178 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
+INFO    2021-04-14 10:21:55,181 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
+DEBUG   2021-04-14 10:21:55,181 [main] csvRepsol.MainClass  - Finaliza la aplicación
+DEBUG   2021-04-14 10:22:59,091 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:22:59,161 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:22:59,161 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:23:25,772 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:64)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:23:25,795 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv
+DEBUG   2021-04-14 10:24:02,779 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:24:02,789 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:24:02,789 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:24:02,839 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:24:02,845 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv
+ERROR   2021-04-14 10:24:02,917 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:20)
+INFO    2021-04-14 10:24:02,921 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
+INFO    2021-04-14 10:24:02,952 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,956 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=cambiaso@email.com, job=Mantenimiento, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:24:02,959 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=NULL, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,962 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=NULL, job=Jefe de Proyecto IT, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,969 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H54, name=Alicia, surname1=Garcia, surname2=Montero, tlf=62589746, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,972 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H56, name=Carmen, surname1=Fernandez, surname2=Hernandez, tlf=698532471, mail=NULL, job=Portero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,976 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2="", tlf=688889265, mail=helenpj@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,988 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H55, name=Manolo, surname1=Rey, surname2=Del Bombo, tlf=6158974236, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:02,997 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H14, name=Ã?lvaro, surname1=Turdasan, surname2="", tlf=NULL, mail=hjgfcv@email.com, job=Responsable Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:24:03,005 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H58, name=Isabel, surname1=Iniesta, surname2=Pantoja, tlf=6329874561, mail=jfjugi@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,011 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H13, name=Javier, surname1=Serrano, surname2=Perez, tlf=NULL, mail=iuyfc@email.com, job=Gerente Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=19000, baja=false]
+INFO    2021-04-14 10:24:03,015 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H57, name=Elisa, surname1=Casas, surname2=Vacias, tlf=623987415, mail=pqiorgh@email.com, job=Programador Senior, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,018 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H16, name=MarÃ­a, surname1=Garcia, surname2=Garcia, tlf=687569856, mail=iiu@email.com, job="Inspector;de calidad", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,021 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H15, name=AndrÃ©s, surname1=Casillas, surname2=Perez, tlf=NULL, mail=ggtr@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,024 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job="Responsable;Tienda", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,026 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqÃ±wkl@email.com, job=Seguridad, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,029 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,034 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=LÃ³pez, tlf=620338982, mail=neregonlo@email.com, job=Cajero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,037 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,040 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=Martinez, tlf=693985264, mail=hgf@email.com, job=Becario, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:24:03,044 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
+DEBUG   2021-04-14 10:24:03,044 [main] csvRepsol.MainClass  - Finaliza la aplicación
+DEBUG   2021-04-14 10:25:15,700 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:25:15,716 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:25:15,717 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:25:15,791 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:25:15,798 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv
+ERROR   2021-04-14 10:25:15,816 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:20)
+INFO    2021-04-14 10:25:15,816 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
+INFO    2021-04-14 10:25:15,834 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,837 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=cambiaso@email.com, job=Mantenimiento, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:25:15,839 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=NULL, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,842 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=NULL, job=Jefe de Proyecto IT, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,846 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H54, name=Alicia, surname1=Garcia, surname2=Montero, tlf=62589746, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,849 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H56, name=Carmen, surname1=Fernandez, surname2=Hernandez, tlf=698532471, mail=NULL, job=Portero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,852 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2="", tlf=688889265, mail=helenpj@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,855 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H55, name=Manolo, surname1=Rey, surname2=Del Bombo, tlf=6158974236, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,859 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H14, name=Ã?lvaro, surname1=Turdasan, surname2="", tlf=NULL, mail=hjgfcv@email.com, job=Responsable Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:25:15,862 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H58, name=Isabel, surname1=Iniesta, surname2=Pantoja, tlf=6329874561, mail=jfjugi@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,866 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H13, name=Javier, surname1=Serrano, surname2=Perez, tlf=NULL, mail=iuyfc@email.com, job=Gerente Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=19000, baja=false]
+INFO    2021-04-14 10:25:15,869 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H57, name=Elisa, surname1=Casas, surname2=Vacias, tlf=623987415, mail=pqiorgh@email.com, job=Programador Senior, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,876 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H16, name=MarÃ­a, surname1=Garcia, surname2=Garcia, tlf=687569856, mail=iiu@email.com, job="Inspector;de calidad", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,880 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H15, name=AndrÃ©s, surname1=Casillas, surname2=Perez, tlf=NULL, mail=ggtr@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,883 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job="Responsable;Tienda", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,886 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqÃ±wkl@email.com, job=Seguridad, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,889 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,891 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=LÃ³pez, tlf=620338982, mail=neregonlo@email.com, job=Cajero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,894 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,898 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=Martinez, tlf=693985264, mail=hgf@email.com, job=Becario, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:25:15,900 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
+DEBUG   2021-04-14 10:25:15,900 [main] csvRepsol.MainClass  - Finaliza la aplicación
+DEBUG   2021-04-14 10:29:23,768 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:29:23,777 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:29:23,778 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:29:23,839 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:29:23,844 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv
+ERROR   2021-04-14 10:29:23,869 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:51)
+	at csvRepsol.MainClass.main(MainClass.java:20)
+INFO    2021-04-14 10:29:23,871 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
+INFO    2021-04-14 10:29:23,877 [main] csvRepsol.Manager  - El empleado con identificador H40 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,878 [main] csvRepsol.Manager  - El empleado con identificador H21 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,878 [main] csvRepsol.Manager  - El empleado con identificador H43 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,896 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,901 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=cambiaso@email.com, job=Mantenimiento, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:29:23,904 [main] csvRepsol.Manager  - El empleado con identificador H22 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,905 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=NULL, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,908 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=NULL, job=Jefe de Proyecto IT, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,912 [main] csvRepsol.Manager  - El empleado con identificador H47 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,915 [main] csvRepsol.Manager  - El empleado con identificador H24 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,917 [main] csvRepsol.Manager  - El empleado con identificador H46 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,917 [main] csvRepsol.Manager  - El empleado con identificador H27 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,918 [main] csvRepsol.Manager  - El empleado con identificador H49 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,918 [main] csvRepsol.Manager  - El empleado con identificador H26 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,919 [main] csvRepsol.Manager  - El empleado con identificador H48 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,922 [main] csvRepsol.Manager  - El empleado con identificador H29 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,924 [main] csvRepsol.Manager  - El empleado con identificador H50 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,924 [main] csvRepsol.Manager  - El empleado con identificador H51 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,925 [main] csvRepsol.Manager  - El empleado con identificador H10 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,926 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H54, name=Alicia, surname1=Garcia, surname2=Montero, tlf=62589746, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,931 [main] csvRepsol.Manager  - El empleado con identificador H31 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,931 [main] csvRepsol.Manager  - El empleado con identificador H53 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,931 [main] csvRepsol.Manager  - El empleado con identificador H12 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,936 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H56, name=Carmen, surname1=Fernandez, surname2=Hernandez, tlf=698532471, mail=NULL, job=Portero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,940 [main] csvRepsol.Manager  - El empleado con identificador H1 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,940 [main] csvRepsol.Manager  - El empleado con identificador H11 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,940 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2="", tlf=688889265, mail=helenpj@email.com, job="Encargado ;de Mantenimiento", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,945 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H55, name=Manolo, surname1=Rey, surname2=Del Bombo, tlf=6158974236, mail=fgwegd@email.com, job=Comercial, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,952 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H14, name=Ã?lvaro, surname1=Turdasan, surname2="", tlf=NULL, mail=hjgfcv@email.com, job=Responsable Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=true]
+INFO    2021-04-14 10:29:23,958 [main] csvRepsol.Manager  - El empleado con identificador H36 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,958 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H58, name=Isabel, surname1=Iniesta, surname2=Pantoja, tlf=6329874561, mail=jfjugi@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,961 [main] csvRepsol.Manager  - El empleado con identificador H3 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,962 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H13, name=Javier, surname1=Serrano, surname2=Perez, tlf=NULL, mail=iuyfc@email.com, job=Gerente Tienda, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=19000, baja=false]
+INFO    2021-04-14 10:29:23,965 [main] csvRepsol.Manager  - El empleado con identificador H35 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,965 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H57, name=Elisa, surname1=Casas, surname2=Vacias, tlf=623987415, mail=pqiorgh@email.com, job=Programador Senior, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,971 [main] csvRepsol.Manager  - El empleado con identificador H4 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,971 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H16, name=MarÃ­a, surname1=Garcia, surname2=Garcia, tlf=687569856, mail=iiu@email.com, job="Inspector;de calidad", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,974 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H15, name=AndrÃ©s, surname1=Casillas, surname2=Perez, tlf=NULL, mail=ggtr@email.com, job=Gerente, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,978 [main] csvRepsol.Manager  - El empleado con identificador H37 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,979 [main] csvRepsol.Manager  - El empleado con identificador H6 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,979 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job="Responsable;Tienda", fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,982 [main] csvRepsol.Manager  - El empleado con identificador H7 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,983 [main] csvRepsol.Manager  - El empleado con identificador H39 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,984 [main] csvRepsol.Manager  - El empleado con identificador H8 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,985 [main] csvRepsol.Manager  - El empleado con identificador H9 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,985 [main] csvRepsol.Manager  - El empleado con identificador H19 no se cambia, se mantiene igual
+INFO    2021-04-14 10:29:23,986 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqÃ±wkl@email.com, job=Seguridad, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,989 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,992 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=LÃ³pez, tlf=620338982, mail=neregonlo@email.com, job=Cajero, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,994 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:23,997 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=Martinez, tlf=693985264, mail=hgf@email.com, job=Becario, fecha_contratacion=Thu Oct 01 00:00:00 CEST 2015, salario_bruto_anual=18000, baja=false]
+INFO    2021-04-14 10:29:24,003 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
+DEBUG   2021-04-14 10:29:24,004 [main] csvRepsol.MainClass  - Finaliza la aplicación

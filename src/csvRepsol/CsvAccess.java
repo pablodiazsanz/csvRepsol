@@ -18,8 +18,8 @@ public class CsvAccess {
 	
 	//private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
     //private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
+	//private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
     /**
      * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por <id del empledado, objeto empleado>
@@ -43,7 +43,7 @@ public class CsvAccess {
                 try {
                     line = br.readLine();
                     /*Separamos los valores para separar y eliminar por ";" asi solo separa por los ; que sabemos que son final de dato */
-                    String[] data_employee = new String[7];
+                    String[] data_employee = new String[10];
                     boolean comillasAbiertas = false;
                     int ultimoCorte = 0;
                     int valorEmpleado = 0;
@@ -112,7 +112,7 @@ public class CsvAccess {
     public void createCSV() {
         try {
             FileWriter fw = new FileWriter(path + "result.csv");
-            fw.write("id;name;first surname;second surname;phone;email;job;status");
+            fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
             fw.close();
         } catch (IOException e) {
             e.printStackTrace();

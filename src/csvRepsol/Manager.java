@@ -44,6 +44,8 @@ public class Manager {
 					Employee emp = updatedEmployee(clientData.get(i), serverData.get(i));
 					log.info("Modificando al empleado: " + clientData.get(i).toString());
 					dao.writeCSV(emp, "UPDATE");
+				} else {
+					log.info("El empleado con identificador " + clientData.get(i).getId() + " no se cambia, se mantiene igual");
 				}
 
 				serverData.remove(i);
