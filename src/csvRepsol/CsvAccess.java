@@ -19,7 +19,7 @@ public class CsvAccess {
 	//private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
     //private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
 	//private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	private String path = "C:\\Users\\mparrap\\eclipse-workspace\\csvRepsol\\csv\\";
+	private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
 
     /**
      * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por <id del empledado, objeto empleado>

@@ -39,3 +39,18 @@ INFO    2021-04-13 17:37:44,930 [main] csvRepsol.Manager  - Eliminando al emplea
 INFO    2021-04-13 17:37:44,937 [main] csvRepsol.Manager  - Eliminando al empleado: Employee{id=H38, name='Nerea', surname1='Gonzalez', surname2='LÃ³pez', tlf='620338982', mail='neregonlo@email.com', job='Cajero'}
 INFO    2021-04-13 17:37:44,942 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
 DEBUG   2021-04-13 17:37:44,942 [main] csvRepsol.MainClass  - Finaliza la aplicación
+DEBUG   2021-04-14 10:17:08,709 [main] csvRepsol.MainClass  - Arranca la aplicación
+INFO    2021-04-14 10:17:08,726 [main] csvRepsol.MainClass  - Se ha creado o sobreescrito el tercer CSV correctamente
+INFO    2021-04-14 10:17:08,729 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\mparrap\git\csvRepsol\csv\client.csv
+ERROR   2021-04-14 10:17:08,734 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:64)
+	at csvRepsol.MainClass.main(MainClass.java:19)
+INFO    2021-04-14 10:17:08,754 [main] csvRepsol.CsvAccess  - Ruta del ficheroC:\Users\mparrap\git\csvRepsol\csv\server.csv
+ERROR   2021-04-14 10:17:08,757 [main] csvRepsol.CsvAccess  - Fallo al leer la siguiente linea del CSV obtenido
+java.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:64)
+	at csvRepsol.MainClass.main(MainClass.java:20)
+INFO    2021-04-14 10:17:08,758 [main] csvRepsol.MainClass  - Se han obtenido los datos del cliente y del servidor correctamente
+INFO    2021-04-14 10:17:08,764 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
+DEBUG   2021-04-14 10:17:08,764 [main] csvRepsol.MainClass  - Finaliza la aplicación
