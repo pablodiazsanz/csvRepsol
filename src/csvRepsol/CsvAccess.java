@@ -30,8 +30,7 @@ public class CsvAccess {
 	private static final int HIRING_DATE = 7;
 	private static final int YEAR_SALARY = 8;
 	private static final int SICK_LEAVE = 9;
-	
-	
+
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
 	 * <id del empledado, objeto empleado>
@@ -102,7 +101,8 @@ public class CsvAccess {
 						if (line.charAt(i) == ';' && openQuotes == false) {
 							employeeValue++;
 							dataEmployee.add("");
-							log.info("[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
+							log.info(
+									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
 
 							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
 							// ArrayList que es un valor nulo
@@ -146,29 +146,28 @@ public class CsvAccess {
 							sickLeave);
 
 					log.info(emp);
-					
+
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
 					map.put(emp.getId(), emp);
 
 				} catch (NullPointerException e) {
-					log.error("La linea " + contLine + " del CSV " + nameCSV + " esta vacia - ", e);
+					log.error("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
 
 				} catch (IndexOutOfBoundsException e) {
-					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Error causado por falta de columnas en el id[" + id + "] - csvline: {" + line + "}",
-							e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero \"" + nameCSV + "\" - Linea{"
+							+ line + "}\nFallo al leer linea", e);
 
 				} catch (ParseException e) {
-					log.error("[" + id + "] - (" + contLine + ") - " + nameCSV + " - {" + line + "}", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero" + nameCSV + " - Linea{" + line
+							+ "}", e);
 
 				} catch (NumberFormatException e) {
-					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Comprobar que el numero introducido sea el correcto id[" + id + "] - csvline: {"
-							+ line + "}", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero" + nameCSV + " - Linea{" + line
+							+ "}\nNumero introducido incorrecto", e);
 
 				} catch (Exception e) {
-					log.error("Fallo generico en la linea " + contLine + " del fichero " + nameCSV, e);
+					log.error("Fallo generico en la linea (" + contLine + ") del Fichero \"" + nameCSV + "\"", e);
 
 				}
 
@@ -177,7 +176,7 @@ public class CsvAccess {
 			}
 
 		} catch (FileNotFoundException e) {
-			log.error("Fallo a la hora de encontrar el fichero con los datos", e);
+			log.error("Fichero no encontrado: \"" + nameCSV + "\"", e);
 
 		} catch (IOException e) {
 			log.error("Fallo de entrada o salida", e);
@@ -198,7 +197,8 @@ public class CsvAccess {
 	}
 
 	/**
-	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la información final.
+	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la
+	 * información final.
 	 */
 	public void createCSV() {
 		try {
@@ -298,9 +298,10 @@ public class CsvAccess {
 			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
+			log.info("usuario ID[" + updatedEmployee.getId() + "] \"" + status + "\" correctamente");
 
 		} catch (IOException e) {
-
+			log.error("Fallo al escribir al usuario: ID[" + updatedEmployee.getId() + "]");
 		}
 
 	}
