@@ -100,10 +100,10 @@ public class CsvAccess {
 						 */
 						if (line.charAt(i) == ';' && openQuotes == false) {
 							employeeValue++;
-							dataEmployee.add("");
 							log.info(
 									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
-
+							dataEmployee.add("");
+							
 							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
 							// ArrayList que es un valor nulo
 							if (dataEmployee.get(employeeValue - 1).length() == 0) {
@@ -112,6 +112,11 @@ public class CsvAccess {
 
 						} else {
 							dataEmployee.set(employeeValue, dataEmployee.get(employeeValue) + line.charAt(i));
+						}
+						
+						if (i == line.length()-1) {
+							log.info(
+									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
 						}
 
 					}
@@ -145,7 +150,8 @@ public class CsvAccess {
 							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
 							sickLeave);
 
-					log.info(emp);
+					log.info(
+							"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - Empleado creado: " + emp);
 
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
@@ -155,16 +161,16 @@ public class CsvAccess {
 					log.error("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
 
 				} catch (IndexOutOfBoundsException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero \"" + nameCSV + "\" - Linea{"
-							+ line + "}\nFallo al leer linea", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
+							+ line + "}\nNo se ha podido crear el objeto empleado. Fallo al leer linea", e);
 
 				} catch (ParseException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero" + nameCSV + " - Linea{" + line
-							+ "}", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {" + line
+							+ "}\nNo se ha podido crear el objeto empleado.", e);
 
 				} catch (NumberFormatException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero" + nameCSV + " - Linea{" + line
-							+ "}\nNumero introducido incorrecto", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {" + line
+							+ "}\nNo se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea (" + contLine + ") del Fichero \"" + nameCSV + "\"", e);
@@ -206,7 +212,7 @@ public class CsvAccess {
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error("Fallo al escribir la información de la cabecera");
 		}
 	}
 
@@ -221,8 +227,13 @@ public class CsvAccess {
 			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
+			if (status.equals("CREATE")) {
+				log.info("[" + employee.getId() + "] - \"" + status + "\"");
+			} else {
+				log.info("[" + employee.getId() + "] - \"" + status + "\"");
+			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error("[" + employee.getId() + "] - Fallo al escribir al usuario");
 		}
 	}
 
@@ -298,10 +309,10 @@ public class CsvAccess {
 			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
-			log.info("usuario ID[" + updatedEmployee.getId() + "] \"" + status + "\" correctamente");
+			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");
 
 		} catch (IOException e) {
-			log.error("Fallo al escribir al usuario: ID[" + updatedEmployee.getId() + "]");
+			log.error("[" + updatedEmployee.getId() + "] - Fallo al escribir al usuario");
 		}
 
 	}

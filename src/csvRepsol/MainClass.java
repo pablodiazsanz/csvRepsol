@@ -23,11 +23,11 @@ public class MainClass {
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			
+			log.error("Fichero no encontrado", e);
+
 		} catch (IOException e) {
-			e.printStackTrace();
-			
+			log.error("Fallo de entrada o salida", e);
+
 		}
 		
         log.debug("Arranca la aplicación");
