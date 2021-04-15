@@ -1,6 +1,5 @@
 package csvRepsol;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +11,11 @@ public class Manager {
 	private static Logger log = Logger.getLogger(Manager.class);
 
 	private static CsvAccess dao;
+	
+
+	public Manager(CsvAccess dao) {
+		this.dao = dao;
+	}
 
 	/**
 	 * Este método compara las listas que se obtienen desde los csv del cliente y
@@ -22,9 +26,9 @@ public class Manager {
 	 *                   cliente
 	 * @param serverData Esta lista contiene los empleados que tiene el csv del
 	 *                   servidor
+	 * @param dao 
 	 */
-	public static void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData) {
-		dao = new CsvAccess();
+	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao) {
 		log.info("Empezamos la comparacion de usuarios");
 		// En este bucle vamos a recorrer todos los empleados de cliente para
 		// compararlos con los del servidor
@@ -47,13 +51,14 @@ public class Manager {
 						|| clientData.get(i).getHiringDate().compareTo(serverData.get(i).getHiringDate()) != 0
 						|| clientData.get(i).getYearSalary() != serverData.get(i).getYearSalary()
 						|| clientData.get(i).isSickLeave() != serverData.get(i).isSickLeave()) {
-
+					
 					updateEmployee(clientData.get(i), serverData.get(i));
-					log.info("[" + clientData.get(i).getId() + "] - Modificado");
-
+					log.info("Modificando al empleado: " + clientData.get(i).toString() +
+							"\n datos anteriores: " + serverData.get(i).toString());
+					
 				} else {
-					log.info("[" + clientData.get(i).getId() + "] - No modificado");
-
+					log.info("El empleado con identificador " + clientData.get(i).getId() + " no se cambia, se mantiene igual");
+					
 				}
 
 				serverData.remove(i);
@@ -61,8 +66,8 @@ public class Manager {
 				// Aquí, si no se ha modificado, como el empleado no está en la lista del
 				// servidor
 				// lo pasamos al tercer CSV como un nuevo empleado que se ha creado.
+				log.info("Creando al empleado: " + clientData.get(i).toString());
 				dao.writeCSV(clientData.get(i), "CREATE");
-				log.info("[" + clientData.get(i).getId() + "] - Creado");
 			}
 		}
 		// Aquí pasamos al tercer CSV los empleados que se encuentran en la lista del
@@ -71,11 +76,11 @@ public class Manager {
 		// a eliminar.
 		log.info("Empezamos el borrado de usuarios");
 		for (String i : serverData.keySet()) {
+			log.info("Eliminando al empleado: " + serverData.get(i).toString());
 			dao.writeCSV(serverData.get(i), "DELETE");
-			log.info("[" + serverData.get(i).getId() + "] - Eliminado");
 		}
 	}
-
+	
 	/**
 	 *
 	 * En este método se comparan los empleados que tienen el mismo identificador de
@@ -87,7 +92,7 @@ public class Manager {
 	 * @return Devuelve el empleado con el identificador y con las modificaciones
 	 *         que tiene.
 	 */
-	private static void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
+	private void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
 		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
 		List<String> extraData = new ArrayList<String>();
@@ -97,55 +102,48 @@ public class Manager {
 		// se han modificado, metemos el dato del cliente en el empleado que devolvemos.
 		if (!clientEmployee.getName().equalsIgnoreCase(serverEmployee.getName())) {
 			updatedEmployee.setName(clientEmployee.getName());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Nombre - {" + updatedEmployee.getName() + "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (nombre) a: {"+updatedEmployee.getName()+"}");
 		}
 		if (!clientEmployee.getSurname1().equalsIgnoreCase(serverEmployee.getSurname1())) {
 			updatedEmployee.setSurname1(clientEmployee.getSurname1());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: 1º apellido - {" + updatedEmployee.getSurname1()
-					+ "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (1º apellido) a: {"+updatedEmployee.getSurname1()+"}");
 		}
 		if (!clientEmployee.getSurname2().equalsIgnoreCase(serverEmployee.getSurname2())) {
 			updatedEmployee.setSurname2(clientEmployee.getSurname2());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: 2º apellido - {" + updatedEmployee.getSurname2()
-					+ "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (2º apellido) a: {"+updatedEmployee.getSurname2()+"}");
 		}
 		if (!clientEmployee.getTlf().equalsIgnoreCase(serverEmployee.getTlf())) {
 			updatedEmployee.setTlf(clientEmployee.getTlf());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Telefono - {" + updatedEmployee.getTlf() + "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (telefono) a: {"+updatedEmployee.getTlf()+"}");
 		}
 		if (!clientEmployee.getMail().equalsIgnoreCase(serverEmployee.getMail())) {
 			updatedEmployee.setMail(clientEmployee.getMail());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Email - {" + updatedEmployee.getMail() + "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Email) a: {"+updatedEmployee.getMail()+"}");
 		}
 		if (!clientEmployee.getJob().equalsIgnoreCase(serverEmployee.getJob())) {
 			updatedEmployee.setJob(clientEmployee.getJob());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Puesto de trabajo - {" + updatedEmployee.getJob()
-					+ "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (puesto de trabajo) a: {"+updatedEmployee.getJob()+"}");
 		}
 		if (clientEmployee.getHiringDate().compareTo(serverEmployee.getHiringDate()) != 0) {
 			updatedEmployee.setHiringDate(clientEmployee.getHiringDate());
-			String hiringDateFormatted = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-					.format(clientEmployee.getHiringDate());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Fecha de contratacion - {" + hiringDateFormatted
-					+ "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Fecha de contratacion) a: {"+updatedEmployee.getHiringDate()+"}");
 		} else {
 			extraData.add("hiringDate");
 		}
 		if (clientEmployee.getYearSalary() != serverEmployee.getYearSalary()) {
 			updatedEmployee.setYearSalary(clientEmployee.getYearSalary());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Salario anual - {" + updatedEmployee.getYearSalary()
-					+ "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Salario anual) a: {"+updatedEmployee.getYearSalary()+"}");
 		} else {
 			extraData.add("yearSalary");
 		}
 		if (clientEmployee.isSickLeave() != serverEmployee.isSickLeave()) {
 			updatedEmployee.setSickLeave(clientEmployee.isSickLeave());
-			log.info("[" + updatedEmployee.getId() + "] - Modifica: Baja - {" + updatedEmployee.isSickLeave() + "}");
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Baja) a: {"+updatedEmployee.isSickLeave()+"}");
 		} else {
 			extraData.add("sickLeave");
 		}
 
 		dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
-
+		log.info("Mandamos a escribir el usuario en el csv resultE");
 	}
 }

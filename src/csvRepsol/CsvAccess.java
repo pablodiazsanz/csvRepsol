@@ -19,8 +19,19 @@ import org.apache.log4j.Logger;
 public class CsvAccess {
 
 	private static Logger log = Logger.getLogger(CsvAccess.class);
+	private PropertyFile a;
 
 	private static final int ID = 0;
+
+	public CsvAccess() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public CsvAccess(PropertyFile a) {
+		this.a = a;
+	}
+
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
 	 * <id del empledado, objeto empleado>
@@ -29,7 +40,6 @@ public class CsvAccess {
 	 * @return HasMap De los empleados con su id como key
 	 */
 	public HashMap<String, Employee> readCSV(String nameCSV) {
-
 		// Creamos el HashMap y obtenemos el fichero CSV
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(nameCSV);
@@ -179,7 +189,7 @@ public class CsvAccess {
 					 * espacios al principìo y al final
 					 */
 
-					Employee emp = new Employee(id, name, surname1,	surname2, tlf,email, job, hiringDate, yearSalary,
+					Employee emp = new Employee(id, name, surname1, surname2, tlf, email, job, hiringDate, yearSalary,
 							sickLeave);
 
 					log.info("[" + dataEmployee.get(ID).trim().toUpperCase() + "] - Empleado creado: " + emp);
@@ -236,10 +246,12 @@ public class CsvAccess {
 	/**
 	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la
 	 * información final.
+	 * 
+	 * @param a
 	 */
 	public void createCSV() {
 		try {
-			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"));
+			FileWriter fw = new FileWriter(a.getProperty("result"));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 		} catch (IOException e) {
@@ -255,7 +267,7 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) {
 		try {
-			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
+			FileWriter fw = new FileWriter(a.getProperty("result"), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
 			if (status.equals("CREATE")) {
@@ -337,7 +349,7 @@ public class CsvAccess {
 
 		// Añadimos la linea de datos al fichero CSV.
 		try {
-			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
+			FileWriter fw = new FileWriter(a.getProperty("result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");

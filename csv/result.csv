@@ -1,23 +1,21 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status
-H61;Jorge;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;22/09/2015 15:16:13;18000;false;CREATE
-H63;Petunia;Hernandez;Isosceles;63219874;aqqwr@email.com;Becario;12/11/2017 15:16:13;18000;false;CREATE
-H62;Marisa;Hernandez;Agudo;63219874;aqqwr@email.com;Becario;13/10/2016 15:16:13;18000;false;CREATE
+H61;Jorge;;;;aqqwr@email.com;Becario;22/09/2015 15:16:13;18000;false;CREATE
+H63;Petunia;;;;aqqwr@email.com;Becario;12/11/2017 15:16:13;18000;false;CREATE
+H62;Marisa;;;;aqqwr@email.com;Becario;13/10/2016 15:16:13;18000;false;CREATE
 H23;;;;;;;;true;UPDATE
 H45;;;;;;11/10/2015 17:16:13;;;UPDATE
 H22;;;;;;01/10/2015 15:16:25;;;UPDATE
 H27;;;;;;;;true;UPDATE
 H10;;;;;;;19000;true;UPDATE
-H31;;;;697536981;;;;;UPDATE
 H33;;;;;;11/10/2015 11:16:13;;true;UPDATE
-H14;;;NULL;;NULL;;;;UPDATE
-H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;calidad";01/10/2015 15:16:13;18000;false;CREATE
+H14;;;;;NULL;;;;UPDATE
+H16;María;;;;iiu@email.com;"Inspector;calidad";01/10/2015 15:16:13;18000;false;CREATE
 H15;;;;;NULL;01/10/2015 15:17:13;;;UPDATE
 H18;;;;;;;;;UPDATE
 H7;;;;;;01/10/2015 18:16:13;;true;UPDATE
-H17;;;NULL;;;;;;UPDATE
-H40;Adrian;Lomillo;Casillas;621459870;yjjyuy@email.com;Comercial;11/10/2015 15:16:13;18000;false;DELETE
-H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;21/10/2015 15:16:13;18000;false;DELETE
-H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H35;Pablo;Díaz;Salinas;632642642;pdiazs@email.com;Analista;11/10/2015 15:16:13;18000;false;DELETE
-H6;Paula;Campos;Fernandez;666444222;opi9uiyh@email.com;Comercial;01/10/2015 15:16:13;18000;false;DELETE
-H39;Maria del Mar;González;Gutierrez;665825681;marimargogu@email.com;Administrativo;11/10/2015 15:16:13;18000;false;DELETE
+H40;Adrian;;;;yjjyuy@email.com;Comercial;11/10/2015 15:16:13;18000;false;DELETE
+H48;Lucia;;;;seerfa@email.com;Reponedor;21/10/2015 15:16:13;18000;false;DELETE
+H13;Javier;;;;iuyfc@email.com;Gerente Tienda;01/10/2015 15:16:13;18000;false;DELETE
+H35;Pablo;;;;pdiazs@email.com;Analista;11/10/2015 15:16:13;18000;false;DELETE
+H6;Paula;;;;opi9uiyh@email.com;Comercial;01/10/2015 15:16:13;18000;false;DELETE
+H39;Maria del Mar;;;;marimargogu@email.com;Administrativo;11/10/2015 15:16:13;18000;false;DELETE
