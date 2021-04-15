@@ -11,10 +11,10 @@ H10;Francisco;Perez;Agudo;654888999;oekjioh@email.com;Abogado Laboralista;1/10/2
 H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;01/10/2015 15:16:13;18000;false
 H12;Alba;Martinez;Alin;622445511;szxd@email.com;Jefe de Marketing;01/10/2015 15:16:13;18000;false
 H13;Javier;Gerente Tienda;01/10/2015;18000;true
-H14;Álvaro;Turdasan;Garcia;689745123;hjgfcv@email.com;"Responsable;1Tienda";01/10/2015 15:16:13;18000;false
-H15;Andrés;Casillas;Perez;     687456213;ggtr@email.com;Gerente;01/10/2015 15:17:13;18000;false
+H14;Álvaro;Turdasan;;689745123;;"Responsable;1Tienda";01/10/2015 15:16:13;18000;false
+H15;Andrés;Casillas;Perez;     687456213;;Gerente;01/10/2015 15:17:13;18000;false
 H16;María;Garcia;Garcia;687569856     ;iiu@email.com;"Inspector;calidad";1/10/2015 15:16:13;18000;false
-H17;Nerea;Garcia;Martinez;693985264;    hgf@email.com    ;Becario;01/10/2015 15:16:13;18000;false
+H17;Nerea;Garcia;;693985264;    hgf@email.com    ;Becario;01/10/2015 15:16:13;18000;false
 
 
 H18;Manuel;Gallego;Serrano;   654238942   ;kjhhg@email.com;"ResponsableTienda";01/10/2015 15:16:13;18000;false

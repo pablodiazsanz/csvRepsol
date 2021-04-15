@@ -24,7 +24,7 @@ public class Manager {
 	 */
 	public static void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData) {
 		dao = new CsvAccess();
-
+		log.info("Empezamos la comparacion de usuarios");
 		// En este bucle vamos a recorrer todos los empleados de cliente para
 		// compararlos con los del servidor
 		for (String i : clientData.keySet()) {
@@ -48,7 +48,8 @@ public class Manager {
 						|| clientData.get(i).isSickLeave() != serverData.get(i).isSickLeave()) {
 					
 					updateEmployee(clientData.get(i), serverData.get(i));
-					log.info("Modificando al empleado: " + clientData.get(i).toString());
+					log.info("Modificando al empleado: " + clientData.get(i).toString() +
+							"\n datos anteriores: " + serverData.get(i).toString());
 					
 				} else {
 					log.info("El empleado con identificador " + clientData.get(i).getId() + " no se cambia, se mantiene igual");
@@ -68,6 +69,7 @@ public class Manager {
 		// servidor pero
 		// que han sido eliminados de la lista del cliente, por lo tanto los que se van
 		// a eliminar.
+		log.info("Empezamos el borrado de usuarios");
 		for (String i : serverData.keySet()) {
 			log.info("Eliminando al empleado: " + serverData.get(i).toString());
 			dao.writeCSV(serverData.get(i), "DELETE");
@@ -87,7 +89,7 @@ public class Manager {
 	 */
 	private static void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
-		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, 0, false);
+		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
 		List<String> extraData = new ArrayList<String>();
 
 		// En los if, comparamos dato a dato para saber cuales han sido modificados, y
@@ -95,38 +97,48 @@ public class Manager {
 		// se han modificado, metemos el dato del cliente en el empleado que devolvemos.
 		if (!clientEmployee.getName().equalsIgnoreCase(serverEmployee.getName())) {
 			updatedEmployee.setName(clientEmployee.getName());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (nombre) a: {"+updatedEmployee.getName()+"}");
 		}
 		if (!clientEmployee.getSurname1().equalsIgnoreCase(serverEmployee.getSurname1())) {
 			updatedEmployee.setSurname1(clientEmployee.getSurname1());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (1º apellido) a: {"+updatedEmployee.getSurname1()+"}");
 		}
 		if (!clientEmployee.getSurname2().equalsIgnoreCase(serverEmployee.getSurname2())) {
 			updatedEmployee.setSurname2(clientEmployee.getSurname2());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (2º apellido) a: {"+updatedEmployee.getSurname2()+"}");
 		}
 		if (!clientEmployee.getTlf().equalsIgnoreCase(serverEmployee.getTlf())) {
 			updatedEmployee.setTlf(clientEmployee.getTlf());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (telefono) a: {"+updatedEmployee.getTlf()+"}");
 		}
 		if (!clientEmployee.getMail().equalsIgnoreCase(serverEmployee.getMail())) {
 			updatedEmployee.setMail(clientEmployee.getMail());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Email) a: {"+updatedEmployee.getMail()+"}");
 		}
 		if (!clientEmployee.getJob().equalsIgnoreCase(serverEmployee.getJob())) {
 			updatedEmployee.setJob(clientEmployee.getJob());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (puesto de trabajo) a: {"+updatedEmployee.getJob()+"}");
 		}
 		if (clientEmployee.getHiringDate().compareTo(serverEmployee.getHiringDate()) != 0) {
 			updatedEmployee.setHiringDate(clientEmployee.getHiringDate());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Fecha de contratacion) a: {"+updatedEmployee.getHiringDate()+"}");
 		} else {
 			extraData.add("hiringDate");
 		}
 		if (clientEmployee.getYearSalary() != serverEmployee.getYearSalary()) {
 			updatedEmployee.setYearSalary(clientEmployee.getYearSalary());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Salario anual) a: {"+updatedEmployee.getYearSalary()+"}");
 		} else {
 			extraData.add("yearSalary");
 		}
 		if (clientEmployee.isSickLeave() != serverEmployee.isSickLeave()) {
 			updatedEmployee.setSickLeave(clientEmployee.isSickLeave());
+			log.info("el empleado ["+updatedEmployee.getId()+"] cambia el (Baja) a: {"+updatedEmployee.isSickLeave()+"}");
 		} else {
 			extraData.add("sickLeave");
 		}
 
 		dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
+		log.info("Mandamos a escribir el usuario en el csv result");
 	}
 }

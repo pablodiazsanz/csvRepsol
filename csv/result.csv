@@ -9,11 +9,12 @@ H27;;;;;;;;true;UPDATE
 H10;;;;;;;19000;true;UPDATE
 H31;;;;697536981;;;;;UPDATE
 H33;;;;;;11/10/2015 11:16:13;;true;UPDATE
-H14;;;;;;;;;UPDATE
+H14;;;NULL;;NULL;;;;UPDATE
 H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;calidad";01/10/2015 15:16:13;18000;false;CREATE
-H15;;;;;;01/10/2015 15:17:13;;;UPDATE
+H15;;;;;NULL;01/10/2015 15:17:13;;;UPDATE
 H18;;;;;;;;;UPDATE
 H7;;;;;;01/10/2015 18:16:13;;true;UPDATE
+H17;;;NULL;;;;;;UPDATE
 H40;Adrian;Lomillo;Casillas;621459870;yjjyuy@email.com;Comercial;11/10/2015 15:16:13;18000;false;DELETE
 H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;21/10/2015 15:16:13;18000;false;DELETE
 H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;01/10/2015 15:16:13;18000;false;DELETE
