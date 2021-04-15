@@ -30,12 +30,8 @@ public class CsvAccess {
 	private static final int HIRING_DATE = 7;
 	private static final int YEAR_SALARY = 8;
 	private static final int SICK_LEAVE = 9;
-
-	// private String path = "C:\\Users\\mparrap\\IdeaProjects\\csvRepsol2\\csv\\";
-	// private String path = "C:\\Users\\pdiazs\\IdeaProjects\\csvRepsol2\\csv\\";
-	private String path = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\csv\\";
-	// private String path = "C:\\Users\\mparrap\\git\\csvRepsol\\csv\\";
-
+	
+	
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
 	 * <id del empledado, objeto empleado>
@@ -49,7 +45,7 @@ public class CsvAccess {
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(nameCSV);
 
-		log.info("Ruta del fichero" + f.getPath());
+		log.info("Ruta del fichero: " + f.getPath());
 
 		FileReader reader = null;
 		BufferedReader br = null;
@@ -61,7 +57,7 @@ public class CsvAccess {
 		try {
 			reader = new FileReader(f);
 			br = new BufferedReader(reader);
-			log.info("accedemos al fichero");
+			log.info("Accedemos al fichero");
 			// Leemos la primera linea, que es la informacion de las columnas
 			String line = br.readLine();
 
@@ -70,7 +66,6 @@ public class CsvAccess {
 				String id = "";
 				try {
 					line = br.readLine();
-					log.info("leemos linea{"+contLine+"}");
 					// Creamos un ArrayList para obtener los datos de la linea
 					List<String> dataEmployee = new ArrayList<String>();
 
@@ -107,6 +102,7 @@ public class CsvAccess {
 						if (line.charAt(i) == ';' && openQuotes == false) {
 							employeeValue++;
 							dataEmployee.add("");
+							log.info("[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
 
 							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
 							// ArrayList que es un valor nulo
@@ -119,7 +115,6 @@ public class CsvAccess {
 						}
 
 					}
-					log.info("separamos datos de una linea");
 
 					id = dataEmployee.get(ID).trim().toUpperCase();
 
@@ -131,8 +126,6 @@ public class CsvAccess {
 					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
 					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
-
-					log.info("analizamos fecha");
 
 					// Aquí comprobamos si el empleado está dado de baja o no
 					boolean sickLeave = false;
@@ -152,6 +145,8 @@ public class CsvAccess {
 							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
 							sickLeave);
 
+					log.info(emp);
+					
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
 					map.put(emp.getId(), emp);
@@ -165,9 +160,7 @@ public class CsvAccess {
 							e);
 
 				} catch (ParseException e) {
-					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
-							+ ".\n Comprobar si el formato es correcto o faltan columnas en id[" + id + "] - csvline: {"
-							+ line + "}\"", e);
+					log.error("[" + id + "] - (" + contLine + ") - " + nameCSV + " - {" + line + "}", e);
 
 				} catch (NumberFormatException e) {
 					log.error("Fallo al leer la linea " + contLine + " del fichero " + nameCSV
@@ -205,7 +198,7 @@ public class CsvAccess {
 	}
 
 	/**
-	 * Este metodo crea un nuevo csv para guardar la informacion final
+	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la información final.
 	 */
 	public void createCSV() {
 		try {
@@ -218,11 +211,10 @@ public class CsvAccess {
 	}
 
 	/**
-	 * Metodo usado para añadir una linea de datos al archivo csv de resultados
+	 * Metodo usado para añadir una linea de datos al archivo CSV de resultados
 	 *
 	 * @param employee El empleado que queremos añadir
-	 * @param status   La accion que realizamos con el empleado, UPDATE, DELETE o
-	 *                 CREATE
+	 * @param status   La accion que realizamos con el empleado, DELETE o CREATE
 	 */
 	public void writeCSV(Employee employee, String status) {
 		try {
@@ -234,52 +226,80 @@ public class CsvAccess {
 		}
 	}
 
+	/**
+	 * Método utilizado para para añadir una linea de datos de un empleado
+	 * modificado al archivo CSV de resultados. Cómo para actualizar necesitamos que
+	 * los datos que no son una cadena no aparezcan como null o, en el caso del
+	 * boolean, false, traemos una lista de si estos datos están actualizados o no.
+	 * 
+	 * @param updatedEmployee El empleado que queremos añadir
+	 * @param extraData       Lista con información de los datos que no son una
+	 *                        cadena, los que no se van a modificar.
+	 * @param status          La accion que realizamos con el empleado, en este caso
+	 *                        UPDATE.
+	 */
 	public void writeUpdatedEmployeeCSV(Employee updatedEmployee, List<String> extraData, String status) {
 
+		// Creamos esta variable para enviarle al fichero CSV el contenido.
 		String updatedData;
-		String hiringDate = "", yearSalary = "", sickLeave = "";
-		int hdAux = 0, ysAux = 0, slAux = 0;
 
+		/*
+		 * Estas variables son las que vamos a darle a la cadena updatedData para pasar
+		 * los datos. Estas cadenas se van a modificar si la lista extraData no contiene
+		 * el dato
+		 */
+		String hiringDate = "", yearSalary = "", sickLeave = "";
+
+		// Estas variables son las vamos a utilizar para comprobar si el dato ha
+		// cambiado o no.
+		boolean hiringDateChanged = true, yearSalaryChanged = true, sickLeaveChanged = true;
+
+		// Comprobamos que la lista no está vacia.
 		if (!extraData.isEmpty()) {
+
+			// Recorremos la lista para saber que datos no se han cambiado.
 			for (int i = 0; i < extraData.size(); i++) {
 
 				if (extraData.get(i).equals("hiringDate")) {
-					hdAux = 1;
+					hiringDateChanged = false;
 				}
 
 				if (extraData.get(i).equals("yearSalary")) {
-					ysAux = 1;
+					yearSalaryChanged = false;
 				}
 
 				if (extraData.get(i).equals("sickLeave")) {
-					slAux = 1;
+					sickLeaveChanged = false;
 				}
 
 			}
 		}
 
-		if (hdAux == 0) {
+		// Si los datos han sido cambiados, establecemos el dato para pasarselo al
+		// fichero CSV.
+		if (hiringDateChanged) {
 			hiringDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(updatedEmployee.getHiringDate());
-			;
 		}
-		if (ysAux == 0) {
+		if (yearSalaryChanged) {
 			yearSalary = String.valueOf(updatedEmployee.getYearSalary());
 		}
-		if (slAux == 0) {
+		if (sickLeaveChanged) {
 			sickLeave = String.valueOf(updatedEmployee.isSickLeave());
 		}
 
+		// Metemos los datos en la cadena que vamos a darle al fichero CSV con los datos
+		// correctos.
 		updatedData = updatedEmployee.getId() + ";" + updatedEmployee.getName() + ";" + updatedEmployee.getSurname1()
 				+ ";" + updatedEmployee.getSurname2() + ";" + updatedEmployee.getTlf() + ";" + updatedEmployee.getMail()
 				+ ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 
+		// Añadimos la linea de datos al fichero CSV.
 		try {
 			FileWriter fw = new FileWriter(MainClass.prop.getProperty("result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 
 		} catch (IOException e) {
-			e.printStackTrace();
 
 		}
 
