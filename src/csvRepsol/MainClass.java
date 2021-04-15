@@ -18,8 +18,8 @@ public class MainClass {
 		FileInputStream ip;
 		
 		try {
-			ip = new FileInputStream("C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\config.properties");
-			//ip = new FileInputStream("C:\\Users\\mparrap\\git\\csvRepsol\\src\\config.properties");
+			//ip = new FileInputStream("C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\config.properties");
+			ip = new FileInputStream("C:\\Users\\mparrap\\git\\csvRepsol\\src\\config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
@@ -29,7 +29,11 @@ public class MainClass {
 			log.error("Fallo de entrada o salida", e);
 
 		}
-		
+		try {
+			
+		} catch (Exception e) {
+			
+		}
         log.debug("Arranca la aplicación");
 		
 		CsvAccess csvAccess = new CsvAccess();

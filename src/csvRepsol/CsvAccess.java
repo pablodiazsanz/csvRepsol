@@ -21,16 +21,6 @@ public class CsvAccess {
 	private static Logger log = Logger.getLogger(CsvAccess.class);
 
 	private static final int ID = 0;
-	private static final int NAME = 1;
-	private static final int SURNAME1 = 2;
-	private static final int SURNAME2 = 3;
-	private static final int TLF = 4;
-	private static final int MAIL = 5;
-	private static final int JOB = 6;
-	private static final int HIRING_DATE = 7;
-	private static final int YEAR_SALARY = 8;
-	private static final int SICK_LEAVE = 9;
-
 	/**
 	 * Lee los empleados de un csv, y devuelme la lista en un HasMap organizado por
 	 * <id del empledado, objeto empleado>
@@ -59,7 +49,11 @@ public class CsvAccess {
 			log.info("Accedemos al fichero");
 			// Leemos la primera linea, que es la informacion de las columnas
 			String line = br.readLine();
-
+			String[] columns = line.split(";");
+			HashMap<Integer, String> ordenColumnas = new HashMap<Integer, String>();
+			for (int i = 0; i < columns.length; i++) {
+				ordenColumnas.put(i, columns[i]);
+			}
 			// Con el bucle while recorremos linea por linea el fichero
 			while (line != null) {
 				String id = "";
@@ -103,7 +97,7 @@ public class CsvAccess {
 							log.info(
 									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
 							dataEmployee.add("");
-							
+
 							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
 							// ArrayList que es un valor nulo
 							if (dataEmployee.get(employeeValue - 1).length() == 0) {
@@ -113,45 +107,82 @@ public class CsvAccess {
 						} else {
 							dataEmployee.set(employeeValue, dataEmployee.get(employeeValue) + line.charAt(i));
 						}
-						
-						if (i == line.length()-1) {
+
+						if (i == line.length() - 1) {
 							log.info(
 									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
 						}
 
 					}
 
-					id = dataEmployee.get(ID).trim().toUpperCase();
-
-					/*
-					 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
-					 * tipo Date
-					 */
-
-					SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-					formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
-					Date hiringDate = formatter.parse(dataEmployee.get(HIRING_DATE));
-
-					// Aquí comprobamos si el empleado está dado de baja o no
+					String name = "";
+					String surname1 = "";
+					String surname2 = "";
+					String tlf = "";
+					String email = "";
+					String job = "";
+					Date hiringDate = null;
+					int yearSalary = -1;
 					boolean sickLeave = false;
-					if (dataEmployee.get(SICK_LEAVE).equals("true")) {
-						sickLeave = true;
-					}
 
-					// Aqui formateamos el salario anual a numero entero
-					int yearSalary = Integer.parseInt(dataEmployee.get(YEAR_SALARY));
+					for (int i = 0; i < columns.length; i++) {
+						switch (ordenColumnas.get(i)) {
+						case "id":
+							id = dataEmployee.get(i).trim().toUpperCase();
+							break;
+						case "name":
+							name = dataEmployee.get(i).trim();
+							break;
+						case "surname1":
+							surname1 = dataEmployee.get(i).trim();
+							break;
+						case "surname2":
+							surname2 = dataEmployee.get(i).trim();
+							break;
+						case "tlf":
+							tlf = dataEmployee.get(i).trim();
+							break;
+						case "email":
+							email = dataEmployee.get(i).trim();
+							break;
+						case "job":
+							job = dataEmployee.get(i).trim();
+							break;
+						case "hiring_date":
+							/*
+							 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
+							 * tipo Date
+							 */
+
+							SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+							formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+							hiringDate = formatter.parse(dataEmployee.get(i));
+							break;
+						case "year_salary":
+							// Aqui formateamos el salario anual a numero entero
+							yearSalary = Integer.parseInt(dataEmployee.get(i));
+							break;
+						case "sick_leave":
+							// Aquí comprobamos si el empleado está dado de baja o no
+							if (dataEmployee.get(i).equals("true")) {
+								sickLeave = true;
+							}
+							break;
+
+						default:
+							break;
+						}
+					}
 
 					/*
 					 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
 					 * espacios al principìo y al final
 					 */
-					Employee emp = new Employee(id, dataEmployee.get(NAME).trim(), dataEmployee.get(SURNAME1).trim(),
-							dataEmployee.get(SURNAME2).trim(), dataEmployee.get(TLF).trim(),
-							dataEmployee.get(MAIL).trim(), dataEmployee.get(JOB).trim(), hiringDate, yearSalary,
+
+					Employee emp = new Employee(id, name, surname1,	surname2, tlf,email, job, hiringDate, yearSalary,
 							sickLeave);
 
-					log.info(
-							"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - Empleado creado: " + emp);
+					log.info("[" + dataEmployee.get(ID).trim().toUpperCase() + "] - Empleado creado: " + emp);
 
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
@@ -165,12 +196,12 @@ public class CsvAccess {
 							+ line + "}\nNo se ha podido crear el objeto empleado. Fallo al leer linea", e);
 
 				} catch (ParseException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {" + line
-							+ "}\nNo se ha podido crear el objeto empleado.", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
+							+ line + "}\nNo se ha podido crear el objeto empleado.", e);
 
 				} catch (NumberFormatException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {" + line
-							+ "}\nNo se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
+					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
+							+ line + "}\nNo se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea (" + contLine + ") del Fichero \"" + nameCSV + "\"", e);
