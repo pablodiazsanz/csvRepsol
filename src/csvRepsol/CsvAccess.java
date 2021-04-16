@@ -242,17 +242,21 @@ public class CsvAccess {
 
 		// Declaramos un empleado
 		Employee createdEmployee;
-		
-		// Creamos todas las variables vacías que posteriormente añadiremos al empleado creado
+
+		// Creamos todas las variables vacías que posteriormente añadiremos al empleado
+		// creado
 		String empID = "", empName = "", empSurname1 = "", empSurname2 = "", empPhone = "", empEmail = "", empJob = "";
 		Date empHiringDate = null;
 		int empYearSalary = -1;
 		boolean empSickLeave = false;
 
-		/* En este bucle for, vamos a ir recorriendo la lista de los datos que hemos sacado de la linea.
-		 * Al recorrer el dato, se le irá preguntando que nombre de columna posee y comparandola con el
-		 * nombre de columna que tenemos nosotros en el servidor para asi obtener los datos y meterlos
-		 * correctamente en el empleado que creamos. */
+		/*
+		 * En este bucle for, vamos a ir recorriendo la lista de los datos que hemos
+		 * sacado de la linea. Al recorrer el dato, se le irá preguntando que nombre de
+		 * columna posee y comparandola con el nombre de columna que tenemos nosotros en
+		 * el servidor para asi obtener los datos y meterlos correctamente en el
+		 * empleado que creamos.
+		 */
 		for (int i = 0; i < dataEmployee.size(); i++) {
 			if (orderColumns.get(i).equals(id)) {
 				empID = dataEmployee.get(i).trim().toUpperCase();
@@ -277,8 +281,8 @@ public class CsvAccess {
 
 			} else if (orderColumns.get(i).equals(hiringDate)) {
 				/*
-				 * Aquí formateamos la cadena obtenida, que en el caso ideal
-				 * es una fecha, a un tipo Date
+				 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
+				 * tipo Date
 				 */
 				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 				formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
@@ -426,8 +430,7 @@ public class CsvAccess {
 		// correctos.
 		updatedData = updatedEmployee.getId() + ";" + updatedEmployee.getName() + ";" + updatedEmployee.getSurname1()
 				+ ";" + updatedEmployee.getSurname2() + ";" + updatedEmployee.getTlf() + ";" + updatedEmployee.getMail()
-				+ ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
-
+				+ ";" + updatedEmployee.getJob() + ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 		// Añadimos la linea de datos al fichero CSV.
 		try {
 			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"), true);

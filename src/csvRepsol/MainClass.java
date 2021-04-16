@@ -9,11 +9,11 @@ public class MainClass {
 	private static Logger log = Logger.getLogger(MainClass.class);
 	private static PropertyFile clientConfig, serverConfig;
 	
-	private static String clientSrc = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
-	//private static String clientSrc = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
+	//private static String clientSrc = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
+	private static String clientSrc = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
 
-	private static String serverSrc = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
-	//private static String serverSrc = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
+	//private static String serverSrc = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+	private static String serverSrc = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
 	
 	public static void main(String[] args) {
 		
