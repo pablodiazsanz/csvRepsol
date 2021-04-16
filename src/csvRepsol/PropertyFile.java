@@ -13,7 +13,6 @@ public class PropertyFile {
 	private FileInputStream ip;
 	private Logger log = Logger.getLogger(PropertyFile.class);
 	private String src;
-	
 
 	public PropertyFile(String src) {
 		super();
@@ -21,9 +20,15 @@ public class PropertyFile {
 		file = new Properties();
 	}
 
+	/**
+	 * comprueba los datos del config del cliente para saber que estan todo los
+	 * datos y devuelve true de ser correcto y false de no ser asi
+	 * 
+	 * @return true en caso de encontrar todos los datos y false si no
+	 */
 	public boolean checkConfigClient() {
 		boolean readed = true;
-		
+
 		try {
 			ip = new FileInputStream(src);
 			file.load(ip);
@@ -38,8 +43,7 @@ public class PropertyFile {
 			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
 			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
 			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
-			
-
+			log.trace("Fichero config de cliente leido exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);
 			readed = false;
@@ -48,13 +52,17 @@ public class PropertyFile {
 			log.error("Fallo de entrada o salida", e);
 			readed = false;
 		}
-
 		return readed;
 	}
-	
+
+	/**
+	 * comprueba los datos del config server para saber que estan todo los datos y
+	 * devuelve true de ser correcto y false de no ser asi
+	 * 
+	 * @return true en caso de encontrar todos los datos y false si no
+	 */
 	public boolean checkConfigServer() {
 		boolean readed = true;
-		
 		try {
 			ip = new FileInputStream(src);
 			file.load(ip);
@@ -70,7 +78,7 @@ public class PropertyFile {
 			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
 			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
 			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
-
+			log.trace("Fichero config de servidor leido exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);
 			readed = false;
@@ -79,18 +87,25 @@ public class PropertyFile {
 			log.error("Fallo de entrada o salida", e);
 			readed = false;
 		}
-
 		return readed;
 	}
-	
+
+	/**
+	 * le introduces el nombre del valor buscado en el fichero propeties y te lo
+	 * devulve
+	 * 
+	 * @param property nombre completo de la variable buscada
+	 * @return el valor que le corresponde en el ficheroi properties
+	 */
 	public String getProperty(String property) {
-        String value = null;
-        try {
-            value = file.getProperty(property);
-        } catch (Exception e) {
-            log.error(property + " no encontrada");
-        }
-        return value;
-    }
+		String value = null;
+		try {
+			value = file.getProperty(property);
+			log.trace(property + " leida correctamente");
+		} catch (Exception e) {
+			log.error(property + " no encontrada");
+		}
+		return value;
+	}
 
 }
