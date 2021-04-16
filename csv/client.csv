@@ -1,4 +1,4 @@
-id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave
+id;nombre;primer apellido;segundo apellido;tlf;email;puesto;fecha contratacion;salario;baja
 H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;01/10/2015 15:16:13;18000;false
 H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;01/10/2015 15:16:13;18000;false
 H3;Miguel;Perez;Perez;666222333;utyrfuytf@email.com;Recepcionista;01/10/2015 15:16:13;18000;false
