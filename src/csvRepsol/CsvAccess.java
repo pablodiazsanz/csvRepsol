@@ -18,11 +18,11 @@ import org.apache.log4j.Logger;
 
 public class CsvAccess {
 
-	private static Logger log = Logger.getLogger(CsvAccess.class);
+	private Logger log = Logger.getLogger(CsvAccess.class);
 	private PropertyFile config;
 
-	private String ID = "", NAME = "", SURNAME1 = "", SURNAME2 = "", PHONE = "", EMAIL = "", JOB = "", HIRING_DATE = "",
-			YEAR_SALARY = "", SICK_LEAVE = "";
+	private String id = "", name = "", surname1 = "", surname2 = "", phone = "", email = "", job = "", hiringDate = "",
+			yearSalary = "", sickLeave = "";
 
 	public CsvAccess(PropertyFile config) {
 		this.config = config;
@@ -30,16 +30,16 @@ public class CsvAccess {
 
 	public void setConfig(PropertyFile config) {
 		this.config = config;
-		ID = config.getProperty("DEFAULT.File.CSV.head.ID");
-		NAME = config.getProperty("DEFAULT.File.CSV.head.NAME");
-		SURNAME1 = config.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
-		SURNAME2 = config.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
-		PHONE = config.getProperty("DEFAULT.File.CSV.head.PHONE");
-		EMAIL = config.getProperty("DEFAULT.File.CSV.head.EMAIL");
-		JOB = config.getProperty("DEFAULT.File.CSV.head.JOB");
-		HIRING_DATE = config.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
-		YEAR_SALARY = config.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
-		SICK_LEAVE = config.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
+		id = config.getProperty("DEFAULT.File.CSV.head.ID");
+		name = config.getProperty("DEFAULT.File.CSV.head.NAME");
+		surname1 = config.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+		surname2 = config.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+		phone = config.getProperty("DEFAULT.File.CSV.head.PHONE");
+		email = config.getProperty("DEFAULT.File.CSV.head.EMAIL");
+		job = config.getProperty("DEFAULT.File.CSV.head.JOB");
+		hiringDate = config.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+		yearSalary = config.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+		sickLeave = config.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
 	}
 
 	/**
@@ -54,7 +54,7 @@ public class CsvAccess {
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(nameCSV);
 
-		log.info("Ruta del fichero: " + f.getPath());
+		log.trace("Ruta del fichero: " + f.getPath());
 
 		FileReader reader = null;
 		BufferedReader br = null;
@@ -67,92 +67,47 @@ public class CsvAccess {
 		try {
 			reader = new FileReader(f);
 			br = new BufferedReader(reader);
-			log.info("Accedemos al fichero");
+			log.trace("Accedemos al fichero");
 			// Leemos la primera linea, que es la informacion de las columnas
 			String line = br.readLine();
-			String[] columns = line.split(";");
-			HashMap<Integer, String> ordenColumnas = new HashMap<Integer, String>();
-			for (int i = 0; i < columns.length; i++) {
-				ordenColumnas.put(i, columns[i]);
+			String[] columnsTitle = line.split(";");
+			HashMap<Integer, String> columnsOrder = new HashMap<Integer, String>();
+			for (int i = 0; i < columnsTitle.length; i++) {
+				columnsOrder.put(i, columnsTitle[i]);
 			}
 			// Con el bucle while recorremos linea por linea el fichero
 			while (line != null) {
-				String id = "";
+				String employeeID = "";
 				try {
 					line = br.readLine();
-					// Creamos un ArrayList para obtener los datos de la linea
-					List<String> dataEmployee = new ArrayList<String>();
 
-					// Añadimos el primer dato
-					dataEmployee.add("");
+					// Obtenemos los datos de cada linea y los metemos en un ArrayList
+					List<String> employeeData = getDataFromLine(line);
 
-					// Utilizamos este booleano para saber si abrimos o cerramos las comillas
-					boolean openQuotes = false;
-
-					// Utilizamos un valor auxiliar para saber cuando cambiamos de dato
-					int employeeValue = 0;
-
-					// Con este bucle for recorremos caracter por caracter para sacar los datos uno
-					// a uno
-					for (int i = 0; i < line.length(); i++) {
-
-						/*
-						 * Aqui observo si el caracter es una comilla. Si lo es, hago una comprobación
-						 * para saber si inicio el dato o lo finalizo
-						 */
-						if (line.charAt(i) == '"') {
-							if (openQuotes) {
-								openQuotes = false;
-							} else {
-								openQuotes = true;
-							}
-						}
-
-						/*
-						 * Aqui decido si hay un cambio de valor o si no lo hay. Si lo hay, añado un
-						 * nuevo valor vacio al ArrayList, y si no lo hay, sumo lo que contiene el valor
-						 * del ArrayList actual a lo existente
-						 */
-						if (line.charAt(i) == ';' && openQuotes == false) {
-							employeeValue++;
-							log.info("[" + dataEmployee.get(0).trim().toUpperCase() + "] - " + dataEmployee.toString());
-							dataEmployee.add("");
-
-							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
-							// ArrayList que es un valor nulo
-							if (dataEmployee.get(employeeValue - 1).length() == 0) {
-								dataEmployee.set(employeeValue - 1, "NULL");
-							}
-
-						} else {
-							dataEmployee.set(employeeValue, dataEmployee.get(employeeValue) + line.charAt(i));
-						}
-
-						if (i == line.length() - 1) {
-							log.info("[" + dataEmployee.get(0).trim().toUpperCase() + "] - " + dataEmployee.toString());
-						}
-
-					}
+					// Obtenemos el id del empleado que vamos a crear
+					employeeID = getEmployeeID(employeeData, columnsOrder);
 
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
-					emp = crearEmpleado(dataEmployee, ordenColumnas);
+					emp = createEmployee(employeeData, columnsOrder);
 					map.put(emp.getId(), emp);
 
 				} catch (NullPointerException e) {
-					log.error("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
+					log.warn("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
 
 				} catch (IndexOutOfBoundsException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
-							+ line + "}\nNo se ha podido crear el objeto empleado. Fallo al leer linea", e);
+					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
+							+ "\" - Linea: {" + line
+							+ "}\n No se ha podido crear el objeto empleado. Fallo al leer linea", e);
 
 				} catch (ParseException e) {
-					log.error("ID: [" + emp.getId() + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
-							+ "\" - Linea: {" + line + "}\nNo se ha podido crear el objeto empleado.", e);
+					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
+							+ "\" - Linea: {" + line + "}\n No se ha podido crear el objeto empleado.", e);
 
 				} catch (NumberFormatException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
-							+ line + "}\nNo se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
+					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
+							+ "\" - Linea: {" + line
+							+ "}\n No se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea (" + contLine + ") del Fichero \"" + nameCSV + "\"", e);
@@ -173,7 +128,7 @@ public class CsvAccess {
 			try {
 				br.close();
 				reader.close();
-				log.info("Lectura finalizada con " + (contLine - 2) + " lineas leidas en fichero " + nameCSV);
+				log.trace("Lectura finalizada con " + (contLine - 2) + " lineas leidas en fichero " + nameCSV);
 
 			} catch (IOException e) {
 				log.error("Fallo de entrada o salida", e);
@@ -185,51 +140,158 @@ public class CsvAccess {
 	}
 
 	/**
+	 * 
+	 * Método que utilizamos para obtener toda la información de una linea.
+	 * 
+	 * @param line La linea del fichero que queremos recorrer
+	 * @return La lista de datos con la que vamos a crear un empleado para meterlo
+	 *         en el HashMap
+	 */
+	private List<String> getDataFromLine(String line) {
+
+		// Creamos un ArrayList para obtener los datos de la linea
+		List<String> employeeData = new ArrayList<String>();
+
+		// Añadimos el primer dato
+		employeeData.add("");
+
+		// Utilizamos este booleano para saber si abrimos o cerramos las comillas
+		boolean openQuotes = false;
+
+		// Utilizamos un valor auxiliar para saber cuando cambiamos de dato
+		int employeeValue = 0;
+
+		// Con este bucle for recorremos caracter por caracter para sacar los datos uno
+		// a uno
+		for (int i = 0; i < line.length(); i++) {
+
+			/*
+			 * Aqui observo si el caracter es una comilla. Si lo es, hago una comprobación
+			 * para saber si inicio el dato o lo finalizo
+			 */
+			if (line.charAt(i) == '"') {
+				if (openQuotes) {
+					openQuotes = false;
+				} else {
+					openQuotes = true;
+				}
+			}
+
+			/*
+			 * Aqui decido si hay un cambio de valor o si no lo hay. Si lo hay, añado un
+			 * nuevo valor vacio al ArrayList, y si no lo hay, sumo lo que contiene el valor
+			 * del ArrayList actual a lo existente
+			 */
+			if (line.charAt(i) == ';' && openQuotes == false) {
+				employeeValue++;
+				log.trace("[" + employeeData.get(0).trim().toUpperCase() + "] - " + employeeData.toString());
+				employeeData.add("");
+
+				// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
+				// ArrayList que es un valor nulo
+				if (employeeData.get(employeeValue - 1).length() == 0) {
+					employeeData.set(employeeValue - 1, "NULL");
+				}
+
+			} else {
+				employeeData.set(employeeValue, employeeData.get(employeeValue) + line.charAt(i));
+			}
+
+			if (i == line.length() - 1) {
+				log.trace("[" + employeeData.get(0).trim().toUpperCase() + "] - " + employeeData.toString());
+			}
+
+		}
+
+		return employeeData;
+	}
+
+	/**
+	 * 
+	 * Método que utilizamos para obtener el ID del empleado que vamos a crear.
+	 * 
+	 * @param employeeData La lista de datos que tenemos del empleado
+	 * @param columnsOrder El HashMap en el que tenemos cada columna y su cabecera
+	 * @return El ID del empleado
+	 */
+	private String getEmployeeID(List<String> employeeData, HashMap<Integer, String> columnsOrder) {
+		String empID = null;
+
+		for (int i = 0; i < employeeData.size(); i++) {
+			if (columnsOrder.get(i).equals(id)) {
+				empID = employeeData.get(i).trim().toUpperCase();
+
+			}
+		}
+
+		return empID;
+	}
+
+	/**
 	 * Devuelve un empleado sacando los datos de la list de dataEmployee y la
 	 * organizacion de orderColumns
 	 * 
 	 * @param dataEmployee datos del empleado no organizados
 	 * @param orderColumns nombre de las columnas con la posicion que tienen
 	 * @return objeto empleado con los datos correspondientes
-	 * @throws ParseException
+	 * @throws ParseException Devuelva un error de fecha y lo lance el método que lo
+	 *                        llama
 	 */
-	private Employee crearEmpleado(List<String> dataEmployee, HashMap<Integer, String> orderColumns)
+	private Employee createEmployee(List<String> dataEmployee, HashMap<Integer, String> orderColumns)
 			throws ParseException {
 
-		String id = "", name = "", surname1 = "", surname2 = "", tlf = "", email = "", job = "";
-		Date hiringDate = null;
-		int yearSalary = -1;
-		boolean sickLeave = false;
+		// Declaramos un empleado
+		Employee createdEmployee;
+		
+		// Creamos todas las variables vacías que posteriormente añadiremos al empleado creado
+		String empID = "", empName = "", empSurname1 = "", empSurname2 = "", empPhone = "", empEmail = "", empJob = "";
+		Date empHiringDate = null;
+		int empYearSalary = -1;
+		boolean empSickLeave = false;
 
+		/* En este bucle for, vamos a ir recorriendo la lista de los datos que hemos sacado de la linea.
+		 * Al recorrer el dato, se le irá preguntando que nombre de columna posee y comparandola con el
+		 * nombre de columna que tenemos nosotros en el servidor para asi obtener los datos y meterlos
+		 * correctamente en el empleado que creamos. */
 		for (int i = 0; i < dataEmployee.size(); i++) {
-			if (orderColumns.get(i).equals(ID)) {
-				id = dataEmployee.get(i).trim().toUpperCase();
-			} else if (orderColumns.get(i).equals(NAME)) {
-				name = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(SURNAME1)) {
-				surname1 = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(SURNAME2)) {
-				surname2 = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(PHONE)) {
-				tlf = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(EMAIL)) {
-				email = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(JOB)) {
-				job = dataEmployee.get(i).trim();
-			} else if (orderColumns.get(i).equals(HIRING_DATE)) {
+			if (orderColumns.get(i).equals(id)) {
+				empID = dataEmployee.get(i).trim().toUpperCase();
+
+			} else if (orderColumns.get(i).equals(name)) {
+				empName = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(surname1)) {
+				empSurname1 = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(surname2)) {
+				empSurname2 = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(phone)) {
+				empPhone = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(email)) {
+				empEmail = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(job)) {
+				empJob = dataEmployee.get(i).trim();
+
+			} else if (orderColumns.get(i).equals(hiringDate)) {
 				/*
-				 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
-				 * tipo Date
+				 * Aquí formateamos la cadena obtenida, que en el caso ideal
+				 * es una fecha, a un tipo Date
 				 */
 				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 				formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
-				hiringDate = formatter.parse(dataEmployee.get(i));
-			} else if (orderColumns.get(i).equals(YEAR_SALARY)) {
+				empHiringDate = formatter.parse(dataEmployee.get(i));
+
+			} else if (orderColumns.get(i).equals(yearSalary)) {
 				// Aqui formateamos el salario anual a numero entero
-				yearSalary = Integer.parseInt(dataEmployee.get(i));
-			} else if (orderColumns.get(i).equals(SICK_LEAVE)) {
+				empYearSalary = Integer.parseInt(dataEmployee.get(i));
+
+			} else if (orderColumns.get(i).equals(sickLeave)) {
 				if (dataEmployee.get(i).equals("true")) {
-					sickLeave = true;
+					empSickLeave = true;
+
 				}
 			}
 			/*
@@ -260,24 +322,23 @@ public class CsvAccess {
 		 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
 		 * espacios al principìo y al final
 		 */
+		createdEmployee = new Employee(empID, empName, empSurname1, empSurname2, empPhone, empEmail, empJob,
+				empHiringDate, empYearSalary, empSickLeave);
 
-		Employee emp = new Employee(id, name, surname1, surname2, tlf, email, job, hiringDate, yearSalary, sickLeave);
-
-		log.trace("[" + dataEmployee.get(0).trim().toUpperCase() + "] - Empleado creado: " + emp);
-		return emp;
+		log.debug("[" + empID + "] - Empleado creado: " + createdEmployee);
+		return createdEmployee;
 	}
 
 	/**
 	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la
 	 * información final.
-	 * 
-	 * @param config
 	 */
 	public void createCSV() {
 		try {
 			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
+			log.trace(fw);
 		} catch (IOException e) {
 			log.error("Fallo al escribir la información de la cabecera");
 		}
