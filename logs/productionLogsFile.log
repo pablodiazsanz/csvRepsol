@@ -1,1241 +1,138 @@
-ERROR   2021-04-16 12:52:29,015 [main] csvRepsol.CsvAccess  - ID: [H1] - NºLinea: (2) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alberto;Garcia;Fernandez;;666777888;tetete@email.com;Contable;10/1/2015 15:16;18000;H1}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,037 [main] csvRepsol.CsvAccess  - ID: [H2] - NºLinea: (3) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Gallego;Avila;;666444333;gfg@email.com;RRHH;10/1/2015 15:16;18000;H2}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,042 [main] csvRepsol.CsvAccess  - ID: [H3] - NºLinea: (4) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Miguel;Perez;Perez;;666222333;utyrfuytf@email.com;Recepcionista;10/1/2015 15:16;18000;H3}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,046 [main] csvRepsol.CsvAccess  - ID: [H4] - NºLinea: (5) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Xavier;Diaz;Garcia;;666111999;utgfuf@email.com;Responsable Tienda;10/1/2015 15:16;18000;H4}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,060 [main] csvRepsol.CsvAccess  - ID: [H5] - NºLinea: (6) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alicia;Vivar;Agudo;;666555444;opiju@email.com;Jefe de Ventas;10/1/2015 15:16;18000;H5}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,064 [main] csvRepsol.CsvAccess  - ID: [H7] - NºLinea: (7) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Esther;Avila;Alin  ;1;666888333;tydf@email.com;Responsable Tienda;10/1/2015 18:16;18000;H7}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 18:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,074 [main] csvRepsol.CsvAccess  - ID: [H8] - NºLinea: (8) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Antonio;Perez;Perez;;666000888;pok@email.com;Cajero;10/1/2015 15:16;18000;H8}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,078 [main] csvRepsol.CsvAccess  - ID: [H9] - NºLinea: (9) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan;Garcia;Garcia;;666222888;ytd@email.com;Responsable Tienda;10/1/2015 15:16;18000;H9}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,086 [main] csvRepsol.CsvAccess  - ID: [H10] - NºLinea: (10) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Francisco;Agudo;Perez;1;654888999;oekjioh@email.com;"Abogado; Laboralista";10/1/2015 15:16;19000;H10}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,098 [main] csvRepsol.CsvAccess  - ID: [H11] - NºLinea: (11) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Clara;Campos;Garcia;;645888999;hufcg@email.com;Comercial;10/1/2015 15:16;18000;H11}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,102 [main] csvRepsol.CsvAccess  - ID: [H12] - NºLinea: (12) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alba;Alin;Martinez;;622445511;szxd@email.com;Jefe de Marketing;10/1/2015 15:16;18000;H12}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,107 [main] csvRepsol.CsvAccess  - ID: [H13] - NºLinea: (13) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Javier;10/1/2015;Gerente Tienda;;18000;1;;;;H13}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "NULL"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,114 [main] csvRepsol.CsvAccess  - ID: [H14] - NºLinea: (14) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ã�lvaro;;Turdasan;;689745123;;Responsable1Tienda;10/1/2015 15:16;18000;H14}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,126 [main] csvRepsol.CsvAccess  - ID: [H15] - NºLinea: (15) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {AndrÃ©s;Perez;Casillas;;687456213;;Gerente;10/1/2015 15:17;18000;H15}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:17"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,128 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (16) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {MarÃ­a;Garcia;Garcia;;687569856;iiu@email.com;"Inspector;calidad";10/1/2015 15:16;18000;H16}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,131 [main] csvRepsol.CsvAccess  - ID: [H17] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;;Garcia;;693985264;    hgf@email.com    ;Becario;10/1/2015 15:16;18000;H17}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:29,137 [main] csvRepsol.CsvAccess  - Linea (18) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+WARN    2021-04-16 13:20:50,600 [main] csvRepsol.CsvAccess  - Linea (17) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
 java.lang.NullPointerException: date must not be null
 	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
 	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
 	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
 	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
 	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
+	at csvRepsol.Employee.toString(Employee.java:115)
 	at java.base/java.lang.String.valueOf(String.java:3365)
 	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
 	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:29,140 [main] csvRepsol.CsvAccess  - Linea (19) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+	at csvRepsol.MainClass.main(MainClass.java:39)
+WARN    2021-04-16 13:20:50,614 [main] csvRepsol.CsvAccess  - Linea (18) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
 java.lang.NullPointerException: date must not be null
 	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
 	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
 	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
 	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
 	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
+	at csvRepsol.Employee.toString(Employee.java:115)
 	at java.base/java.lang.String.valueOf(String.java:3365)
 	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
 	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,143 [main] csvRepsol.CsvAccess  - ID: [H18] - NºLinea: (20) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Manuel;Serrano;Gallego;;654238942;kjhhg@email.com;"Responsable;Tienda";10/1/2015 15:16;18000;H18}
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-16 13:20:50,676 [main] csvRepsol.CsvAccess  - ID: [H39] - NºLinea: (34) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;GonzÃ¡lez;false;665825681;marimargogu@email.com;Administrativo;10/11/2015:32;18000;H39}
  No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
+java.text.ParseException: Unparseable date: "10/11/2015:32"
 	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
 	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,145 [main] csvRepsol.CsvAccess  - ID: [H19] - NºLinea: (21) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sergio;Turdasan;Perez;;612378454; jhgfg@email.com;Gerente;10/1/2015 15:16;18000;H19}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-16 13:20:50,680 [main] csvRepsol.CsvAccess  - ID: [H40] - NºLinea: (35) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;false;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16:13;180+00;H40}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "180+00"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:289)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,146 [main] csvRepsol.CsvAccess  - ID: [H21] - NºLinea: (22) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Iker;Casillas;Diaz;;698745321;yyyyuy@email.com;Becario;10/1/2015 15:16;18000;H21}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-16 13:20:50,700 [main] csvRepsol.CsvAccess  - ID: [H48] - NºLinea: (41) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;false;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16:13;18*000;H48}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "18*000"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:289)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,150 [main] csvRepsol.CsvAccess  - ID: [H22] - NºLinea: (23) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Carlos;Garcia;Vivar;;689452136;plol@email.com;Becario;10/1/2015 15:16;18000;H22}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-16 13:20:50,749 [main] csvRepsol.CsvAccess  - ID: [null] - NºLinea: (47) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;false;Programador Senior;10/1/2015;18000;10/21/2015 15:16:13;H60}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "H60"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:289)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,156 [main] csvRepsol.CsvAccess  - ID: [H23] - NºLinea: (24) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alfredo;Pintado;Escobar;1;655656767;alfred@email.com;Encargado de Mantenimiento;10/1/2015 15:16;18000;H23}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+WARN    2021-04-16 13:20:50,767 [main] csvRepsol.CsvAccess  - Linea (51) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: date must not be null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3365)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,159 [main] csvRepsol.CsvAccess  - ID: [H24] - NºLinea: (25) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ana;del Castillo;Caballero;;682783723;anacc@email.com;Administrativo;10/1/2015 15:16;18000;H24}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,164 [main] csvRepsol.CsvAccess  - ID: [H25] - NºLinea: (26) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marta;Gimenez;Salamanca;;602836862;martasg@email.com;Jefe de Proyecto IT;10/1/2015 15:16;18000;H25}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,175 [main] csvRepsol.CsvAccess  - ID: [H27] - NºLinea: (28) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Sevilla;GÃ³mez;1;643342369;elisags@email.com;Encargado de Publicidad;10/11/2015 15:16;18000;H27}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,178 [main] csvRepsol.CsvAccess  - ID: [H29] - NºLinea: (29) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ainhoa;Garcia;Segovia;;697538627;ainhoasgar@email.com;Responsable Tienda;10/11/2015 15:16;18000;H29}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,182 [main] csvRepsol.CsvAccess  - ID: [H31] - NºLinea: (30) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan Manuel;Estrella;Romero;;697536981;juanmare@email.com;"Jefe; Publicidad";10/11/2015 15:16;18000;H31}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,214 [main] csvRepsol.CsvAccess  - ID: [H33] - NºLinea: (31) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elena;Jimenez;de Pablos;1;688889265;helenpj@email.com;Encargado de Mantenimiento;10/11/2015 11:16;18000;H33}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 11:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,216 [main] csvRepsol.CsvAccess  - ID: [H36] - NºLinea: (32) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria Luisa;del Rosario;Gutierrez;;688225362;mariluigr@email.com;Cajero;10/11/2015 15:16;18000;H36}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,219 [main] csvRepsol.CsvAccess  - ID: [H37] - NºLinea: (33) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ruth;Rey;Delgado;;668761152;rudere@email.com;Encargado de Limpieza;10/11/2015 15:16;18000;H37}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,221 [main] csvRepsol.CsvAccess  - ID: [H38] - NºLinea: (34) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;LÃ³pez;Gonzalez;;620338982;neregonlo@email.com;Cajero;10/11/2015 15:16;18000;H38}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,223 [main] csvRepsol.CsvAccess  - ID: [H39] - NºLinea: (35) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;GonzÃ¡lez;;665825681;marimargogu@email.com;Administrativo;10/11/2015;18000;H39}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,225 [main] csvRepsol.CsvAccess  - ID: [H40] - NºLinea: (36) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16;180+00;H40}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,229 [main] csvRepsol.CsvAccess  - ID: [H43] - NºLinea: (37) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Pelayo;Casillas;Pelaez;;126987413;haqwhdj@email.com;Quimico;10/11/2015 15:16;18000;H43}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,233 [main] csvRepsol.CsvAccess  - ID: [H44] - NºLinea: (38) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Sojunio;Sobarzo;;632159874;jqhds@email.com;Gerente;10/11/2015 15:16;18000;H44}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,248 [main] csvRepsol.CsvAccess  - ID: [H45] - NºLinea: (39) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria;Millan;Casado;;632145987;nhasjndx@email.com;Mantenimiento;10/11/2015 17:16;18000;H45}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 17:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,274 [main] csvRepsol.CsvAccess  - ID: [H46] - NºLinea: (40) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sonia;Moran;Puertas;;654789152;yqwter@email.com;Quimico;10/11/2015 15:16;18000;H46}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,278 [main] csvRepsol.CsvAccess  - ID: [H47] - NºLinea: (41) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Beatriz;Huertas;Rosado;;635987415;aasxz@email.com;Quimico;10/11/2015 15:16;18000;H47}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,280 [main] csvRepsol.CsvAccess  - ID: [H48] - NºLinea: (42) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16;18*000;H48}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,281 [main] csvRepsol.CsvAccess  - ID: [H49] - NºLinea: (43) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sara;Obtuso;Hernandez;;63219874;aqqwr@email.com;Becario;10/12/2015 15:16;18000;H49}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/12/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,295 [main] csvRepsol.CsvAccess  - ID: [H50] - NºLinea: (44) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Fabiola;Centena;Decena;;652169743;ghjjhey@email.com;Seguridad;10/21/2015 15:16;18000;H50}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,297 [main] csvRepsol.CsvAccess  - ID: [H51] - NºLinea: (45) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lorena;Moreno;Garcia;;63897421;gwtdgw@email.com;Becario;10/21/2015 15:16;18000;H51}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,301 [main] csvRepsol.CsvAccess  - ID: [H52] - NºLinea: (46) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Grande;Fernandez;;652653623;ppwqÃƒÂ±wkl@email.com;Seguridad;10/21/2015 15:16;18000;H52}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,307 [main] csvRepsol.CsvAccess  - ID: [H53] - NºLinea: (47) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lidia;Alin;Turdasan;;655442536;fgwegd@email.com;Comercial;10/21/2015 15:16;18000;H53}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,311 [main] csvRepsol.CsvAccess  - ID: [H60] - NºLinea: (48) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;;Programador Senior;10/1/2015;18000;falses;;H60}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "falses"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,312 [main] csvRepsol.CsvAccess  - ID: [H61] - NºLinea: (49) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Obtuso;Hernandez;;63219874;aqqwr@email.com;Becario;9/22/2015 15:16;18000;H61}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "9/22/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,313 [main] csvRepsol.CsvAccess  - ID: [H62] - NºLinea: (50) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marisa;Agudo;Hernandez;;63219874;aqqwr@email.com;"Beca;rio";10/13/2016 15:16;18000;H62}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/13/2016 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,316 [main] csvRepsol.CsvAccess  - ID: [H63] - NºLinea: (51) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Petunia;Isosceles;Hernandez;;63219874;aqqwr@email.com;Becario;11/12/2017 15:16;18000;H63}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "11/12/2017 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:29,321 [main] csvRepsol.CsvAccess  - Linea (52) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+	at csvRepsol.MainClass.main(MainClass.java:39)
+WARN    2021-04-16 13:20:50,768 [main] csvRepsol.CsvAccess  - Linea (52) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
 java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
 	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:29,414 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" - Linea: {H16;MarÃ­a;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-16 13:20:50,882 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" - Linea: {H16;MarÃ­a;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
  No se ha podido crear el objeto empleado.
 java.text.ParseException: Unparseable date: "1/10/2015"
 	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
 	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-WARN    2021-04-16 12:52:29,548 [main] csvRepsol.CsvAccess  - Linea (48) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" esta vacia
+	at csvRepsol.MainClass.main(MainClass.java:45)
+WARN    2021-04-16 13:20:51,070 [main] csvRepsol.CsvAccess  - Linea (48) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" esta vacia
 java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
 	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
 	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-INFO    2021-04-16 12:52:29,559 [main] csvRepsol.CsvAccess  - [H40] - "DELETE"
-INFO    2021-04-16 12:52:29,582 [main] csvRepsol.CsvAccess  - [H21] - "DELETE"
-INFO    2021-04-16 12:52:29,597 [main] csvRepsol.CsvAccess  - [H43] - "DELETE"
-INFO    2021-04-16 12:52:29,613 [main] csvRepsol.CsvAccess  - [H23] - "DELETE"
-INFO    2021-04-16 12:52:29,629 [main] csvRepsol.CsvAccess  - [H45] - "DELETE"
-INFO    2021-04-16 12:52:29,646 [main] csvRepsol.CsvAccess  - [H22] - "DELETE"
-INFO    2021-04-16 12:52:29,660 [main] csvRepsol.CsvAccess  - [H44] - "DELETE"
-INFO    2021-04-16 12:52:29,668 [main] csvRepsol.CsvAccess  - [H25] - "DELETE"
-INFO    2021-04-16 12:52:29,680 [main] csvRepsol.CsvAccess  - [H47] - "DELETE"
-INFO    2021-04-16 12:52:29,686 [main] csvRepsol.CsvAccess  - [H24] - "DELETE"
-INFO    2021-04-16 12:52:29,696 [main] csvRepsol.CsvAccess  - [H46] - "DELETE"
-INFO    2021-04-16 12:52:29,709 [main] csvRepsol.CsvAccess  - [H27] - "DELETE"
-INFO    2021-04-16 12:52:29,713 [main] csvRepsol.CsvAccess  - [H49] - "DELETE"
-INFO    2021-04-16 12:52:29,729 [main] csvRepsol.CsvAccess  - [H48] - "DELETE"
-INFO    2021-04-16 12:52:29,741 [main] csvRepsol.CsvAccess  - [H29] - "DELETE"
-INFO    2021-04-16 12:52:29,747 [main] csvRepsol.CsvAccess  - [H50] - "DELETE"
-INFO    2021-04-16 12:52:29,754 [main] csvRepsol.CsvAccess  - [H52] - "DELETE"
-INFO    2021-04-16 12:52:29,764 [main] csvRepsol.CsvAccess  - [H51] - "DELETE"
-INFO    2021-04-16 12:52:29,773 [main] csvRepsol.CsvAccess  - [H10] - "DELETE"
-INFO    2021-04-16 12:52:29,778 [main] csvRepsol.CsvAccess  - [H31] - "DELETE"
-INFO    2021-04-16 12:52:29,782 [main] csvRepsol.CsvAccess  - [H53] - "DELETE"
-INFO    2021-04-16 12:52:29,791 [main] csvRepsol.CsvAccess  - [H12] - "DELETE"
-INFO    2021-04-16 12:52:29,795 [main] csvRepsol.CsvAccess  - [H1] - "DELETE"
-INFO    2021-04-16 12:52:29,798 [main] csvRepsol.CsvAccess  - [H11] - "DELETE"
-INFO    2021-04-16 12:52:29,807 [main] csvRepsol.CsvAccess  - [H33] - "DELETE"
-INFO    2021-04-16 12:52:29,812 [main] csvRepsol.CsvAccess  - [H2] - "DELETE"
-INFO    2021-04-16 12:52:29,816 [main] csvRepsol.CsvAccess  - [H14] - "DELETE"
-INFO    2021-04-16 12:52:29,824 [main] csvRepsol.CsvAccess  - [H36] - "DELETE"
-INFO    2021-04-16 12:52:29,828 [main] csvRepsol.CsvAccess  - [H3] - "DELETE"
-INFO    2021-04-16 12:52:29,831 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
-INFO    2021-04-16 12:52:29,842 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
-INFO    2021-04-16 12:52:29,846 [main] csvRepsol.CsvAccess  - [H4] - "DELETE"
-INFO    2021-04-16 12:52:29,851 [main] csvRepsol.CsvAccess  - [H38] - "DELETE"
-INFO    2021-04-16 12:52:29,858 [main] csvRepsol.CsvAccess  - [H5] - "DELETE"
-INFO    2021-04-16 12:52:29,864 [main] csvRepsol.CsvAccess  - [H15] - "DELETE"
-INFO    2021-04-16 12:52:29,869 [main] csvRepsol.CsvAccess  - [H37] - "DELETE"
-INFO    2021-04-16 12:52:29,879 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
-INFO    2021-04-16 12:52:29,891 [main] csvRepsol.CsvAccess  - [H18] - "DELETE"
-INFO    2021-04-16 12:52:29,897 [main] csvRepsol.CsvAccess  - [H7] - "DELETE"
-INFO    2021-04-16 12:52:29,905 [main] csvRepsol.CsvAccess  - [H17] - "DELETE"
-INFO    2021-04-16 12:52:29,913 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"
-INFO    2021-04-16 12:52:29,917 [main] csvRepsol.CsvAccess  - [H8] - "DELETE"
-INFO    2021-04-16 12:52:29,924 [main] csvRepsol.CsvAccess  - [H9] - "DELETE"
-INFO    2021-04-16 12:52:29,929 [main] csvRepsol.CsvAccess  - [H19] - "DELETE"
-ERROR   2021-04-16 12:52:53,360 [main] csvRepsol.CsvAccess  - ID: [H1] - NºLinea: (2) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alberto;Garcia;Fernandez;;666777888;tetete@email.com;Contable;10/1/2015 15:16;18000;H1}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,380 [main] csvRepsol.CsvAccess  - ID: [H2] - NºLinea: (3) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Gallego;Avila;;666444333;gfg@email.com;RRHH;10/1/2015 15:16;18000;H2}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,389 [main] csvRepsol.CsvAccess  - ID: [H3] - NºLinea: (4) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Miguel;Perez;Perez;;666222333;utyrfuytf@email.com;Recepcionista;10/1/2015 15:16;18000;H3}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,392 [main] csvRepsol.CsvAccess  - ID: [H4] - NºLinea: (5) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Xavier;Diaz;Garcia;;666111999;utgfuf@email.com;Responsable Tienda;10/1/2015 15:16;18000;H4}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,395 [main] csvRepsol.CsvAccess  - ID: [H5] - NºLinea: (6) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alicia;Vivar;Agudo;;666555444;opiju@email.com;Jefe de Ventas;10/1/2015 15:16;18000;H5}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,398 [main] csvRepsol.CsvAccess  - ID: [H7] - NºLinea: (7) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Esther;Avila;Alin  ;1;666888333;tydf@email.com;Responsable Tienda;10/1/2015 18:16;18000;H7}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 18:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,407 [main] csvRepsol.CsvAccess  - ID: [H8] - NºLinea: (8) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Antonio;Perez;Perez;;666000888;pok@email.com;Cajero;10/1/2015 15:16;18000;H8}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,410 [main] csvRepsol.CsvAccess  - ID: [H9] - NºLinea: (9) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan;Garcia;Garcia;;666222888;ytd@email.com;Responsable Tienda;10/1/2015 15:16;18000;H9}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,425 [main] csvRepsol.CsvAccess  - ID: [H10] - NºLinea: (10) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Francisco;Agudo;Perez;1;654888999;oekjioh@email.com;"Abogado; Laboralista";10/1/2015 15:16;19000;H10}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,430 [main] csvRepsol.CsvAccess  - ID: [H11] - NºLinea: (11) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Clara;Campos;Garcia;;645888999;hufcg@email.com;Comercial;10/1/2015 15:16;18000;H11}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,432 [main] csvRepsol.CsvAccess  - ID: [H12] - NºLinea: (12) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alba;Alin;Martinez;;622445511;szxd@email.com;Jefe de Marketing;10/1/2015 15:16;18000;H12}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,445 [main] csvRepsol.CsvAccess  - ID: [H13] - NºLinea: (13) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Javier;10/1/2015;Gerente Tienda;;18000;1;;;;H13}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "NULL"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,448 [main] csvRepsol.CsvAccess  - ID: [H14] - NºLinea: (14) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ã�lvaro;;Turdasan;;689745123;;Responsable1Tienda;10/1/2015 15:16;18000;H14}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,460 [main] csvRepsol.CsvAccess  - ID: [H15] - NºLinea: (15) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {AndrÃ©s;Perez;Casillas;;687456213;;Gerente;10/1/2015 15:17;18000;H15}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:17"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,462 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (16) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {MarÃ­a;Garcia;Garcia;;687569856;iiu@email.com;"Inspector;calidad";10/1/2015 15:16;18000;H16}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,465 [main] csvRepsol.CsvAccess  - ID: [H17] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;;Garcia;;693985264;    hgf@email.com    ;Becario;10/1/2015 15:16;18000;H17}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:53,475 [main] csvRepsol.CsvAccess  - Linea (18) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: date must not be null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
-	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
-	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:53,475 [main] csvRepsol.CsvAccess  - Linea (19) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: date must not be null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
-	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
-	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,487 [main] csvRepsol.CsvAccess  - ID: [H18] - NºLinea: (20) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Manuel;Serrano;Gallego;;654238942;kjhhg@email.com;"Responsable;Tienda";10/1/2015 15:16;18000;H18}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,488 [main] csvRepsol.CsvAccess  - ID: [H19] - NºLinea: (21) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sergio;Turdasan;Perez;;612378454; jhgfg@email.com;Gerente;10/1/2015 15:16;18000;H19}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,490 [main] csvRepsol.CsvAccess  - ID: [H21] - NºLinea: (22) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Iker;Casillas;Diaz;;698745321;yyyyuy@email.com;Becario;10/1/2015 15:16;18000;H21}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,491 [main] csvRepsol.CsvAccess  - ID: [H22] - NºLinea: (23) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Carlos;Garcia;Vivar;;689452136;plol@email.com;Becario;10/1/2015 15:16;18000;H22}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,496 [main] csvRepsol.CsvAccess  - ID: [H23] - NºLinea: (24) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alfredo;Pintado;Escobar;1;655656767;alfred@email.com;Encargado de Mantenimiento;10/1/2015 15:16;18000;H23}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,498 [main] csvRepsol.CsvAccess  - ID: [H24] - NºLinea: (25) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ana;del Castillo;Caballero;;682783723;anacc@email.com;Administrativo;10/1/2015 15:16;18000;H24}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,502 [main] csvRepsol.CsvAccess  - ID: [H25] - NºLinea: (26) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marta;Gimenez;Salamanca;;602836862;martasg@email.com;Jefe de Proyecto IT;10/1/2015 15:16;18000;H25}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,506 [main] csvRepsol.CsvAccess  - ID: [H27] - NºLinea: (28) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Sevilla;GÃ³mez;1;643342369;elisags@email.com;Encargado de Publicidad;10/11/2015 15:16;18000;H27}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,508 [main] csvRepsol.CsvAccess  - ID: [H29] - NºLinea: (29) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ainhoa;Garcia;Segovia;;697538627;ainhoasgar@email.com;Responsable Tienda;10/11/2015 15:16;18000;H29}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,510 [main] csvRepsol.CsvAccess  - ID: [H31] - NºLinea: (30) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan Manuel;Estrella;Romero;;697536981;juanmare@email.com;"Jefe; Publicidad";10/11/2015 15:16;18000;H31}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,513 [main] csvRepsol.CsvAccess  - ID: [H33] - NºLinea: (31) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elena;Jimenez;de Pablos;1;688889265;helenpj@email.com;Encargado de Mantenimiento;10/11/2015 11:16;18000;H33}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 11:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,516 [main] csvRepsol.CsvAccess  - ID: [H36] - NºLinea: (32) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria Luisa;del Rosario;Gutierrez;;688225362;mariluigr@email.com;Cajero;10/11/2015 15:16;18000;H36}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,527 [main] csvRepsol.CsvAccess  - ID: [H37] - NºLinea: (33) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ruth;Rey;Delgado;;668761152;rudere@email.com;Encargado de Limpieza;10/11/2015 15:16;18000;H37}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,544 [main] csvRepsol.CsvAccess  - ID: [H38] - NºLinea: (34) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;LÃ³pez;Gonzalez;;620338982;neregonlo@email.com;Cajero;10/11/2015 15:16;18000;H38}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,547 [main] csvRepsol.CsvAccess  - ID: [H39] - NºLinea: (35) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;GonzÃ¡lez;;665825681;marimargogu@email.com;Administrativo;10/11/2015;18000;H39}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,552 [main] csvRepsol.CsvAccess  - ID: [H40] - NºLinea: (36) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16;180+00;H40}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,557 [main] csvRepsol.CsvAccess  - ID: [H43] - NºLinea: (37) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Pelayo;Casillas;Pelaez;;126987413;haqwhdj@email.com;Quimico;10/11/2015 15:16;18000;H43}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,561 [main] csvRepsol.CsvAccess  - ID: [H44] - NºLinea: (38) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Sojunio;Sobarzo;;632159874;jqhds@email.com;Gerente;10/11/2015 15:16;18000;H44}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,564 [main] csvRepsol.CsvAccess  - ID: [H45] - NºLinea: (39) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria;Millan;Casado;;632145987;nhasjndx@email.com;Mantenimiento;10/11/2015 17:16;18000;H45}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 17:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,579 [main] csvRepsol.CsvAccess  - ID: [H46] - NºLinea: (40) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sonia;Moran;Puertas;;654789152;yqwter@email.com;Quimico;10/11/2015 15:16;18000;H46}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,581 [main] csvRepsol.CsvAccess  - ID: [H47] - NºLinea: (41) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Beatriz;Huertas;Rosado;;635987415;aasxz@email.com;Quimico;10/11/2015 15:16;18000;H47}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,588 [main] csvRepsol.CsvAccess  - ID: [H48] - NºLinea: (42) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16;18*000;H48}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,591 [main] csvRepsol.CsvAccess  - ID: [H49] - NºLinea: (43) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sara;Obtuso;Hernandez;;63219874;aqqwr@email.com;Becario;10/12/2015 15:16;18000;H49}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/12/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,594 [main] csvRepsol.CsvAccess  - ID: [H50] - NºLinea: (44) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Fabiola;Centena;Decena;;652169743;ghjjhey@email.com;Seguridad;10/21/2015 15:16;18000;H50}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,597 [main] csvRepsol.CsvAccess  - ID: [H51] - NºLinea: (45) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lorena;Moreno;Garcia;;63897421;gwtdgw@email.com;Becario;10/21/2015 15:16;18000;H51}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,606 [main] csvRepsol.CsvAccess  - ID: [H52] - NºLinea: (46) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Grande;Fernandez;;652653623;ppwqÃƒÂ±wkl@email.com;Seguridad;10/21/2015 15:16;18000;H52}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,608 [main] csvRepsol.CsvAccess  - ID: [H53] - NºLinea: (47) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lidia;Alin;Turdasan;;655442536;fgwegd@email.com;Comercial;10/21/2015 15:16;18000;H53}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,610 [main] csvRepsol.CsvAccess  - ID: [H60] - NºLinea: (48) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;;Programador Senior;10/1/2015;18000;falses;;H60}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "falses"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,611 [main] csvRepsol.CsvAccess  - ID: [H61] - NºLinea: (49) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Obtuso;Hernandez;;63219874;aqqwr@email.com;Becario;9/22/2015 15:16;18000;H61}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "9/22/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,613 [main] csvRepsol.CsvAccess  - ID: [H62] - NºLinea: (50) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marisa;Agudo;Hernandez;;63219874;aqqwr@email.com;"Beca;rio";10/13/2016 15:16;18000;H62}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/13/2016 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,614 [main] csvRepsol.CsvAccess  - ID: [H63] - NºLinea: (51) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Petunia;Isosceles;Hernandez;;63219874;aqqwr@email.com;Becario;11/12/2017 15:16;18000;H63}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "11/12/2017 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 12:52:53,621 [main] csvRepsol.CsvAccess  - Linea (52) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
-	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 12:52:53,763 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" - Linea: {H16;MarÃ­a;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "1/10/2015"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-WARN    2021-04-16 12:52:53,891 [main] csvRepsol.CsvAccess  - Linea (48) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" esta vacia
-java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
-	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-INFO    2021-04-16 12:52:53,897 [main] csvRepsol.CsvAccess  - [H40] - "DELETE"
-INFO    2021-04-16 12:52:53,903 [main] csvRepsol.CsvAccess  - [H21] - "DELETE"
-INFO    2021-04-16 12:52:53,912 [main] csvRepsol.CsvAccess  - [H43] - "DELETE"
-INFO    2021-04-16 12:52:53,922 [main] csvRepsol.CsvAccess  - [H23] - "DELETE"
-INFO    2021-04-16 12:52:53,930 [main] csvRepsol.CsvAccess  - [H45] - "DELETE"
-INFO    2021-04-16 12:52:53,938 [main] csvRepsol.CsvAccess  - [H22] - "DELETE"
-INFO    2021-04-16 12:52:53,943 [main] csvRepsol.CsvAccess  - [H44] - "DELETE"
-INFO    2021-04-16 12:52:53,947 [main] csvRepsol.CsvAccess  - [H25] - "DELETE"
-INFO    2021-04-16 12:52:53,954 [main] csvRepsol.CsvAccess  - [H47] - "DELETE"
-INFO    2021-04-16 12:52:53,961 [main] csvRepsol.CsvAccess  - [H24] - "DELETE"
-INFO    2021-04-16 12:52:53,965 [main] csvRepsol.CsvAccess  - [H46] - "DELETE"
-INFO    2021-04-16 12:52:53,971 [main] csvRepsol.CsvAccess  - [H27] - "DELETE"
-INFO    2021-04-16 12:52:53,978 [main] csvRepsol.CsvAccess  - [H49] - "DELETE"
-INFO    2021-04-16 12:52:53,988 [main] csvRepsol.CsvAccess  - [H48] - "DELETE"
-INFO    2021-04-16 12:52:53,993 [main] csvRepsol.CsvAccess  - [H29] - "DELETE"
-INFO    2021-04-16 12:52:53,997 [main] csvRepsol.CsvAccess  - [H50] - "DELETE"
-INFO    2021-04-16 12:52:54,007 [main] csvRepsol.CsvAccess  - [H52] - "DELETE"
-INFO    2021-04-16 12:52:54,011 [main] csvRepsol.CsvAccess  - [H51] - "DELETE"
-INFO    2021-04-16 12:52:54,014 [main] csvRepsol.CsvAccess  - [H10] - "DELETE"
-INFO    2021-04-16 12:52:54,022 [main] csvRepsol.CsvAccess  - [H31] - "DELETE"
-INFO    2021-04-16 12:52:54,025 [main] csvRepsol.CsvAccess  - [H53] - "DELETE"
-INFO    2021-04-16 12:52:54,028 [main] csvRepsol.CsvAccess  - [H12] - "DELETE"
-INFO    2021-04-16 12:52:54,032 [main] csvRepsol.CsvAccess  - [H1] - "DELETE"
-INFO    2021-04-16 12:52:54,041 [main] csvRepsol.CsvAccess  - [H11] - "DELETE"
-INFO    2021-04-16 12:52:54,043 [main] csvRepsol.CsvAccess  - [H33] - "DELETE"
-INFO    2021-04-16 12:52:54,046 [main] csvRepsol.CsvAccess  - [H2] - "DELETE"
-INFO    2021-04-16 12:52:54,048 [main] csvRepsol.CsvAccess  - [H14] - "DELETE"
-INFO    2021-04-16 12:52:54,055 [main] csvRepsol.CsvAccess  - [H36] - "DELETE"
-INFO    2021-04-16 12:52:54,057 [main] csvRepsol.CsvAccess  - [H3] - "DELETE"
-INFO    2021-04-16 12:52:54,060 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
-INFO    2021-04-16 12:52:54,063 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
-INFO    2021-04-16 12:52:54,066 [main] csvRepsol.CsvAccess  - [H4] - "DELETE"
-INFO    2021-04-16 12:52:54,075 [main] csvRepsol.CsvAccess  - [H38] - "DELETE"
-INFO    2021-04-16 12:52:54,078 [main] csvRepsol.CsvAccess  - [H5] - "DELETE"
-INFO    2021-04-16 12:52:54,089 [main] csvRepsol.CsvAccess  - [H15] - "DELETE"
-INFO    2021-04-16 12:52:54,093 [main] csvRepsol.CsvAccess  - [H37] - "DELETE"
-INFO    2021-04-16 12:52:54,096 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
-INFO    2021-04-16 12:52:54,107 [main] csvRepsol.CsvAccess  - [H18] - "DELETE"
-INFO    2021-04-16 12:52:54,112 [main] csvRepsol.CsvAccess  - [H7] - "DELETE"
-INFO    2021-04-16 12:52:54,124 [main] csvRepsol.CsvAccess  - [H17] - "DELETE"
-INFO    2021-04-16 12:52:54,127 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"
-INFO    2021-04-16 12:52:54,131 [main] csvRepsol.CsvAccess  - [H8] - "DELETE"
-INFO    2021-04-16 12:52:54,144 [main] csvRepsol.CsvAccess  - [H9] - "DELETE"
-INFO    2021-04-16 12:52:54,147 [main] csvRepsol.CsvAccess  - [H19] - "DELETE"
-ERROR   2021-04-16 13:00:23,577 [main] csvRepsol.CsvAccess  - ID: [H1] - NºLinea: (2) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alberto;Garcia;Fernandez;false;666777888;tetete@email.com;Contable;10/1/2015 15:16;18000;H1}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,603 [main] csvRepsol.CsvAccess  - ID: [H2] - NºLinea: (3) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Gallego;Avila;false;666444333;gfg@email.com;RRHH;10/1/2015 15:16;18000;H2}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,607 [main] csvRepsol.CsvAccess  - ID: [H3] - NºLinea: (4) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Miguel;Perez;Perez;false;666222333;utyrfuytf@email.com;Recepcionista;10/1/2015 15:16;18000;H3}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,617 [main] csvRepsol.CsvAccess  - ID: [H4] - NºLinea: (5) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Xavier;Diaz;Garcia;false;666111999;utgfuf@email.com;Responsable Tienda;10/1/2015 15:16;18000;H4}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,651 [main] csvRepsol.CsvAccess  - ID: [H5] - NºLinea: (6) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alicia;Vivar;Agudo;false;666555444;opiju@email.com;Jefe de Ventas;10/1/2015 15:16;18000;H5}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,659 [main] csvRepsol.CsvAccess  - ID: [H7] - NºLinea: (7) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Esther;Avila;Alin  ;true;666888333;tydf@email.com;Responsable Tienda;10/1/2015 18:16;18000;H7}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 18:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,670 [main] csvRepsol.CsvAccess  - ID: [H8] - NºLinea: (8) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Antonio;Perez;Perez;false;666000888;pok@email.com;Cajero;10/1/2015 15:16;18000;H8}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,686 [main] csvRepsol.CsvAccess  - ID: [H9] - NºLinea: (9) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan;Garcia;Garcia;false;666222888;ytd@email.com;Responsable Tienda;10/1/2015 15:16;18000;H9}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,693 [main] csvRepsol.CsvAccess  - ID: [H10] - NºLinea: (10) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Francisco;Agudo;Perez;true;654888999;oekjioh@email.com;"Abogado; Laboralista";10/1/2015 15:16;19000;H10}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,701 [main] csvRepsol.CsvAccess  - ID: [H11] - NºLinea: (11) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Clara;Campos;Garcia;false;645888999;hufcg@email.com;Comercial;10/1/2015 15:16;18000;H11}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,704 [main] csvRepsol.CsvAccess  - ID: [H12] - NºLinea: (12) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alba;Alin;Martinez;false;622445511;szxd@email.com;Jefe de Marketing;10/1/2015 15:16;18000;H12}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,713 [main] csvRepsol.CsvAccess  - ID: [H14] - NºLinea: (13) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ã�lvaro;;Turdasan;false;689745123;;Responsable Tienda;10/1/2015 15:16;18000;H14}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,721 [main] csvRepsol.CsvAccess  - ID: [H15] - NºLinea: (14) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {AndrÃ©s;Perez;Casillas;false;687456213;;Gerente;10/1/2015 15:17;18000;H15}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:17"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,727 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (15) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {MarÃ­a;Garcia;Garcia;false;687569856;iiu@email.com;"Inspector;calidad";10/1/2015 15:16;18000;H16}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,744 [main] csvRepsol.CsvAccess  - ID: [H17] - NºLinea: (16) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;;Garcia;false;693985264;    hgf@email.com    ;Becario;10/1/2015 15:16;18000;H17}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 13:00:23,752 [main] csvRepsol.CsvAccess  - Linea (17) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: date must not be null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
-	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
-	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 13:00:23,756 [main] csvRepsol.CsvAccess  - Linea (18) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: date must not be null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
-	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
-	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
-	at java.base/java.text.DateFormat.format(DateFormat.java:375)
-	at csvRepsol.Employee.toString(Employee.java:114)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:328)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,776 [main] csvRepsol.CsvAccess  - ID: [H18] - NºLinea: (19) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Manuel;Serrano;Gallego;false;654238942;kjhhg@email.com;"Responsable;Tienda";10/1/2015 15:16;18000;H18}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,784 [main] csvRepsol.CsvAccess  - ID: [H19] - NºLinea: (20) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sergio;Turdasan;Perez;false;612378454; jhgfg@email.com;Gerente;10/1/2015 15:16;18000;H19}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,790 [main] csvRepsol.CsvAccess  - ID: [H21] - NºLinea: (21) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Iker;Casillas;Diaz;false;698745321;yyyyuy@email.com;Becario;10/1/2015 15:16;18000;H21}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,801 [main] csvRepsol.CsvAccess  - ID: [H22] - NºLinea: (22) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Carlos;Garcia;Vivar;false;689452136;plol@email.com;Becario;10/1/2015 15:16;18000;H22}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,817 [main] csvRepsol.CsvAccess  - ID: [H23] - NºLinea: (23) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Alfredo;Pintado;Escobar;true;655656767;alfred@email.com;Encargado de Mantenimiento;10/1/2015 15:16;18000;H23}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,820 [main] csvRepsol.CsvAccess  - ID: [H24] - NºLinea: (24) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ana;del Castillo;Caballero;false;682783723;anacc@email.com;Administrativo;10/1/2015 15:16;18000;H24}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,825 [main] csvRepsol.CsvAccess  - ID: [H25] - NºLinea: (25) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marta;Gimenez;Salamanca;false;602836862;martasg@email.com;Jefe de Proyecto IT;10/1/2015 15:16;18000;H25}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/1/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,840 [main] csvRepsol.CsvAccess  - ID: [H27] - NºLinea: (27) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Sevilla;GÃ³mez;true;643342369;elisags@email.com;Encargado de Publicidad;10/11/2015 15:16;18000;H27}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,842 [main] csvRepsol.CsvAccess  - ID: [H29] - NºLinea: (28) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ainhoa;Garcia;Segovia;false;697538627;ainhoasgar@email.com;Responsable Tienda;10/11/2015 15:16;18000;H29}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,848 [main] csvRepsol.CsvAccess  - ID: [H31] - NºLinea: (29) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Juan Manuel;Estrella;Romero;false;697536981;juanmare@email.com;"Jefe; Publicidad";10/11/2015 15:16;18000;H31}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,849 [main] csvRepsol.CsvAccess  - ID: [H33] - NºLinea: (30) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elena;Jimenez;de Pablos;true;688889265;helenpj@email.com;Encargado de Mantenimiento;10/11/2015 11:16;18000;H33}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 11:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,850 [main] csvRepsol.CsvAccess  - ID: [H36] - NºLinea: (31) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria Luisa;del Rosario;Gutierrez;false;688225362;mariluigr@email.com;Cajero;10/11/2015 15:16;18000;H36}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,854 [main] csvRepsol.CsvAccess  - ID: [H37] - NºLinea: (32) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Ruth;Rey;Delgado;false;668761152;rudere@email.com;Encargado de Limpieza;10/11/2015 15:16;18000;H37}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,855 [main] csvRepsol.CsvAccess  - ID: [H38] - NºLinea: (33) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Nerea;LÃ³pez;Gonzalez;false;620338982;neregonlo@email.com;Cajero;10/11/2015 15:16;18000;H38}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,856 [main] csvRepsol.CsvAccess  - ID: [H39] - NºLinea: (34) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;GonzÃ¡lez;false;665825681;marimargogu@email.com;Administrativo;10/11/2015;18000;H39}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,858 [main] csvRepsol.CsvAccess  - ID: [H40] - NºLinea: (35) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;false;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16;180+00;H40}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,862 [main] csvRepsol.CsvAccess  - ID: [H43] - NºLinea: (36) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Pelayo;Casillas;Pelaez;false;126987413;haqwhdj@email.com;Quimico;10/11/2015 15:16;18000;H43}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,869 [main] csvRepsol.CsvAccess  - ID: [H44] - NºLinea: (37) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Sojunio;Sobarzo;false;632159874;jqhds@email.com;Gerente;10/11/2015 15:16;18000;H44}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,870 [main] csvRepsol.CsvAccess  - ID: [H45] - NºLinea: (38) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria;Millan;Casado;false;632145987;nhasjndx@email.com;Mantenimiento;10/11/2015 17:16;18000;H45}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 17:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,873 [main] csvRepsol.CsvAccess  - ID: [H46] - NºLinea: (39) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sonia;Moran;Puertas;false;654789152;yqwter@email.com;Quimico;10/11/2015 15:16;18000;H46}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,884 [main] csvRepsol.CsvAccess  - ID: [H47] - NºLinea: (40) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Beatriz;Huertas;Rosado;false;635987415;aasxz@email.com;Quimico;10/11/2015 15:16;18000;H47}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/11/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,886 [main] csvRepsol.CsvAccess  - ID: [H48] - NºLinea: (41) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;false;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16;18*000;H48}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,887 [main] csvRepsol.CsvAccess  - ID: [H49] - NºLinea: (42) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Sara;Obtuso;Hernandez;false;63219874;aqqwr@email.com;Becario;10/12/2015 15:16;18000;H49}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/12/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,890 [main] csvRepsol.CsvAccess  - ID: [H50] - NºLinea: (43) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Fabiola;Centena;Decena;false;652169743;ghjjhey@email.com;Seguridad;10/21/2015 15:16;18000;H50}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,900 [main] csvRepsol.CsvAccess  - ID: [H51] - NºLinea: (44) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lorena;Moreno;Garcia;false;63897421;gwtdgw@email.com;Becario;10/21/2015 15:16;18000;H51}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,902 [main] csvRepsol.CsvAccess  - ID: [H52] - NºLinea: (45) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Diego;Grande;Fernandez;false;652653623;ppwqÃƒÂ±wkl@email.com;Seguridad;10/21/2015 15:16;18000;H52}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,905 [main] csvRepsol.CsvAccess  - ID: [H53] - NºLinea: (46) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lidia;Alin;Turdasan;false;655442536;fgwegd@email.com;Comercial;10/21/2015 15:16;18000;H53}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/21/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,907 [main] csvRepsol.CsvAccess  - ID: [H60] - NºLinea: (47) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;false;Programador Senior;10/1/2015;18000;falses;;H60}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "falses"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,910 [main] csvRepsol.CsvAccess  - ID: [H61] - NºLinea: (48) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Jorge;Obtuso;Hernandez;false;63219874;aqqwr@email.com;Becario;9/22/2015 15:16;18000;H61}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "9/22/2015 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,916 [main] csvRepsol.CsvAccess  - ID: [H62] - NºLinea: (49) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Marisa;Agudo;Hernandez;false;63219874;aqqwr@email.com;"Beca;rio";10/13/2016 15:16;18000;H62}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "10/13/2016 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,917 [main] csvRepsol.CsvAccess  - ID: [H63] - NºLinea: (50) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Petunia;Isosceles;Hernandez;false;63219874;aqqwr@email.com;Becario;11/12/2017 15:16;18000;H63}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "11/12/2017 15:16"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-WARN    2021-04-16 13:00:23,919 [main] csvRepsol.CsvAccess  - Linea (51) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
-java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
-	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:34)
-ERROR   2021-04-16 13:00:23,990 [main] csvRepsol.CsvAccess  - ID: [H16] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" - Linea: {H16;MarÃ­a;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
- No se ha podido crear el objeto empleado.
-java.text.ParseException: Unparseable date: "1/10/2015"
-	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
-	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:285)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-WARN    2021-04-16 13:00:24,098 [main] csvRepsol.CsvAccess  - Linea (48) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" esta vacia
-java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
-	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
-	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
-	at csvRepsol.MainClass.main(MainClass.java:38)
-INFO    2021-04-16 13:00:24,103 [main] csvRepsol.CsvAccess  - [H40] - "DELETE"
-INFO    2021-04-16 13:00:24,107 [main] csvRepsol.CsvAccess  - [H21] - "DELETE"
-INFO    2021-04-16 13:00:24,111 [main] csvRepsol.CsvAccess  - [H43] - "DELETE"
-INFO    2021-04-16 13:00:24,118 [main] csvRepsol.CsvAccess  - [H23] - "DELETE"
-INFO    2021-04-16 13:00:24,121 [main] csvRepsol.CsvAccess  - [H45] - "DELETE"
-INFO    2021-04-16 13:00:24,125 [main] csvRepsol.CsvAccess  - [H22] - "DELETE"
-INFO    2021-04-16 13:00:24,130 [main] csvRepsol.CsvAccess  - [H44] - "DELETE"
-INFO    2021-04-16 13:00:24,135 [main] csvRepsol.CsvAccess  - [H25] - "DELETE"
-INFO    2021-04-16 13:00:24,137 [main] csvRepsol.CsvAccess  - [H47] - "DELETE"
-INFO    2021-04-16 13:00:24,142 [main] csvRepsol.CsvAccess  - [H24] - "DELETE"
-INFO    2021-04-16 13:00:24,151 [main] csvRepsol.CsvAccess  - [H46] - "DELETE"
-INFO    2021-04-16 13:00:24,155 [main] csvRepsol.CsvAccess  - [H27] - "DELETE"
-INFO    2021-04-16 13:00:24,159 [main] csvRepsol.CsvAccess  - [H49] - "DELETE"
-INFO    2021-04-16 13:00:24,164 [main] csvRepsol.CsvAccess  - [H48] - "DELETE"
-INFO    2021-04-16 13:00:24,170 [main] csvRepsol.CsvAccess  - [H29] - "DELETE"
-INFO    2021-04-16 13:00:24,173 [main] csvRepsol.CsvAccess  - [H50] - "DELETE"
-INFO    2021-04-16 13:00:24,177 [main] csvRepsol.CsvAccess  - [H52] - "DELETE"
-INFO    2021-04-16 13:00:24,183 [main] csvRepsol.CsvAccess  - [H51] - "DELETE"
-INFO    2021-04-16 13:00:24,191 [main] csvRepsol.CsvAccess  - [H10] - "DELETE"
-INFO    2021-04-16 13:00:24,193 [main] csvRepsol.CsvAccess  - [H31] - "DELETE"
-INFO    2021-04-16 13:00:24,197 [main] csvRepsol.CsvAccess  - [H53] - "DELETE"
-INFO    2021-04-16 13:00:24,201 [main] csvRepsol.CsvAccess  - [H12] - "DELETE"
-INFO    2021-04-16 13:00:24,205 [main] csvRepsol.CsvAccess  - [H1] - "DELETE"
-INFO    2021-04-16 13:00:24,208 [main] csvRepsol.CsvAccess  - [H11] - "DELETE"
-INFO    2021-04-16 13:00:24,212 [main] csvRepsol.CsvAccess  - [H33] - "DELETE"
-INFO    2021-04-16 13:00:24,215 [main] csvRepsol.CsvAccess  - [H2] - "DELETE"
-INFO    2021-04-16 13:00:24,218 [main] csvRepsol.CsvAccess  - [H14] - "DELETE"
-INFO    2021-04-16 13:00:24,223 [main] csvRepsol.CsvAccess  - [H36] - "DELETE"
-INFO    2021-04-16 13:00:24,225 [main] csvRepsol.CsvAccess  - [H3] - "DELETE"
-INFO    2021-04-16 13:00:24,229 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
-INFO    2021-04-16 13:00:24,235 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
-INFO    2021-04-16 13:00:24,239 [main] csvRepsol.CsvAccess  - [H4] - "DELETE"
-INFO    2021-04-16 13:00:24,242 [main] csvRepsol.CsvAccess  - [H38] - "DELETE"
-INFO    2021-04-16 13:00:24,253 [main] csvRepsol.CsvAccess  - [H5] - "DELETE"
-INFO    2021-04-16 13:00:24,258 [main] csvRepsol.CsvAccess  - [H15] - "DELETE"
-INFO    2021-04-16 13:00:24,268 [main] csvRepsol.CsvAccess  - [H37] - "DELETE"
-INFO    2021-04-16 13:00:24,272 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
-INFO    2021-04-16 13:00:24,274 [main] csvRepsol.CsvAccess  - [H18] - "DELETE"
-INFO    2021-04-16 13:00:24,277 [main] csvRepsol.CsvAccess  - [H7] - "DELETE"
-INFO    2021-04-16 13:00:24,282 [main] csvRepsol.CsvAccess  - [H17] - "DELETE"
-INFO    2021-04-16 13:00:24,286 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"
-INFO    2021-04-16 13:00:24,289 [main] csvRepsol.CsvAccess  - [H8] - "DELETE"
-INFO    2021-04-16 13:00:24,293 [main] csvRepsol.CsvAccess  - [H9] - "DELETE"
-INFO    2021-04-16 13:00:24,300 [main] csvRepsol.CsvAccess  - [H19] - "DELETE"
+	at csvRepsol.MainClass.main(MainClass.java:45)
+INFO    2021-04-16 13:20:51,086 [main] csvRepsol.CsvAccess  - [H61] - "CREATE"
+INFO    2021-04-16 13:20:51,095 [main] csvRepsol.CsvAccess  - [H63] - "CREATE"
+INFO    2021-04-16 13:20:51,100 [main] csvRepsol.CsvAccess  - [H62] - "CREATE"
+INFO    2021-04-16 13:20:51,135 [main] csvRepsol.CsvAccess  - [H21] - "UPDATE"
+INFO    2021-04-16 13:20:51,142 [main] csvRepsol.CsvAccess  - [H43] - "UPDATE"
+INFO    2021-04-16 13:20:51,152 [main] csvRepsol.CsvAccess  - [H23] - "UPDATE"
+INFO    2021-04-16 13:20:51,166 [main] csvRepsol.CsvAccess  - [H45] - "UPDATE"
+INFO    2021-04-16 13:20:51,171 [main] csvRepsol.CsvAccess  - [H22] - "UPDATE"
+INFO    2021-04-16 13:20:51,185 [main] csvRepsol.CsvAccess  - [H44] - "UPDATE"
+INFO    2021-04-16 13:20:51,196 [main] csvRepsol.CsvAccess  - [H25] - "UPDATE"
+INFO    2021-04-16 13:20:51,203 [main] csvRepsol.CsvAccess  - [H47] - "UPDATE"
+INFO    2021-04-16 13:20:51,217 [main] csvRepsol.CsvAccess  - [H24] - "UPDATE"
+INFO    2021-04-16 13:20:51,220 [main] csvRepsol.CsvAccess  - [H46] - "UPDATE"
+INFO    2021-04-16 13:20:51,233 [main] csvRepsol.CsvAccess  - [H27] - "UPDATE"
+INFO    2021-04-16 13:20:51,236 [main] csvRepsol.CsvAccess  - [H49] - "UPDATE"
+INFO    2021-04-16 13:20:51,251 [main] csvRepsol.CsvAccess  - [H29] - "UPDATE"
+INFO    2021-04-16 13:20:51,257 [main] csvRepsol.CsvAccess  - [H50] - "UPDATE"
+INFO    2021-04-16 13:20:51,265 [main] csvRepsol.CsvAccess  - [H52] - "UPDATE"
+INFO    2021-04-16 13:20:51,270 [main] csvRepsol.CsvAccess  - [H51] - "UPDATE"
+INFO    2021-04-16 13:20:51,278 [main] csvRepsol.CsvAccess  - [H10] - "UPDATE"
+INFO    2021-04-16 13:20:51,288 [main] csvRepsol.CsvAccess  - [H31] - "UPDATE"
+INFO    2021-04-16 13:20:51,301 [main] csvRepsol.CsvAccess  - [H53] - "UPDATE"
+INFO    2021-04-16 13:20:51,304 [main] csvRepsol.CsvAccess  - [H12] - "UPDATE"
+INFO    2021-04-16 13:20:51,308 [main] csvRepsol.CsvAccess  - [H1] - "UPDATE"
+INFO    2021-04-16 13:20:51,318 [main] csvRepsol.CsvAccess  - [H11] - "UPDATE"
+INFO    2021-04-16 13:20:51,323 [main] csvRepsol.CsvAccess  - [H33] - "UPDATE"
+INFO    2021-04-16 13:20:51,335 [main] csvRepsol.CsvAccess  - [H2] - "UPDATE"
+INFO    2021-04-16 13:20:51,344 [main] csvRepsol.CsvAccess  - [H14] - "UPDATE"
+INFO    2021-04-16 13:20:51,349 [main] csvRepsol.CsvAccess  - [H36] - "UPDATE"
+INFO    2021-04-16 13:20:51,352 [main] csvRepsol.CsvAccess  - [H3] - "UPDATE"
+INFO    2021-04-16 13:20:51,355 [main] csvRepsol.CsvAccess  - [H4] - "UPDATE"
+INFO    2021-04-16 13:20:51,366 [main] csvRepsol.CsvAccess  - [H16] - "CREATE"
+INFO    2021-04-16 13:20:51,372 [main] csvRepsol.CsvAccess  - [H38] - "UPDATE"
+INFO    2021-04-16 13:20:51,387 [main] csvRepsol.CsvAccess  - [H5] - "UPDATE"
+INFO    2021-04-16 13:20:51,397 [main] csvRepsol.CsvAccess  - [H15] - "UPDATE"
+INFO    2021-04-16 13:20:51,403 [main] csvRepsol.CsvAccess  - [H37] - "UPDATE"
+INFO    2021-04-16 13:20:51,416 [main] csvRepsol.CsvAccess  - [H18] - "UPDATE"
+INFO    2021-04-16 13:20:51,420 [main] csvRepsol.CsvAccess  - [H7] - "UPDATE"
+INFO    2021-04-16 13:20:51,430 [main] csvRepsol.CsvAccess  - [H17] - "UPDATE"
+INFO    2021-04-16 13:20:51,435 [main] csvRepsol.CsvAccess  - [H8] - "UPDATE"
+INFO    2021-04-16 13:20:51,439 [main] csvRepsol.CsvAccess  - [H9] - "UPDATE"
+INFO    2021-04-16 13:20:51,445 [main] csvRepsol.CsvAccess  - [H19] - "UPDATE"
+INFO    2021-04-16 13:20:51,449 [main] csvRepsol.CsvAccess  - [H40] - "DELETE"
+INFO    2021-04-16 13:20:51,462 [main] csvRepsol.CsvAccess  - [H48] - "DELETE"
+INFO    2021-04-16 13:20:51,466 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
+INFO    2021-04-16 13:20:51,471 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
+INFO    2021-04-16 13:20:51,484 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
+INFO    2021-04-16 13:20:51,495 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"

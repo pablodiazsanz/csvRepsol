@@ -21,7 +21,7 @@ public class PropertyFile {
 	}
 
 	/**
-	 * comprueba los datos del config del cliente para saber que estan todo los
+	 * Comprueba los datos del config del cliente para saber que estan todo los
 	 * datos y devuelve true de ser correcto y false de no ser asi
 	 * 
 	 * @return true en caso de encontrar todos los datos y false si no
@@ -32,17 +32,17 @@ public class PropertyFile {
 		try {
 			ip = new FileInputStream(src);
 			file.load(ip);
-			String client = file.getProperty("DEFAULT.File.CSV.client");
-			String id = file.getProperty("DEFAULT.File.CSV.head.ID");
-			String name = file.getProperty("DEFAULT.File.CSV.head.NAME");
-			String surname1 = file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
-			String surname2 = file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
-			String phone = file.getProperty("DEFAULT.File.CSV.head.PHONE");
-			String mail = file.getProperty("DEFAULT.File.CSV.head.EMAIL");
-			String job = file.getProperty("DEFAULT.File.CSV.head.JOB");
-			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
-			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
-			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
+			file.getProperty("DEFAULT.File.CSV.client");
+			file.getProperty("DEFAULT.File.CSV.head.ID");
+			file.getProperty("DEFAULT.File.CSV.head.NAME");
+			file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+			file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+			file.getProperty("DEFAULT.File.CSV.head.PHONE");
+			file.getProperty("DEFAULT.File.CSV.head.EMAIL");
+			file.getProperty("DEFAULT.File.CSV.head.JOB");
+			file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+			file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+			file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
 			log.trace("Fichero config de cliente leido exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);
@@ -56,7 +56,7 @@ public class PropertyFile {
 	}
 
 	/**
-	 * comprueba los datos del config server para saber que estan todo los datos y
+	 * Comprueba los datos del config server para saber que estan todo los datos y
 	 * devuelve true de ser correcto y false de no ser asi
 	 * 
 	 * @return true en caso de encontrar todos los datos y false si no
@@ -66,18 +66,18 @@ public class PropertyFile {
 		try {
 			ip = new FileInputStream(src);
 			file.load(ip);
-			String server = file.getProperty("DEFAULT.File.csv.server");
-			String result = file.getProperty("DEFAULT.File.csv.result");
-			String id = file.getProperty("DEFAULT.File.CSV.head.ID");
-			String name = file.getProperty("DEFAULT.File.CSV.head.NAME");
-			String surname1 = file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
-			String surname2 = file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
-			String phone = file.getProperty("DEFAULT.File.CSV.head.PHONE");
-			String mail = file.getProperty("DEFAULT.File.CSV.head.EMAIL");
-			String job = file.getProperty("DEFAULT.File.CSV.head.JOB");
-			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
-			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
-			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
+			file.getProperty("DEFAULT.File.csv.server");
+			file.getProperty("DEFAULT.File.csv.result");
+			file.getProperty("DEFAULT.File.CSV.head.ID");
+			file.getProperty("DEFAULT.File.CSV.head.NAME");
+			file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+			file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+			file.getProperty("DEFAULT.File.CSV.head.PHONE");
+			file.getProperty("DEFAULT.File.CSV.head.EMAIL");
+			file.getProperty("DEFAULT.File.CSV.head.JOB");
+			file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+			file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+			file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
 			log.trace("Fichero config de servidor leido exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);
@@ -91,7 +91,7 @@ public class PropertyFile {
 	}
 
 	/**
-	 * le introduces el nombre del valor buscado en el fichero propeties y te lo
+	 * Le introduces el nombre del valor buscado en el fichero propeties y te lo
 	 * devulve
 	 * 
 	 * @param property nombre completo de la variable buscada

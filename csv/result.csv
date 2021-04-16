@@ -1,45 +1,49 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status
+H61;Jorge;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;09/10/2016 15:16:13;18000;false;CREATE
+H63;Petunia;Hernandez;Isosceles;63219874;aqqwr@email.com;Becario;11/12/2017 15:16:13;18000;false;CREATE
+H62;Marisa;Hernandez;Agudo;63219874;aqqwr@email.com;"Beca;rio";10/01/2017 15:16:13;18000;false;CREATE
+H21;;;;;;10/01/2015 15:16:13;;;UPDATE
+H43;;;;;;10/11/2015 15:16:13;;;UPDATE
+H23;;;;;;10/01/2015 15:16:13;;true;UPDATE
+H45;;;;;;10/11/2015 17:16:13;;;UPDATE
+H22;;;;;;10/01/2015 15:16:13;;;UPDATE
+H44;;;;;;10/11/2015 15:16:13;;;UPDATE
+H25;;;;;;10/01/2015 15:16:13;;;UPDATE
+H47;;;;;;10/11/2015 15:16:13;;;UPDATE
+H24;;;;;;10/01/2015 15:16:13;;;UPDATE
+H46;;;;;;10/11/2015 15:16:12;;;UPDATE
+H27;;;;;;10/11/2015 15:16:13;;true;UPDATE
+H49;;;;;;10/12/2015 15:16:13;;;UPDATE
+H29;;;;;;10/11/2015 15:16:13;;;UPDATE
+H50;;;;;;10/09/2016 15:16:13;;;UPDATE
+H52;;;;;ppwqÃ±wkl@email.com;10/09/2016 15:16:13;;;UPDATE
+H51;;;;;;10/09/2016 15:16:13;;;UPDATE
+H10;;;;;;10/01/2015 15:16:13;19000;true;UPDATE
+H31;;;;697536981;;10/11/2015 15:16:13;;;UPDATE
+H53;;;;;;10/09/2016 15:16:13;;;UPDATE
+H12;;;;;;10/01/2015 15:16:13;;;UPDATE
+H1;;;;;;10/01/2015 15:16:13;;;UPDATE
+H11;;;;;;10/01/2015 15:16:13;;;UPDATE
+H33;;;;;;10/11/2015 11:16:13;;true;UPDATE
+H2;;;;;;10/01/2015 15:16:13;;;UPDATE
+H14;;;NULL;;NULL;10/01/2015 15:16:13;;;UPDATE
+H36;;;;;;10/11/2015 15:16:13;;;UPDATE
+H3;;;;;;10/01/2015 15:16:13;;;UPDATE
+H4;;;;;;10/01/2015 15:16:13;;;UPDATE
+H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;calidad";10/01/2015 15:16:13;18000;false;CREATE
+H38;;;;;;10/11/2015 15:16:13;;;UPDATE
+H5;;;;;;10/01/2015 15:16:13;;;UPDATE
+H15;;;;;NULL;10/01/2015 15:17:13;;;UPDATE
+H37;;;;;;10/11/2015 15:16:13;;;UPDATE
+H18;;;;;;10/01/2015 15:16:13;;;UPDATE
+H7;;;;;;10/01/2015 18:16:13;;true;UPDATE
+H17;;;NULL;;;10/01/2015 15:16:13;;;UPDATE
+H8;;;;;;10/01/2015 15:16:13;;;UPDATE
+H9;;;;;;10/01/2015 15:16:13;;;UPDATE
+H19;;;;;;10/01/2015 15:16:13;;;UPDATE
 H40;Adrian;Lomillo;Casillas;621459870;yjjyuy@email.com;Comercial;11/10/2015 15:16:13;18000;false;DELETE
-H21;Iker;Diaz;Casillas;698745321;yyyyuy@email.com;Becario;01/10/2015 15:16:13;18000;false;DELETE
-H43;Pelayo;Pelaez;Casillas;126987413;haqwhdj@email.com;Quimico;11/10/2015 15:16:13;18000;false;DELETE
-H23;Alfredo;Escobar;Pintado;655656767;alfred@email.com;Encargado de Mantenimiento;01/10/2015 15:16:13;18000;false;DELETE
-H45;Maria;Casado;Millan;632145987;nhasjndx@email.com;Mantenimiento;11/10/2015 15:16:13;18000;false;DELETE
-H22;Carlos;Vivar;Garcia;689452136;plol@email.com;Becario;01/10/2015 15:16:13;18000;false;DELETE
-H44;Diego;Sobarzo;Sojunio;632159874;jqhds@email.com;Gerente;11/10/2015 15:16:13;18000;false;DELETE
-H25;Marta;Salamanca;Gimenez;602836862;martasg@email.com;Jefe de Proyecto IT;01/10/2015 15:16:13;18000;false;DELETE
-H47;Beatriz;Rosado;Huertas;635987415;aasxz@email.com;Quimico;11/10/2015 15:16:13;18000;false;DELETE
-H24;Ana;Caballero;del Castillo;682783723;anacc@email.com;Administrativo;01/10/2015 15:16:13;18000;false;DELETE
-H46;Sonia;Puertas;Moran;654789152;yqwter@email.com;Quimico;11/10/2015 15:16:13;18000;false;DELETE
-H27;Elisa;Gómez;Sevilla;643342369;elisags@email.com;Encargado de Publicidad;11/10/2015 15:16:13;18000;false;DELETE
-H49;Sara;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;12/10/2015 15:16:13;18000;false;DELETE
 H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;21/10/2015 15:16:13;18000;false;DELETE
-H29;Ainhoa;Segovia;Garcia;697538627;ainhoasgar@email.com;Responsable Tienda;11/10/2015 15:16:13;18000;false;DELETE
-H50;Fabiola;Decena;Centena;652169743;ghjjhey@email.com;Seguridad;21/10/2015 15:16:13;18000;false;DELETE
-H52;Diego;Fernandez;Grande;652653623;ppwqñwkl@email.com;Seguridad;21/10/2015 15:16:13;18000;false;DELETE
-H51;Lorena;Garcia;Moreno;63897421;gwtdgw@email.com;Becario;21/10/2015 15:16:13;18000;false;DELETE
-H10;Francisco;Perez;Agudo;654888999;oekjioh@email.com;Abogado Laboralista;01/10/2015 15:16:13;18000;false;DELETE
-H31;Juan Manuel;Romero;Estrella;677792687;juanmare@email.com;Jefe de Publicidad;11/10/2015 15:16:13;18000;false;DELETE
-H53;Lidia;Turdasan;Alin;655442536;fgwegd@email.com;Comercial;21/10/2015 15:16:13;18000;false;DELETE
-H12;Alba;Martinez;Alin;622445511;szxd@email.com;Jefe de Marketing;01/10/2015 15:16:13;18000;false;DELETE
-H1;Alberto;Fernandez;Garcia;666777888;tetete@email.com;Contable;01/10/2015 15:16:13;18000;false;DELETE
-H11;Clara;Garcia;Campos;645888999;hufcg@email.com;Comercial;01/10/2015 15:16:13;18000;false;DELETE
-H33;Elena;de Pablos;Jimenez;688889265;helenpj@email.com;Encargado de Mantenimiento;11/10/2015 15:16:13;18000;false;DELETE
-H2;Jorge;Avila;Gallego;666444333;gfg@email.com;RRHH;01/10/2015 15:16:13;18000;false;DELETE
-H14;�?lvaro;Turdasan;Garcia;689745123;hjgfcv@email.com;Responsable Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H36;Maria Luisa;Gutierrez;del Rosario;688225362;mariluigr@email.com;Cajero;11/10/2015 15:16:13;18000;false;DELETE
-H3;Miguel;Perez;Perez;666222333;utyrfuytf@email.com;Recepcionista;01/10/2015 15:16:13;18000;false;DELETE
 H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;01/10/2015 15:16:13;18000;false;DELETE
 H35;Pablo;Díaz;Salinas;632642642;pdiazs@email.com;Analista;11/10/2015 15:16:13;18000;false;DELETE
-H4;Xavier;Garcia;Diaz;666111999;utgfuf@email.com;Responsable Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H38;Nerea;Gonzalez;López;620338982;neregonlo@email.com;Cajero;11/10/2015 15:16:13;18000;false;DELETE
-H5;Alicia;Agudo;Vivar;666555444;opiju@email.com;Jefe de Ventas;01/10/2015 15:16:13;18000;false;DELETE
-H15;Andrés;Casillas;Perez;687456213;ggtr@email.com;Gerente;01/10/2015 15:16:13;18000;false;DELETE
-H37;Ruth;Delgado;Rey;668761152;rudere@email.com;Encargado de Limpieza;11/10/2015 15:16:13;18000;false;DELETE
 H6;Paula;Campos;Fernandez;666444222;opi9uiyh@email.com;Comercial;01/10/2015 15:16:13;18000;false;DELETE
-H18;Manuel;Gallego;Serrano;654238942;kjhhg@email.com;Responsable Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H7;Esther;Alin;Avila;666888333;tydf@email.com;Responsable Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H17;Nerea;Garcia;Martinez;693985264;hgf@email.com;Becario;01/10/2015 15:16:13;18000;false;DELETE
 H39;Maria del Mar;González;Gutierrez;665825681;marimargogu@email.com;Administrativo;11/10/2015 15:16:13;18000;false;DELETE
-H8;Antonio;Perez;Perez;666000888;pok@email.com;Cajero;01/10/2015 15:16:13;18000;false;DELETE
-H9;Juan;Garcia;Garcia;666222888;ytd@email.com;Responsable Tienda;01/10/2015 15:16:13;18000;false;DELETE
-H19;Sergio;Perez;Turdasan;612378454;jhgfg@email.com;Gerente;01/10/2015 15:16:13;18000;false;DELETE
