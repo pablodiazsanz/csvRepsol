@@ -21,15 +21,55 @@ public class PropertyFile {
 		file = new Properties();
 	}
 
-	public boolean checkConfig() {
+	public boolean checkConfigClient() {
 		boolean readed = true;
 		
 		try {
 			ip = new FileInputStream(src);
 			file.load(ip);
-			String client = file.getProperty("client");
-			String server = file.getProperty("server");
-			String result = file.getProperty("result");
+			String client = file.getProperty("DEFAULT.File.CSV.client");
+			String id = file.getProperty("DEFAULT.File.CSV.head.ID");
+			String name = file.getProperty("DEFAULT.File.CSV.head.NAME");
+			String surname1 = file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+			String surname2 = file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+			String phone = file.getProperty("DEFAULT.File.CSV.head.PHONE");
+			String mail = file.getProperty("DEFAULT.File.CSV.head.EMAIL");
+			String job = file.getProperty("DEFAULT.File.CSV.head.JOB");
+			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
+			
+
+		} catch (FileNotFoundException e) {
+			log.error("Fichero no encontrado", e);
+			readed = false;
+
+		} catch (IOException e) {
+			log.error("Fallo de entrada o salida", e);
+			readed = false;
+		}
+
+		return readed;
+	}
+	
+	public boolean checkConfigServer() {
+		boolean readed = true;
+		
+		try {
+			ip = new FileInputStream(src);
+			file.load(ip);
+			String server = file.getProperty("DEFAULT.File.csv.server");
+			String result = file.getProperty("DEFAULT.File.csv.result");
+			String id = file.getProperty("DEFAULT.File.CSV.head.ID");
+			String name = file.getProperty("DEFAULT.File.CSV.head.NAME");
+			String surname1 = file.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+			String surname2 = file.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+			String phone = file.getProperty("DEFAULT.File.CSV.head.PHONE");
+			String mail = file.getProperty("DEFAULT.File.CSV.head.EMAIL");
+			String job = file.getProperty("DEFAULT.File.CSV.head.JOB");
+			String hiringDate = file.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+			String yearSalary = file.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+			String sickLeave = file.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
 
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);

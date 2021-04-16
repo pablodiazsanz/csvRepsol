@@ -19,17 +19,27 @@ import org.apache.log4j.Logger;
 public class CsvAccess {
 
 	private static Logger log = Logger.getLogger(CsvAccess.class);
-	private PropertyFile a;
+	private PropertyFile config;
 
-	private static final int ID = 0;
+	private String ID = "", NAME = "", SURNAME1 = "", SURNAME2 = "", PHONE = "", EMAIL = "", JOB = "", HIRING_DATE = "",
+			YEAR_SALARY = "", SICK_LEAVE = "";
 
-	public CsvAccess() {
-		super();
-		// TODO Auto-generated constructor stub
+	public CsvAccess(PropertyFile config) {
+		this.config = config;
 	}
 
-	public CsvAccess(PropertyFile a) {
-		this.a = a;
+	public void setConfig(PropertyFile config) {
+		this.config = config;
+		ID = config.getProperty("DEFAULT.File.CSV.head.ID");
+		NAME = config.getProperty("DEFAULT.File.CSV.head.NAME");
+		SURNAME1 = config.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
+		SURNAME2 = config.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
+		PHONE = config.getProperty("DEFAULT.File.CSV.head.PHONE");
+		EMAIL = config.getProperty("DEFAULT.File.CSV.head.EMAIL");
+		JOB = config.getProperty("DEFAULT.File.CSV.head.JOB");
+		HIRING_DATE = config.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
+		YEAR_SALARY = config.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
+		SICK_LEAVE = config.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
 	}
 
 	/**
@@ -52,6 +62,7 @@ public class CsvAccess {
 		// Utilizamos un contador de lineas del fichero para obtener informacion
 		// acerca de la linea que nos da un error o una excepcion
 		int contLine = 2;
+		Employee emp = null;
 
 		try {
 			reader = new FileReader(f);
@@ -104,8 +115,7 @@ public class CsvAccess {
 						 */
 						if (line.charAt(i) == ';' && openQuotes == false) {
 							employeeValue++;
-							log.info(
-									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
+							log.info("[" + dataEmployee.get(0).trim().toUpperCase() + "] - " + dataEmployee.toString());
 							dataEmployee.add("");
 
 							// Aquí compruebo que si no hay nada en ese dato, me ponga en valor del
@@ -119,83 +129,14 @@ public class CsvAccess {
 						}
 
 						if (i == line.length() - 1) {
-							log.info(
-									"[" + dataEmployee.get(ID).trim().toUpperCase() + "] - " + dataEmployee.toString());
+							log.info("[" + dataEmployee.get(0).trim().toUpperCase() + "] - " + dataEmployee.toString());
 						}
 
 					}
-
-					String name = "";
-					String surname1 = "";
-					String surname2 = "";
-					String tlf = "";
-					String email = "";
-					String job = "";
-					Date hiringDate = null;
-					int yearSalary = -1;
-					boolean sickLeave = false;
-
-					for (int i = 0; i < columns.length; i++) {
-						switch (ordenColumnas.get(i)) {
-						case "id":
-							id = dataEmployee.get(i).trim().toUpperCase();
-							break;
-						case "name":
-							name = dataEmployee.get(i).trim();
-							break;
-						case "surname1":
-							surname1 = dataEmployee.get(i).trim();
-							break;
-						case "surname2":
-							surname2 = dataEmployee.get(i).trim();
-							break;
-						case "tlf":
-							tlf = dataEmployee.get(i).trim();
-							break;
-						case "email":
-							email = dataEmployee.get(i).trim();
-							break;
-						case "job":
-							job = dataEmployee.get(i).trim();
-							break;
-						case "hiring_date":
-							/*
-							 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
-							 * tipo Date
-							 */
-
-							SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-							formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
-							hiringDate = formatter.parse(dataEmployee.get(i));
-							break;
-						case "year_salary":
-							// Aqui formateamos el salario anual a numero entero
-							yearSalary = Integer.parseInt(dataEmployee.get(i));
-							break;
-						case "sick_leave":
-							// Aquí comprobamos si el empleado está dado de baja o no
-							if (dataEmployee.get(i).equals("true")) {
-								sickLeave = true;
-							}
-							break;
-
-						default:
-							break;
-						}
-					}
-
-					/*
-					 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
-					 * espacios al principìo y al final
-					 */
-
-					Employee emp = new Employee(id, name, surname1, surname2, tlf, email, job, hiringDate, yearSalary,
-							sickLeave);
-
-					log.info("[" + dataEmployee.get(ID).trim().toUpperCase() + "] - Empleado creado: " + emp);
 
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
+					emp = crearEmpleado(dataEmployee, ordenColumnas);
 					map.put(emp.getId(), emp);
 
 				} catch (NullPointerException e) {
@@ -206,8 +147,8 @@ public class CsvAccess {
 							+ line + "}\nNo se ha podido crear el objeto empleado. Fallo al leer linea", e);
 
 				} catch (ParseException e) {
-					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
-							+ line + "}\nNo se ha podido crear el objeto empleado.", e);
+					log.error("ID: [" + emp.getId() + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
+							+ "\" - Linea: {" + line + "}\nNo se ha podido crear el objeto empleado.", e);
 
 				} catch (NumberFormatException e) {
 					log.error("ID: [" + id + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV + "\" - Linea: {"
@@ -244,14 +185,97 @@ public class CsvAccess {
 	}
 
 	/**
+	 * Devuelve un empleado sacando los datos de la list de dataEmployee y la
+	 * organizacion de orderColumns
+	 * 
+	 * @param dataEmployee datos del empleado no organizados
+	 * @param orderColumns nombre de las columnas con la posicion que tienen
+	 * @return objeto empleado con los datos correspondientes
+	 * @throws ParseException
+	 */
+	private Employee crearEmpleado(List<String> dataEmployee, HashMap<Integer, String> orderColumns)
+			throws ParseException {
+
+		String id = "", name = "", surname1 = "", surname2 = "", tlf = "", email = "", job = "";
+		Date hiringDate = null;
+		int yearSalary = -1;
+		boolean sickLeave = false;
+
+		for (int i = 0; i < dataEmployee.size(); i++) {
+			if (orderColumns.get(i).equals(ID)) {
+				id = dataEmployee.get(i).trim().toUpperCase();
+			} else if (orderColumns.get(i).equals(NAME)) {
+				name = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(SURNAME1)) {
+				surname1 = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(SURNAME2)) {
+				surname2 = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(PHONE)) {
+				tlf = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(EMAIL)) {
+				email = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(JOB)) {
+				job = dataEmployee.get(i).trim();
+			} else if (orderColumns.get(i).equals(HIRING_DATE)) {
+				/*
+				 * Aquí formateamos la cadena obtenida, que en el caso ideal es una fecha, a un
+				 * tipo Date
+				 */
+				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+				formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid"));
+				hiringDate = formatter.parse(dataEmployee.get(i));
+			} else if (orderColumns.get(i).equals(YEAR_SALARY)) {
+				// Aqui formateamos el salario anual a numero entero
+				yearSalary = Integer.parseInt(dataEmployee.get(i));
+			} else if (orderColumns.get(i).equals(SICK_LEAVE)) {
+				if (dataEmployee.get(i).equals("true")) {
+					sickLeave = true;
+				}
+			}
+			/*
+			 * switch (orderColumns.get(i)) { case : id =
+			 * dataEmployee.get(i).trim().toUpperCase(); break; case "name": name =
+			 * dataEmployee.get(i).trim(); break; case "surname1": surname1 =
+			 * dataEmployee.get(i).trim(); break; case "surname2": surname2 =
+			 * dataEmployee.get(i).trim(); break; case "tlf": tlf =
+			 * dataEmployee.get(i).trim(); break; case "email": email =
+			 * dataEmployee.get(i).trim(); break; case "job": job =
+			 * dataEmployee.get(i).trim(); break; case "hiring_date": /* Aquí formateamos la
+			 * cadena obtenida, que en el caso ideal es una fecha, a un tipo Date
+			 */
+			/*
+			 * SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+			 * formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid")); hiringDate =
+			 * formatter.parse(dataEmployee.get(i)); break; case "year_salary": // Aqui
+			 * formateamos el salario anual a numero entero yearSalary =
+			 * Integer.parseInt(dataEmployee.get(i)); break; case "sick_leave": // Aquí
+			 * comprobamos si el empleado está dado de baja o no if
+			 * (dataEmployee.get(i).equals("true")) { sickLeave = true; } break;
+			 * 
+			 * default: break; }
+			 */
+		}
+
+		/*
+		 * Creamos el objeto empleado normalizando el id en mayusculas, eliminamos los
+		 * espacios al principìo y al final
+		 */
+
+		Employee emp = new Employee(id, name, surname1, surname2, tlf, email, job, hiringDate, yearSalary, sickLeave);
+
+		log.trace("[" + dataEmployee.get(0).trim().toUpperCase() + "] - Empleado creado: " + emp);
+		return emp;
+	}
+
+	/**
 	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la
 	 * información final.
 	 * 
-	 * @param a
+	 * @param config
 	 */
 	public void createCSV() {
 		try {
-			FileWriter fw = new FileWriter(a.getProperty("result"));
+			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 		} catch (IOException e) {
@@ -267,14 +291,10 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) {
 		try {
-			FileWriter fw = new FileWriter(a.getProperty("result"), true);
+			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
-			if (status.equals("CREATE")) {
-				log.info("[" + employee.getId() + "] - \"" + status + "\"");
-			} else {
-				log.info("[" + employee.getId() + "] - \"" + status + "\"");
-			}
+			log.info("[" + employee.getId() + "] - \"" + status + "\"");
 		} catch (IOException e) {
 			log.error("[" + employee.getId() + "] - Fallo al escribir al usuario");
 		}
@@ -349,7 +369,7 @@ public class CsvAccess {
 
 		// Añadimos la linea de datos al fichero CSV.
 		try {
-			FileWriter fw = new FileWriter(a.getProperty("result"), true);
+			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");
@@ -359,4 +379,5 @@ public class CsvAccess {
 		}
 
 	}
+
 }
