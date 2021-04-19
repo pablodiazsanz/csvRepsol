@@ -21,8 +21,16 @@ public class CsvAccess {
 	private Logger log = Logger.getLogger(CsvAccess.class);
 	private PropertyFile config;
 
-	private String id = "", name = "", surname1 = "", surname2 = "", phone = "", email = "", job = "", hiringDate = "",
-			yearSalary = "", sickLeave = "";
+	private String id = "";
+	private String name = "";
+	private String surname1 = "";
+	private String surname2 = "";
+	private String phone = "";
+	private String email = "";
+	private String job = "";
+	private String hiringDate = "";
+	private String yearSalary = "";
+	private String sickLeave = "";
 
 	public CsvAccess(PropertyFile config) {
 		this.config = config;
@@ -30,16 +38,16 @@ public class CsvAccess {
 
 	public void setConfig(PropertyFile config) {
 		this.config = config;
-		id = config.getProperty("DEFAULT.File.CSV.head.ID");
-		name = config.getProperty("DEFAULT.File.CSV.head.NAME");
-		surname1 = config.getProperty("DEFAULT.File.CSV.head.FIRST_SURNAME");
-		surname2 = config.getProperty("DEFAULT.File.CSV.head.SECOND_SURNAME");
-		phone = config.getProperty("DEFAULT.File.CSV.head.PHONE");
-		email = config.getProperty("DEFAULT.File.CSV.head.EMAIL");
-		job = config.getProperty("DEFAULT.File.CSV.head.JOB");
-		hiringDate = config.getProperty("DEFAULT.File.CSV.head.HIRING_DATE");
-		yearSalary = config.getProperty("DEFAULT.File.CSV.head.YEAR_SALARY");
-		sickLeave = config.getProperty("DEFAULT.File.CSV.head.SICK_LEAVE");
+		id = config.getProperty(PropertyFile.HEAD_ID);
+		name = config.getProperty(PropertyFile.HEAD_NAME);
+		surname1 = config.getProperty(PropertyFile.HEAD_SURNAME1);
+		surname2 = config.getProperty(PropertyFile.HEAD_SURNAME2);
+		phone = config.getProperty(PropertyFile.HEAD_PHONE);
+		email = config.getProperty(PropertyFile.HEAD_EMAIL);
+		job = config.getProperty(PropertyFile.HEAD_JOB);
+		hiringDate = config.getProperty(PropertyFile.HEAD_HIRING_DATE);
+		yearSalary = config.getProperty(PropertyFile.HEAD_YEAR_SALARY);
+		sickLeave = config.getProperty(PropertyFile.HEAD_SICK_LEAVE);
 	}
 
 	/**

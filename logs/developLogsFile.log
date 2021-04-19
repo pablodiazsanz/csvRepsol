@@ -1531,3 +1531,7 @@ TRACE   2021-04-19 09:22:17,593 [main] csvRepsol.PropertyFile  - DEFAULT.File.CS
 INFO    2021-04-19 09:22:17,607 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"
 TRACE   2021-04-19 09:22:17,607 [main] csvRepsol.MainClass  - Se han realizado las comparaciones correctamente y en el tercer CSV se han metido las creaciones, modificaciones y eliminaciones de empleados
 TRACE   2021-04-19 09:22:17,607 [main] csvRepsol.MainClass  - Finaliza la aplicación
+TRACE   2021-04-19 12:31:03,806 [main] csvRepsol.PropertyFile  - Fichero config de cliente leido exitosamente
+TRACE   2021-04-19 12:31:03,834 [main] csvRepsol.PropertyFile  - Fichero config de cliente leido exitosamente
+TRACE   2021-04-19 12:31:03,835 [main] csvRepsol.MainClass  - Arranca la aplicaciÃ³n
+TRACE   2021-04-19 12:31:03,888 [main] csvRepsol.PropertyFile  - DEFAULT.File.CSV.result leida correctamente
