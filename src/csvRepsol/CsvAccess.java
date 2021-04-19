@@ -306,28 +306,6 @@ public class CsvAccess {
 
 				}
 			}
-			/*
-			 * switch (orderColumns.get(i)) { case : id =
-			 * dataEmployee.get(i).trim().toUpperCase(); break; case "name": name =
-			 * dataEmployee.get(i).trim(); break; case "surname1": surname1 =
-			 * dataEmployee.get(i).trim(); break; case "surname2": surname2 =
-			 * dataEmployee.get(i).trim(); break; case "tlf": tlf =
-			 * dataEmployee.get(i).trim(); break; case "email": email =
-			 * dataEmployee.get(i).trim(); break; case "job": job =
-			 * dataEmployee.get(i).trim(); break; case "hiring_date": /* Aquí formateamos la
-			 * cadena obtenida, que en el caso ideal es una fecha, a un tipo Date
-			 */
-			/*
-			 * SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-			 * formatter.setTimeZone(TimeZone.getTimeZone("Europe/Madrid")); hiringDate =
-			 * formatter.parse(dataEmployee.get(i)); break; case "year_salary": // Aqui
-			 * formateamos el salario anual a numero entero yearSalary =
-			 * Integer.parseInt(dataEmployee.get(i)); break; case "sick_leave": // Aquí
-			 * comprobamos si el empleado está dado de baja o no if
-			 * (dataEmployee.get(i).equals("true")) { sickLeave = true; } break;
-			 * 
-			 * default: break; }
-			 */
 		}
 
 		/*
@@ -347,7 +325,7 @@ public class CsvAccess {
 	 */
 	public void createCSV() {
 		try {
-			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"));
+			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 			log.trace(fw);
@@ -364,7 +342,7 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) {
 		try {
-			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"), true);
+			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
 			log.info("[" + employee.getId() + "] - \"" + status + "\"");
@@ -441,7 +419,7 @@ public class CsvAccess {
 				+ ";" + updatedEmployee.getJob() + ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 		// Añadimos la linea de datos al fichero CSV.
 		try {
-			FileWriter fw = new FileWriter(config.getProperty("DEFAULT.File.CSV.result"), true);
+			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");

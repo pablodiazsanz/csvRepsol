@@ -12,7 +12,7 @@ public class ServerProperties extends PropertyFile {
 	
 	public static String PATH_SERVER = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";	
 	
-	//public static String PATH_SERVER = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+	//public static String PATH_SERVER = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties
 
 	public ServerProperties() {
 		super(PATH_SERVER);
