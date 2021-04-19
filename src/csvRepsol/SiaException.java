@@ -22,12 +22,7 @@ public class SiaException extends Exception {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SiaException(Throwable cause) {
-		super(cause);
-		// TODO Auto-generated constructor stub
-	}
 	
 	
-
-	
+		
 }
