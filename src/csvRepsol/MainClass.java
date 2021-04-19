@@ -30,13 +30,13 @@ public class MainClass {
 			// Establecemos en el objeto CsvAccess el fichero de propiedades del cliente
 			csvAccess.setConfig(clientConfig);
 			// Obtenemos los datos del fichero del cliente
-			HashMap<String, Employee> clientData = csvAccess.readCSV(clientConfig.getProperty("DEFAULT.File.CSV.client"));
+			HashMap<String, Employee> clientData = csvAccess.readCSV(clientConfig.getProperty(ClientPropeties.PATH));
 			log.trace("Se han obtenido los datos del  fichero del cliente correctamente");
 			
 			// Establecemos en el objeto CsvAccess el fichero de propiedades del servidor
 			csvAccess.setConfig(serverConfig);
 			// Obtenemos los datos del fichero del servidor
-			HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty("DEFAULT.File.CSV.server"));
+			HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty(ServerProperties.PATH_SERVER));
 			log.trace("Se han obtenido los datos del  fichero del servidor correctamente");
 
 			// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer

@@ -7,10 +7,9 @@ import java.io.IOException;
 public class ClientPropeties extends PropertyFile {
 	
 	public static String PATH = "DEFAULT.File.CSV.client";	
-	//public static String src = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
-	public static String src = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
 	
-	
+	public static String src = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
+	//public static String src = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
 	
 	public ClientPropeties() {
 		super(src);
