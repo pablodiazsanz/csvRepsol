@@ -1,0 +1,363 @@
+DEBUG   2021-04-19 09:22:15,645 [main] csvRepsol.CsvAccess  - [H1] - Empleado creado: Employee [id=H1, name=Alberto, surname1=Fernandez, surname2=Garcia, tlf=666777888, mail=tetete@email.com, job=Contable, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,654 [main] csvRepsol.CsvAccess  - [H2] - Empleado creado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,660 [main] csvRepsol.CsvAccess  - [H3] - Empleado creado: Employee [id=H3, name=Miguel, surname1=Perez, surname2=Perez, tlf=666222333, mail=utyrfuytf@email.com, job=Recepcionista, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,684 [main] csvRepsol.CsvAccess  - [H4] - Empleado creado: Employee [id=H4, name=Xavier, surname1=Garcia, surname2=Diaz, tlf=666111999, mail=utgfuf@email.com, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,686 [main] csvRepsol.CsvAccess  - [H5] - Empleado creado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,690 [main] csvRepsol.CsvAccess  - [H7] - Empleado creado: Employee [id=H7, name=Esther, surname1=Alin, surname2=Avila, tlf=666888333, mail=tydf@email.com, job=Responsable Tienda, hiringDate=10/01/2015 18:16:13, yearSalary=18000, sickLeave=true]
+DEBUG   2021-04-19 09:22:15,698 [main] csvRepsol.CsvAccess  - [H8] - Empleado creado: Employee [id=H8, name=Antonio, surname1=Perez, surname2=Perez, tlf=666000888, mail=pok@email.com, job=Cajero, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,700 [main] csvRepsol.CsvAccess  - [H9] - Empleado creado: Employee [id=H9, name=Juan, surname1=Garcia, surname2=Garcia, tlf=666222888, mail=ytd@email.com, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,701 [main] csvRepsol.CsvAccess  - [H10] - Empleado creado: Employee [id=H10, name=Francisco, surname1=Perez, surname2=Agudo, tlf=654888999, mail=oekjioh@email.com, job="Abogado; Laboralista", hiringDate=10/01/2015 15:16:13, yearSalary=19000, sickLeave=true]
+DEBUG   2021-04-19 09:22:15,717 [main] csvRepsol.CsvAccess  - [H11] - Empleado creado: Employee [id=H11, name=Clara, surname1=Garcia, surname2=Campos, tlf=645888999, mail=hufcg@email.com, job=Comercial, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,718 [main] csvRepsol.CsvAccess  - [H12] - Empleado creado: Employee [id=H12, name=Alba, surname1=Martinez, surname2=Alin, tlf=622445511, mail=szxd@email.com, job=Jefe de Marketing, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,725 [main] csvRepsol.CsvAccess  - [H14] - Empleado creado: Employee [id=H14, name=�?lvaro, surname1=Turdasan, surname2=NULL, tlf=689745123, mail=NULL, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,727 [main] csvRepsol.CsvAccess  - [H15] - Empleado creado: Employee [id=H15, name=Andrés, surname1=Casillas, surname2=Perez, tlf=687456213, mail=NULL, job=Gerente, hiringDate=10/01/2015 15:17:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,750 [main] csvRepsol.CsvAccess  - [H16] - Empleado creado: Employee [id=H16, name=María, surname1=Garcia, surname2=Garcia, tlf=687569856, mail=iiu@email.com, job="Inspector;calidad", hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,752 [main] csvRepsol.CsvAccess  - [H17] - Empleado creado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=NULL, tlf=693985264, mail=hgf@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+WARN    2021-04-19 09:22:15,754 [main] csvRepsol.CsvAccess  - Linea (17) del Fichero "C:\Users\mparrap\git\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "java.util.Date.getTime()" because "date" is null
+	at java.base/java.util.Calendar.setTime(Calendar.java:1801)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3367)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:167)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:332)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+WARN    2021-04-19 09:22:15,764 [main] csvRepsol.CsvAccess  - Linea (18) del Fichero "C:\Users\mparrap\git\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "java.util.Date.getTime()" because "date" is null
+	at java.base/java.util.Calendar.setTime(Calendar.java:1801)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3367)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:167)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:332)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+DEBUG   2021-04-19 09:22:15,767 [main] csvRepsol.CsvAccess  - [H18] - Empleado creado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job="Responsable;Tienda", hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,769 [main] csvRepsol.CsvAccess  - [H19] - Empleado creado: Employee [id=H19, name=Sergio, surname1=Perez, surname2=Turdasan, tlf=612378454, mail=jhgfg@email.com, job=Gerente, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,786 [main] csvRepsol.CsvAccess  - [H21] - Empleado creado: Employee [id=H21, name=Iker, surname1=Diaz, surname2=Casillas, tlf=698745321, mail=yyyyuy@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,788 [main] csvRepsol.CsvAccess  - [H22] - Empleado creado: Employee [id=H22, name=Carlos, surname1=Vivar, surname2=Garcia, tlf=689452136, mail=plol@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,798 [main] csvRepsol.CsvAccess  - [H23] - Empleado creado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job=Encargado de Mantenimiento, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=true]
+DEBUG   2021-04-19 09:22:15,800 [main] csvRepsol.CsvAccess  - [H24] - Empleado creado: Employee [id=H24, name=Ana, surname1=Caballero, surname2=del Castillo, tlf=682783723, mail=anacc@email.com, job=Administrativo, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,802 [main] csvRepsol.CsvAccess  - [H25] - Empleado creado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=martasg@email.com, job=Jefe de Proyecto IT, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,832 [main] csvRepsol.CsvAccess  - [H26] - Empleado creado: Employee [id=H26, name=Andrea, surname1=Fernández, surname2=Sanchez, tlf=617638627, mail=andreafsa@email.com, job=RRHH, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,858 [main] csvRepsol.CsvAccess  - [H27] - Empleado creado: Employee [id=H27, name=Elisa, surname1=Gómez, surname2=Sevilla, tlf=643342369, mail=elisags@email.com, job=Encargado de Publicidad, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=true]
+DEBUG   2021-04-19 09:22:15,860 [main] csvRepsol.CsvAccess  - [H29] - Empleado creado: Employee [id=H29, name=Ainhoa, surname1=Segovia, surname2=Garcia, tlf=697538627, mail=ainhoasgar@email.com, job=Responsable Tienda, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,896 [main] csvRepsol.CsvAccess  - [H31] - Empleado creado: Employee [id=H31, name=Juan Manuel, surname1=Romero, surname2=Estrella, tlf=697536981, mail=juanmare@email.com, job="Jefe; Publicidad", hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,898 [main] csvRepsol.CsvAccess  - [H33] - Empleado creado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2=Jimenez, tlf=688889265, mail=helenpj@email.com, job=Encargado de Mantenimiento, hiringDate=10/11/2015 11:16:13, yearSalary=18000, sickLeave=true]
+DEBUG   2021-04-19 09:22:15,927 [main] csvRepsol.CsvAccess  - [H36] - Empleado creado: Employee [id=H36, name=Maria Luisa, surname1=Gutierrez, surname2=del Rosario, tlf=688225362, mail=mariluigr@email.com, job=Cajero, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,928 [main] csvRepsol.CsvAccess  - [H37] - Empleado creado: Employee [id=H37, name=Ruth, surname1=Delgado, surname2=Rey, tlf=668761152, mail=rudere@email.com, job=Encargado de Limpieza, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,931 [main] csvRepsol.CsvAccess  - [H38] - Empleado creado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=López, tlf=620338982, mail=neregonlo@email.com, job=Cajero, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ERROR   2021-04-19 09:22:15,935 [main] csvRepsol.CsvAccess  - ID: [H39] - N�Linea: (34) - Fichero: "C:\Users\mparrap\git\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;González;false;665825681;marimargogu@email.com;Administrativo;10/11/2015:32;18000;H39}
+ No se ha podido crear el objeto empleado.
+java.text.ParseException: Unparseable date: "10/11/2015:32"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:289)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+ERROR   2021-04-19 09:22:15,938 [main] csvRepsol.CsvAccess  - ID: [H40] - N�Linea: (35) - Fichero: "C:\Users\mparrap\git\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;false;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16:13;180+00;H40}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "180+00"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:293)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+DEBUG   2021-04-19 09:22:15,941 [main] csvRepsol.CsvAccess  - [H43] - Empleado creado: Employee [id=H43, name=Pelayo, surname1=Pelaez, surname2=Casillas, tlf=126987413, mail=haqwhdj@email.com, job=Quimico, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,947 [main] csvRepsol.CsvAccess  - [H44] - Empleado creado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=jqhds@email.com, job=Gerente, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,948 [main] csvRepsol.CsvAccess  - [H45] - Empleado creado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=nhasjndx@email.com, job=Mantenimiento, hiringDate=10/11/2015 17:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,952 [main] csvRepsol.CsvAccess  - [H46] - Empleado creado: Employee [id=H46, name=Sonia, surname1=Puertas, surname2=Moran, tlf=654789152, mail=yqwter@email.com, job=Quimico, hiringDate=10/11/2015 15:16:12, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,955 [main] csvRepsol.CsvAccess  - [H47] - Empleado creado: Employee [id=H47, name=Beatriz, surname1=Rosado, surname2=Huertas, tlf=635987415, mail=aasxz@email.com, job=Quimico, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ERROR   2021-04-19 09:22:15,957 [main] csvRepsol.CsvAccess  - ID: [H48] - N�Linea: (41) - Fichero: "C:\Users\mparrap\git\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;false;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16:13;18*000;H48}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "18*000"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:293)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+DEBUG   2021-04-19 09:22:15,967 [main] csvRepsol.CsvAccess  - [H49] - Empleado creado: Employee [id=H49, name=Sara, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=10/12/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,968 [main] csvRepsol.CsvAccess  - [H50] - Empleado creado: Employee [id=H50, name=Fabiola, surname1=Decena, surname2=Centena, tlf=652169743, mail=ghjjhey@email.com, job=Seguridad, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,971 [main] csvRepsol.CsvAccess  - [H51] - Empleado creado: Employee [id=H51, name=Lorena, surname1=Garcia, surname2=Moreno, tlf=63897421, mail=gwtdgw@email.com, job=Becario, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,980 [main] csvRepsol.CsvAccess  - [H52] - Empleado creado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqÃ±wkl@email.com, job=Seguridad, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,981 [main] csvRepsol.CsvAccess  - [H53] - Empleado creado: Employee [id=H53, name=Lidia, surname1=Turdasan, surname2=Alin, tlf=655442536, mail=fgwegd@email.com, job=Comercial, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+ERROR   2021-04-19 09:22:15,984 [main] csvRepsol.CsvAccess  - ID: [null] - N�Linea: (47) - Fichero: "C:\Users\mparrap\git\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;false;Programador Senior;10/1/2015;18000;10/21/2015 15:16:13;H60}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "H60"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:293)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+DEBUG   2021-04-19 09:22:15,985 [main] csvRepsol.CsvAccess  - [H61] - Empleado creado: Employee [id=H61, name=Jorge, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=09/10/2016 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:15,987 [main] csvRepsol.CsvAccess  - [H62] - Empleado creado: Employee [id=H62, name=Marisa, surname1=Hernandez, surname2=Agudo, tlf=63219874, mail=aqqwr@email.com, job="Beca;rio", hiringDate=10/01/2017 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,015 [main] csvRepsol.CsvAccess  - [H63] - Empleado creado: Employee [id=H63, name=Petunia, surname1=Hernandez, surname2=Isosceles, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=11/12/2017 15:16:13, yearSalary=18000, sickLeave=false]
+WARN    2021-04-19 09:22:16,015 [main] csvRepsol.CsvAccess  - Linea (51) del Fichero "C:\Users\mparrap\git\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "java.util.Date.getTime()" because "date" is null
+	at java.base/java.util.Calendar.setTime(Calendar.java:1801)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3367)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:167)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:332)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+WARN    2021-04-19 09:22:16,016 [main] csvRepsol.CsvAccess  - Linea (52) del Fichero "C:\Users\mparrap\git\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
+	at csvRepsol.MainClass.main(MainClass.java:39)
+DEBUG   2021-04-19 09:22:16,034 [main] csvRepsol.CsvAccess  - [H1] - Empleado creado: Employee [id=H1, name=Alberto, surname1=Fernandez, surname2=Garcia, tlf=666777888, mail=tetete@email.com, job=Contable, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,035 [main] csvRepsol.CsvAccess  - [H2] - Empleado creado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,037 [main] csvRepsol.CsvAccess  - [H3] - Empleado creado: Employee [id=H3, name=Miguel, surname1=Perez, surname2=Perez, tlf=666222333, mail=utyrfuytf@email.com, job=Recepcionista, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,039 [main] csvRepsol.CsvAccess  - [H4] - Empleado creado: Employee [id=H4, name=Xavier, surname1=Garcia, surname2=Diaz, tlf=666111999, mail=utgfuf@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,041 [main] csvRepsol.CsvAccess  - [H5] - Empleado creado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,047 [main] csvRepsol.CsvAccess  - [H6] - Empleado creado: Employee [id=H6, name=Paula, surname1=Campos, surname2=Fernandez, tlf=666444222, mail=opi9uiyh@email.com, job=Comercial, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,048 [main] csvRepsol.CsvAccess  - [H7] - Empleado creado: Employee [id=H7, name=Esther, surname1=Alin, surname2=Avila, tlf=666888333, mail=tydf@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,048 [main] csvRepsol.CsvAccess  - [H8] - Empleado creado: Employee [id=H8, name=Antonio, surname1=Perez, surname2=Perez, tlf=666000888, mail=pok@email.com, job=Cajero, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,051 [main] csvRepsol.CsvAccess  - [H9] - Empleado creado: Employee [id=H9, name=Juan, surname1=Garcia, surname2=Garcia, tlf=666222888, mail=ytd@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,052 [main] csvRepsol.CsvAccess  - [H10] - Empleado creado: Employee [id=H10, name=Francisco, surname1=Perez, surname2=Agudo, tlf=654888999, mail=oekjioh@email.com, job=Abogado Laboralista, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,053 [main] csvRepsol.CsvAccess  - [H11] - Empleado creado: Employee [id=H11, name=Clara, surname1=Garcia, surname2=Campos, tlf=645888999, mail=hufcg@email.com, job=Comercial, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,084 [main] csvRepsol.CsvAccess  - [H12] - Empleado creado: Employee [id=H12, name=Alba, surname1=Martinez, surname2=Alin, tlf=622445511, mail=szxd@email.com, job=Jefe de Marketing, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,085 [main] csvRepsol.CsvAccess  - [H13] - Empleado creado: Employee [id=H13, name=Javier, surname1=Serrano, surname2=Perez, tlf=687456289, mail=iuyfc@email.com, job=Gerente Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,086 [main] csvRepsol.CsvAccess  - [H14] - Empleado creado: Employee [id=H14, name=�?lvaro, surname1=Turdasan, surname2=Garcia, tlf=689745123, mail=hjgfcv@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,108 [main] csvRepsol.CsvAccess  - [H15] - Empleado creado: Employee [id=H15, name=Andrés, surname1=Casillas, surname2=Perez, tlf=687456213, mail=ggtr@email.com, job=Gerente, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ERROR   2021-04-19 09:22:16,110 [main] csvRepsol.CsvAccess  - ID: [H16] - N�Linea: (17) - Fichero: "C:\Users\mparrap\git\csvRepsol\csv\server.csv" - Linea: {H16;María;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
+ No se ha podido crear el objeto empleado.
+java.text.ParseException: Unparseable date: "1/10/2015"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
+	at csvRepsol.CsvAccess.createEmployee(CsvAccess.java:289)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:92)
+	at csvRepsol.MainClass.main(MainClass.java:45)
+DEBUG   2021-04-19 09:22:16,111 [main] csvRepsol.CsvAccess  - [H17] - Empleado creado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=Martinez, tlf=693985264, mail=hgf@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,133 [main] csvRepsol.CsvAccess  - [H18] - Empleado creado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,134 [main] csvRepsol.CsvAccess  - [H19] - Empleado creado: Employee [id=H19, name=Sergio, surname1=Perez, surname2=Turdasan, tlf=612378454, mail=jhgfg@email.com, job=Gerente, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,141 [main] csvRepsol.CsvAccess  - [H21] - Empleado creado: Employee [id=H21, name=Iker, surname1=Diaz, surname2=Casillas, tlf=698745321, mail=yyyyuy@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,143 [main] csvRepsol.CsvAccess  - [H22] - Empleado creado: Employee [id=H22, name=Carlos, surname1=Vivar, surname2=Garcia, tlf=689452136, mail=plol@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,143 [main] csvRepsol.CsvAccess  - [H23] - Empleado creado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job=Encargado de Mantenimiento, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,143 [main] csvRepsol.CsvAccess  - [H24] - Empleado creado: Employee [id=H24, name=Ana, surname1=Caballero, surname2=del Castillo, tlf=682783723, mail=anacc@email.com, job=Administrativo, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,144 [main] csvRepsol.CsvAccess  - [H25] - Empleado creado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=martasg@email.com, job=Jefe de Proyecto IT, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,145 [main] csvRepsol.CsvAccess  - [H26] - Empleado creado: Employee [id=H26, name=Andrea, surname1=Fernández, surname2=Sanchez, tlf=617638627, mail=andreafsa@email.com, job=RRHH, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,147 [main] csvRepsol.CsvAccess  - [H27] - Empleado creado: Employee [id=H27, name=Elisa, surname1=Gómez, surname2=Sevilla, tlf=643342369, mail=elisags@email.com, job=Encargado de Publicidad, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,148 [main] csvRepsol.CsvAccess  - [H29] - Empleado creado: Employee [id=H29, name=Ainhoa, surname1=Segovia, surname2=Garcia, tlf=697538627, mail=ainhoasgar@email.com, job=Responsable Tienda, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,152 [main] csvRepsol.CsvAccess  - [H31] - Empleado creado: Employee [id=H31, name=Juan Manuel, surname1=Romero, surname2=Estrella, tlf=677792687, mail=juanmare@email.com, job=Jefe de Publicidad, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,153 [main] csvRepsol.CsvAccess  - [H33] - Empleado creado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2=Jimenez, tlf=688889265, mail=helenpj@email.com, job=Encargado de Mantenimiento, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,154 [main] csvRepsol.CsvAccess  - [H35] - Empleado creado: Employee [id=H35, name=Pablo, surname1=Díaz, surname2=Salinas, tlf=632642642, mail=pdiazs@email.com, job=Analista, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,207 [main] csvRepsol.CsvAccess  - [H36] - Empleado creado: Employee [id=H36, name=Maria Luisa, surname1=Gutierrez, surname2=del Rosario, tlf=688225362, mail=mariluigr@email.com, job=Cajero, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,208 [main] csvRepsol.CsvAccess  - [H37] - Empleado creado: Employee [id=H37, name=Ruth, surname1=Delgado, surname2=Rey, tlf=668761152, mail=rudere@email.com, job=Encargado de Limpieza, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,209 [main] csvRepsol.CsvAccess  - [H38] - Empleado creado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=López, tlf=620338982, mail=neregonlo@email.com, job=Cajero, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,210 [main] csvRepsol.CsvAccess  - [H39] - Empleado creado: Employee [id=H39, name=Maria del Mar, surname1=González, surname2=Gutierrez, tlf=665825681, mail=marimargogu@email.com, job=Administrativo, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,251 [main] csvRepsol.CsvAccess  - [H40] - Empleado creado: Employee [id=H40, name=Adrian, surname1=Lomillo, surname2=Casillas, tlf=621459870, mail=yjjyuy@email.com, job=Comercial, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,253 [main] csvRepsol.CsvAccess  - [H43] - Empleado creado: Employee [id=H43, name=Pelayo, surname1=Pelaez, surname2=Casillas, tlf=126987413, mail=haqwhdj@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,253 [main] csvRepsol.CsvAccess  - [H44] - Empleado creado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=jqhds@email.com, job=Gerente, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,254 [main] csvRepsol.CsvAccess  - [H45] - Empleado creado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=nhasjndx@email.com, job=Mantenimiento, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,255 [main] csvRepsol.CsvAccess  - [H46] - Empleado creado: Employee [id=H46, name=Sonia, surname1=Puertas, surname2=Moran, tlf=654789152, mail=yqwter@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,258 [main] csvRepsol.CsvAccess  - [H47] - Empleado creado: Employee [id=H47, name=Beatriz, surname1=Rosado, surname2=Huertas, tlf=635987415, mail=aasxz@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,264 [main] csvRepsol.CsvAccess  - [H48] - Empleado creado: Employee [id=H48, name=Lucia, surname1=Pardo, surname2=Bazan, tlf=698745036, mail=seerfa@email.com, job=Reponedor, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,265 [main] csvRepsol.CsvAccess  - [H49] - Empleado creado: Employee [id=H49, name=Sara, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=12/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,267 [main] csvRepsol.CsvAccess  - [H50] - Empleado creado: Employee [id=H50, name=Fabiola, surname1=Decena, surname2=Centena, tlf=652169743, mail=ghjjhey@email.com, job=Seguridad, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,268 [main] csvRepsol.CsvAccess  - [H51] - Empleado creado: Employee [id=H51, name=Lorena, surname1=Garcia, surname2=Moreno, tlf=63897421, mail=gwtdgw@email.com, job=Becario, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,269 [main] csvRepsol.CsvAccess  - [H52] - Empleado creado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqñwkl@email.com, job=Seguridad, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,295 [main] csvRepsol.CsvAccess  - [H53] - Empleado creado: Employee [id=H53, name=Lidia, surname1=Turdasan, surname2=Alin, tlf=655442536, mail=fgwegd@email.com, job=Comercial, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+WARN    2021-04-19 09:22:16,295 [main] csvRepsol.CsvAccess  - Linea (48) del Fichero "C:\Users\mparrap\git\csvRepsol\csv\server.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.CsvAccess.getDataFromLine(CsvAccess.java:166)
+	at csvRepsol.CsvAccess.readCSV(CsvAccess.java:85)
+	at csvRepsol.MainClass.main(MainClass.java:45)
+DEBUG   2021-04-19 09:22:16,296 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H61, name=Jorge, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=09/10/2016 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:16,304 [main] csvRepsol.CsvAccess  - [H61] - "CREATE"
+DEBUG   2021-04-19 09:22:16,307 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H63, name=Petunia, surname1=Hernandez, surname2=Isosceles, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=11/12/2017 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:16,315 [main] csvRepsol.CsvAccess  - [H63] - "CREATE"
+DEBUG   2021-04-19 09:22:16,315 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H62, name=Marisa, surname1=Hernandez, surname2=Agudo, tlf=63219874, mail=aqqwr@email.com, job="Beca;rio", hiringDate=10/01/2017 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:16,325 [main] csvRepsol.CsvAccess  - [H62] - "CREATE"
+DEBUG   2021-04-19 09:22:16,349 [main] csvRepsol.Manager  - el empleado [H21] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,361 [main] csvRepsol.CsvAccess  - [H21] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,361 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H21, name=Iker, surname1=Diaz, surname2=Casillas, tlf=698745321, mail=yyyyuy@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H21, name=Iker, surname1=Diaz, surname2=Casillas, tlf=698745321, mail=yyyyuy@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,361 [main] csvRepsol.Manager  - el empleado [H43] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,371 [main] csvRepsol.CsvAccess  - [H43] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,371 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H43, name=Pelayo, surname1=Pelaez, surname2=Casillas, tlf=126987413, mail=haqwhdj@email.com, job=Quimico, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H43, name=Pelayo, surname1=Pelaez, surname2=Casillas, tlf=126987413, mail=haqwhdj@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,371 [main] csvRepsol.Manager  - el empleado [H23] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+DEBUG   2021-04-19 09:22:16,371 [main] csvRepsol.Manager  - el empleado [H23] cambia el (Baja) a: {true}
+INFO    2021-04-19 09:22:16,468 [main] csvRepsol.CsvAccess  - [H23] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,470 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job=Encargado de Mantenimiento, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=true]
+ datos anteriores: Employee [id=H23, name=Alfredo, surname1=Escobar, surname2=Pintado, tlf=655656767, mail=alfred@email.com, job=Encargado de Mantenimiento, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,471 [main] csvRepsol.Manager  - el empleado [H45] cambia el (Fecha de contratacion) a: {Tue Nov 10 17:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,515 [main] csvRepsol.CsvAccess  - [H45] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,516 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=nhasjndx@email.com, job=Mantenimiento, hiringDate=10/11/2015 17:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H45, name=Maria, surname1=Casado, surname2=Millan, tlf=632145987, mail=nhasjndx@email.com, job=Mantenimiento, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,516 [main] csvRepsol.Manager  - el empleado [H22] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,531 [main] csvRepsol.CsvAccess  - [H22] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,532 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H22, name=Carlos, surname1=Vivar, surname2=Garcia, tlf=689452136, mail=plol@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H22, name=Carlos, surname1=Vivar, surname2=Garcia, tlf=689452136, mail=plol@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,532 [main] csvRepsol.Manager  - el empleado [H44] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,581 [main] csvRepsol.CsvAccess  - [H44] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,581 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=jqhds@email.com, job=Gerente, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H44, name=Diego, surname1=Sobarzo, surname2=Sojunio, tlf=632159874, mail=jqhds@email.com, job=Gerente, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,582 [main] csvRepsol.Manager  - el empleado [H25] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,596 [main] csvRepsol.CsvAccess  - [H25] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,597 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=martasg@email.com, job=Jefe de Proyecto IT, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H25, name=Marta, surname1=Salamanca, surname2=Gimenez, tlf=602836862, mail=martasg@email.com, job=Jefe de Proyecto IT, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,597 [main] csvRepsol.Manager  - el empleado [H47] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,619 [main] csvRepsol.CsvAccess  - [H47] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,620 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H47, name=Beatriz, surname1=Rosado, surname2=Huertas, tlf=635987415, mail=aasxz@email.com, job=Quimico, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H47, name=Beatriz, surname1=Rosado, surname2=Huertas, tlf=635987415, mail=aasxz@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,621 [main] csvRepsol.Manager  - el empleado [H24] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,635 [main] csvRepsol.CsvAccess  - [H24] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,641 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H24, name=Ana, surname1=Caballero, surname2=del Castillo, tlf=682783723, mail=anacc@email.com, job=Administrativo, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H24, name=Ana, surname1=Caballero, surname2=del Castillo, tlf=682783723, mail=anacc@email.com, job=Administrativo, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,641 [main] csvRepsol.Manager  - el empleado [H46] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:12 CET 2015}
+INFO    2021-04-19 09:22:16,681 [main] csvRepsol.CsvAccess  - [H46] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,682 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H46, name=Sonia, surname1=Puertas, surname2=Moran, tlf=654789152, mail=yqwter@email.com, job=Quimico, hiringDate=10/11/2015 15:16:12, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H46, name=Sonia, surname1=Puertas, surname2=Moran, tlf=654789152, mail=yqwter@email.com, job=Quimico, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,682 [main] csvRepsol.Manager  - el empleado [H27] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+DEBUG   2021-04-19 09:22:16,682 [main] csvRepsol.Manager  - el empleado [H27] cambia el (Baja) a: {true}
+INFO    2021-04-19 09:22:16,706 [main] csvRepsol.CsvAccess  - [H27] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,707 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H27, name=Elisa, surname1=Gómez, surname2=Sevilla, tlf=643342369, mail=elisags@email.com, job=Encargado de Publicidad, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=true]
+ datos anteriores: Employee [id=H27, name=Elisa, surname1=Gómez, surname2=Sevilla, tlf=643342369, mail=elisags@email.com, job=Encargado de Publicidad, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,708 [main] csvRepsol.Manager  - el empleado [H49] cambia el (Fecha de contratacion) a: {Thu Dec 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,779 [main] csvRepsol.CsvAccess  - [H49] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,779 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H49, name=Sara, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=10/12/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H49, name=Sara, surname1=Hernandez, surname2=Obtuso, tlf=63219874, mail=aqqwr@email.com, job=Becario, hiringDate=12/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,780 [main] csvRepsol.Manager  - El empleado con identificador H26 no se cambia, se mantiene igual
+DEBUG   2021-04-19 09:22:16,780 [main] csvRepsol.Manager  - el empleado [H29] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,820 [main] csvRepsol.CsvAccess  - [H29] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,821 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H29, name=Ainhoa, surname1=Segovia, surname2=Garcia, tlf=697538627, mail=ainhoasgar@email.com, job=Responsable Tienda, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H29, name=Ainhoa, surname1=Segovia, surname2=Garcia, tlf=697538627, mail=ainhoasgar@email.com, job=Responsable Tienda, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,822 [main] csvRepsol.Manager  - el empleado [H50] cambia el (Fecha de contratacion) a: {Sat Sep 10 15:16:13 CEST 2016}
+INFO    2021-04-19 09:22:16,842 [main] csvRepsol.CsvAccess  - [H50] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,846 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H50, name=Fabiola, surname1=Decena, surname2=Centena, tlf=652169743, mail=ghjjhey@email.com, job=Seguridad, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H50, name=Fabiola, surname1=Decena, surname2=Centena, tlf=652169743, mail=ghjjhey@email.com, job=Seguridad, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,847 [main] csvRepsol.Manager  - el empleado [H52] cambia el (Email) a: {ppwqÃ±wkl@email.com}
+DEBUG   2021-04-19 09:22:16,847 [main] csvRepsol.Manager  - el empleado [H52] cambia el (Fecha de contratacion) a: {Sat Sep 10 15:16:13 CEST 2016}
+INFO    2021-04-19 09:22:16,882 [main] csvRepsol.CsvAccess  - [H52] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,883 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqÃ±wkl@email.com, job=Seguridad, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H52, name=Diego, surname1=Fernandez, surname2=Grande, tlf=652653623, mail=ppwqñwkl@email.com, job=Seguridad, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,883 [main] csvRepsol.Manager  - el empleado [H51] cambia el (Fecha de contratacion) a: {Sat Sep 10 15:16:13 CEST 2016}
+INFO    2021-04-19 09:22:16,903 [main] csvRepsol.CsvAccess  - [H51] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,903 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H51, name=Lorena, surname1=Garcia, surname2=Moreno, tlf=63897421, mail=gwtdgw@email.com, job=Becario, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H51, name=Lorena, surname1=Garcia, surname2=Moreno, tlf=63897421, mail=gwtdgw@email.com, job=Becario, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,903 [main] csvRepsol.Manager  - el empleado [H10] cambia el (puesto de trabajo) a: {"Abogado; Laboralista"}
+DEBUG   2021-04-19 09:22:16,903 [main] csvRepsol.Manager  - el empleado [H10] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+DEBUG   2021-04-19 09:22:16,903 [main] csvRepsol.Manager  - el empleado [H10] cambia el (Salario anual) a: {19000}
+DEBUG   2021-04-19 09:22:16,903 [main] csvRepsol.Manager  - el empleado [H10] cambia el (Baja) a: {true}
+INFO    2021-04-19 09:22:16,930 [main] csvRepsol.CsvAccess  - [H10] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,930 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H10, name=Francisco, surname1=Perez, surname2=Agudo, tlf=654888999, mail=oekjioh@email.com, job="Abogado; Laboralista", hiringDate=10/01/2015 15:16:13, yearSalary=19000, sickLeave=true]
+ datos anteriores: Employee [id=H10, name=Francisco, surname1=Perez, surname2=Agudo, tlf=654888999, mail=oekjioh@email.com, job=Abogado Laboralista, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,930 [main] csvRepsol.Manager  - el empleado [H31] cambia el (telefono) a: {697536981}
+DEBUG   2021-04-19 09:22:16,930 [main] csvRepsol.Manager  - el empleado [H31] cambia el (puesto de trabajo) a: {"Jefe; Publicidad"}
+DEBUG   2021-04-19 09:22:16,931 [main] csvRepsol.Manager  - el empleado [H31] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:16,965 [main] csvRepsol.CsvAccess  - [H31] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,966 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H31, name=Juan Manuel, surname1=Romero, surname2=Estrella, tlf=697536981, mail=juanmare@email.com, job="Jefe; Publicidad", hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H31, name=Juan Manuel, surname1=Romero, surname2=Estrella, tlf=677792687, mail=juanmare@email.com, job=Jefe de Publicidad, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,967 [main] csvRepsol.Manager  - el empleado [H53] cambia el (Fecha de contratacion) a: {Sat Sep 10 15:16:13 CEST 2016}
+INFO    2021-04-19 09:22:16,987 [main] csvRepsol.CsvAccess  - [H53] - "UPDATE"
+DEBUG   2021-04-19 09:22:16,988 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H53, name=Lidia, surname1=Turdasan, surname2=Alin, tlf=655442536, mail=fgwegd@email.com, job=Comercial, hiringDate=10/09/2016 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H53, name=Lidia, surname1=Turdasan, surname2=Alin, tlf=655442536, mail=fgwegd@email.com, job=Comercial, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:16,992 [main] csvRepsol.Manager  - el empleado [H12] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,012 [main] csvRepsol.CsvAccess  - [H12] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,013 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H12, name=Alba, surname1=Martinez, surname2=Alin, tlf=622445511, mail=szxd@email.com, job=Jefe de Marketing, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H12, name=Alba, surname1=Martinez, surname2=Alin, tlf=622445511, mail=szxd@email.com, job=Jefe de Marketing, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,014 [main] csvRepsol.Manager  - el empleado [H1] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,034 [main] csvRepsol.CsvAccess  - [H1] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,037 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H1, name=Alberto, surname1=Fernandez, surname2=Garcia, tlf=666777888, mail=tetete@email.com, job=Contable, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H1, name=Alberto, surname1=Fernandez, surname2=Garcia, tlf=666777888, mail=tetete@email.com, job=Contable, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,037 [main] csvRepsol.Manager  - el empleado [H11] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,052 [main] csvRepsol.CsvAccess  - [H11] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,054 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H11, name=Clara, surname1=Garcia, surname2=Campos, tlf=645888999, mail=hufcg@email.com, job=Comercial, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H11, name=Clara, surname1=Garcia, surname2=Campos, tlf=645888999, mail=hufcg@email.com, job=Comercial, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,054 [main] csvRepsol.Manager  - el empleado [H33] cambia el (Fecha de contratacion) a: {Tue Nov 10 11:16:13 CET 2015}
+DEBUG   2021-04-19 09:22:17,054 [main] csvRepsol.Manager  - el empleado [H33] cambia el (Baja) a: {true}
+INFO    2021-04-19 09:22:17,076 [main] csvRepsol.CsvAccess  - [H33] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,078 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H33, name=Elena, surname1=de Pablos, surname2=Jimenez, tlf=688889265, mail=helenpj@email.com, job=Encargado de Mantenimiento, hiringDate=10/11/2015 11:16:13, yearSalary=18000, sickLeave=true]
+ datos anteriores: Employee [id=H33, name=Elena, surname1=de Pablos, surname2=Jimenez, tlf=688889265, mail=helenpj@email.com, job=Encargado de Mantenimiento, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,080 [main] csvRepsol.Manager  - el empleado [H2] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,101 [main] csvRepsol.CsvAccess  - [H2] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,102 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H2, name=Jorge, surname1=Avila, surname2=Gallego, tlf=666444333, mail=gfg@email.com, job=RRHH, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,102 [main] csvRepsol.Manager  - el empleado [H14] cambia el (2� apellido) a: {NULL}
+DEBUG   2021-04-19 09:22:17,102 [main] csvRepsol.Manager  - el empleado [H14] cambia el (Email) a: {NULL}
+DEBUG   2021-04-19 09:22:17,103 [main] csvRepsol.Manager  - el empleado [H14] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,128 [main] csvRepsol.CsvAccess  - [H14] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,129 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H14, name=�?lvaro, surname1=Turdasan, surname2=NULL, tlf=689745123, mail=NULL, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H14, name=�?lvaro, surname1=Turdasan, surname2=Garcia, tlf=689745123, mail=hjgfcv@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,129 [main] csvRepsol.Manager  - el empleado [H36] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,146 [main] csvRepsol.CsvAccess  - [H36] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,146 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H36, name=Maria Luisa, surname1=Gutierrez, surname2=del Rosario, tlf=688225362, mail=mariluigr@email.com, job=Cajero, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H36, name=Maria Luisa, surname1=Gutierrez, surname2=del Rosario, tlf=688225362, mail=mariluigr@email.com, job=Cajero, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,147 [main] csvRepsol.Manager  - el empleado [H3] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,157 [main] csvRepsol.CsvAccess  - [H3] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,159 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H3, name=Miguel, surname1=Perez, surname2=Perez, tlf=666222333, mail=utyrfuytf@email.com, job=Recepcionista, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H3, name=Miguel, surname1=Perez, surname2=Perez, tlf=666222333, mail=utyrfuytf@email.com, job=Recepcionista, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,160 [main] csvRepsol.Manager  - el empleado [H4] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,181 [main] csvRepsol.CsvAccess  - [H4] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,181 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H4, name=Xavier, surname1=Garcia, surname2=Diaz, tlf=666111999, mail=utgfuf@email.com, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H4, name=Xavier, surname1=Garcia, surname2=Diaz, tlf=666111999, mail=utgfuf@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,183 [main] csvRepsol.Manager  - Creando al empleado: Employee [id=H16, name=María, surname1=Garcia, surname2=Garcia, tlf=687569856, mail=iiu@email.com, job="Inspector;calidad", hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,221 [main] csvRepsol.CsvAccess  - [H16] - "CREATE"
+DEBUG   2021-04-19 09:22:17,222 [main] csvRepsol.Manager  - el empleado [H38] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,262 [main] csvRepsol.CsvAccess  - [H38] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,263 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=López, tlf=620338982, mail=neregonlo@email.com, job=Cajero, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H38, name=Nerea, surname1=Gonzalez, surname2=López, tlf=620338982, mail=neregonlo@email.com, job=Cajero, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,264 [main] csvRepsol.Manager  - el empleado [H5] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,281 [main] csvRepsol.CsvAccess  - [H5] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,281 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H5, name=Alicia, surname1=Agudo, surname2=Vivar, tlf=666555444, mail=opiju@email.com, job=Jefe de Ventas, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,281 [main] csvRepsol.Manager  - el empleado [H15] cambia el (Email) a: {NULL}
+DEBUG   2021-04-19 09:22:17,282 [main] csvRepsol.Manager  - el empleado [H15] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:17:13 CET 2015}
+INFO    2021-04-19 09:22:17,303 [main] csvRepsol.CsvAccess  - [H15] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,304 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H15, name=Andrés, surname1=Casillas, surname2=Perez, tlf=687456213, mail=NULL, job=Gerente, hiringDate=10/01/2015 15:17:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H15, name=Andrés, surname1=Casillas, surname2=Perez, tlf=687456213, mail=ggtr@email.com, job=Gerente, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,304 [main] csvRepsol.Manager  - el empleado [H37] cambia el (Fecha de contratacion) a: {Tue Nov 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,336 [main] csvRepsol.CsvAccess  - [H37] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,337 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H37, name=Ruth, surname1=Delgado, surname2=Rey, tlf=668761152, mail=rudere@email.com, job=Encargado de Limpieza, hiringDate=10/11/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H37, name=Ruth, surname1=Delgado, surname2=Rey, tlf=668761152, mail=rudere@email.com, job=Encargado de Limpieza, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,337 [main] csvRepsol.Manager  - el empleado [H18] cambia el (puesto de trabajo) a: {"Responsable;Tienda"}
+DEBUG   2021-04-19 09:22:17,337 [main] csvRepsol.Manager  - el empleado [H18] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,350 [main] csvRepsol.CsvAccess  - [H18] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,351 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job="Responsable;Tienda", hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H18, name=Manuel, surname1=Gallego, surname2=Serrano, tlf=654238942, mail=kjhhg@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,351 [main] csvRepsol.Manager  - el empleado [H7] cambia el (Fecha de contratacion) a: {Sat Jan 10 18:16:13 CET 2015}
+DEBUG   2021-04-19 09:22:17,351 [main] csvRepsol.Manager  - el empleado [H7] cambia el (Baja) a: {true}
+INFO    2021-04-19 09:22:17,365 [main] csvRepsol.CsvAccess  - [H7] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,366 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H7, name=Esther, surname1=Alin, surname2=Avila, tlf=666888333, mail=tydf@email.com, job=Responsable Tienda, hiringDate=10/01/2015 18:16:13, yearSalary=18000, sickLeave=true]
+ datos anteriores: Employee [id=H7, name=Esther, surname1=Alin, surname2=Avila, tlf=666888333, mail=tydf@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,366 [main] csvRepsol.Manager  - el empleado [H17] cambia el (2� apellido) a: {NULL}
+DEBUG   2021-04-19 09:22:17,366 [main] csvRepsol.Manager  - el empleado [H17] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,382 [main] csvRepsol.CsvAccess  - [H17] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,382 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=NULL, tlf=693985264, mail=hgf@email.com, job=Becario, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H17, name=Nerea, surname1=Garcia, surname2=Martinez, tlf=693985264, mail=hgf@email.com, job=Becario, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,383 [main] csvRepsol.Manager  - el empleado [H8] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,399 [main] csvRepsol.CsvAccess  - [H8] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,400 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H8, name=Antonio, surname1=Perez, surname2=Perez, tlf=666000888, mail=pok@email.com, job=Cajero, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H8, name=Antonio, surname1=Perez, surname2=Perez, tlf=666000888, mail=pok@email.com, job=Cajero, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,400 [main] csvRepsol.Manager  - el empleado [H9] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,414 [main] csvRepsol.CsvAccess  - [H9] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,415 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H9, name=Juan, surname1=Garcia, surname2=Garcia, tlf=666222888, mail=ytd@email.com, job=Responsable Tienda, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H9, name=Juan, surname1=Garcia, surname2=Garcia, tlf=666222888, mail=ytd@email.com, job=Responsable Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,415 [main] csvRepsol.Manager  - el empleado [H19] cambia el (Fecha de contratacion) a: {Sat Jan 10 15:16:13 CET 2015}
+INFO    2021-04-19 09:22:17,435 [main] csvRepsol.CsvAccess  - [H19] - "UPDATE"
+DEBUG   2021-04-19 09:22:17,436 [main] csvRepsol.Manager  - Modificando al empleado: Employee [id=H19, name=Sergio, surname1=Perez, surname2=Turdasan, tlf=612378454, mail=jhgfg@email.com, job=Gerente, hiringDate=10/01/2015 15:16:13, yearSalary=18000, sickLeave=false]
+ datos anteriores: Employee [id=H19, name=Sergio, surname1=Perez, surname2=Turdasan, tlf=612378454, mail=jhgfg@email.com, job=Gerente, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+DEBUG   2021-04-19 09:22:17,436 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H40, name=Adrian, surname1=Lomillo, surname2=Casillas, tlf=621459870, mail=yjjyuy@email.com, job=Comercial, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,449 [main] csvRepsol.CsvAccess  - [H40] - "DELETE"
+DEBUG   2021-04-19 09:22:17,450 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H48, name=Lucia, surname1=Pardo, surname2=Bazan, tlf=698745036, mail=seerfa@email.com, job=Reponedor, hiringDate=21/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,478 [main] csvRepsol.CsvAccess  - [H48] - "DELETE"
+DEBUG   2021-04-19 09:22:17,479 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H13, name=Javier, surname1=Serrano, surname2=Perez, tlf=687456289, mail=iuyfc@email.com, job=Gerente Tienda, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,515 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
+DEBUG   2021-04-19 09:22:17,516 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H35, name=Pablo, surname1=Díaz, surname2=Salinas, tlf=632642642, mail=pdiazs@email.com, job=Analista, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,545 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
+DEBUG   2021-04-19 09:22:17,545 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H6, name=Paula, surname1=Campos, surname2=Fernandez, tlf=666444222, mail=opi9uiyh@email.com, job=Comercial, hiringDate=01/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,593 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
+DEBUG   2021-04-19 09:22:17,593 [main] csvRepsol.Manager  - Eliminando al empleado: Employee [id=H39, name=Maria del Mar, surname1=González, surname2=Gutierrez, tlf=665825681, mail=marimargogu@email.com, job=Administrativo, hiringDate=11/10/2015 15:16:13, yearSalary=18000, sickLeave=false]
+INFO    2021-04-19 09:22:17,607 [main] csvRepsol.CsvAccess  - [H39] - "DELETE"
