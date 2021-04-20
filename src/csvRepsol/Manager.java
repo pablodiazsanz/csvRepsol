@@ -28,13 +28,13 @@ public class Manager {
 	 */
 	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao) {
 		log.trace("Empezamos la comparacion de usuarios");
-		List<String> aux =  new ArrayList<String>();
+
 		// En este bucle vamos a recorrer todos los empleados de cliente para
 		// compararlos con los del servidor
 		for (String i : clientData.keySet()) {
 
-			if (clientData.get(i) == null || serverData.get(i) == null) {
-				aux.add(i);
+			if (clientData.get(i) == null) {
+				serverData.remove(i);
 				
 			} else {
 
@@ -46,7 +46,7 @@ public class Manager {
 				 * que hay que borrar.
 				 */
 
-				if (serverData.containsKey(i) && !aux.contains(i)) {
+				if (serverData.containsKey(i) && serverData.get(i) != null) {
 					if (!clientData.get(i).getName().equalsIgnoreCase(serverData.get(i).getName().toLowerCase())
 							|| !clientData.get(i).getSurname1().equalsIgnoreCase(serverData.get(i).getSurname1())
 							|| !clientData.get(i).getSurname2().equalsIgnoreCase(serverData.get(i).getSurname2())
@@ -74,10 +74,12 @@ public class Manager {
 					// Aquí, si no se ha modificado, como el empleado no está en la lista del
 					// servidor
 					// lo pasamos al tercer CSV como un nuevo empleado que se ha creado.
-					if(!aux.contains(i)) {
+					if (serverData.get(i) == null) {
+						serverData.remove(i);
+					}
 					log.debug("Creando al empleado: " + clientData.get(i).toString());
 					dao.writeCSV(clientData.get(i), "CREATE");
-				}}
+				}
 			}
 		}
 		// Aquí pasamos al tercer CSV los empleados que se encuentran en la lista del
@@ -86,10 +88,9 @@ public class Manager {
 		// a eliminar.
 		log.trace("Empezamos el borrado de usuarios");
 		for (String key : serverData.keySet()) {
-			if(!aux.contains(key)) {
 			log.debug("Eliminando al empleado: " + serverData.get(key).toString());
 			dao.writeCSV(serverData.get(key), "DELETE");
-		}}
+		}
 	}
 
 	/**

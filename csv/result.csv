@@ -1,4 +1,7 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status
+H61;Jorge;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;09/10/2016 15:16:13;18000;false;CREATE
+H63;Petunia;Hernandez;Isosceles;63219874;aqqwr@email.com;Becario;11/12/2017 15:16:13;18000;false;CREATE
+H62;Marisa;Hernandez;Agudo;63219874;aqqwr@email.com;"Beca;rio";10/01/2017 15:16:13;18000;false;CREATE
 H21;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H43;;;;;;;10/11/2015 15:16:13;;;UPDATE
 H23;;;;;;;10/01/2015 15:16:13;;true;UPDATE
@@ -28,6 +31,7 @@ H14;�?lvaro;;NULL;;NULL;;10/01/2015 15:16:13;;;UPDATE
 H36;;;;;;;10/11/2015 15:16:13;;;UPDATE
 H3;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H4;;;;;;;10/01/2015 15:16:13;;;UPDATE
+H16;María;Garcia;Garcia;687569856;iiu@email.com;"Inspector;calidad";10/01/2015 15:16:13;18000;false;CREATE
 H38;;;López;;;;10/11/2015 15:16:13;;;UPDATE
 H5;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H15;Andrés;;;;NULL;;10/01/2015 15:17:13;;;UPDATE
