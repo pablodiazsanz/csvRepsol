@@ -1,7 +1,4 @@
 id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status
-H61;Jorge;Hernandez;Obtuso;63219874;aqqwr@email.com;Becario;09/10/2016 15:16:13;18000;false;CREATE
-H63;Petunia;Hernandez;Isosceles;63219874;aqqwr@email.com;Becario;11/12/2017 15:16:13;18000;false;CREATE
-H62;Marisa;Hernandez;Agudo;63219874;aqqwr@email.com;"Beca;rio";10/01/2017 15:16:13;18000;false;CREATE
 H21;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H43;;;;;;;10/11/2015 15:16:13;;;UPDATE
 H23;;;;;;;10/01/2015 15:16:13;;true;UPDATE
@@ -31,7 +28,6 @@ H14;√?lvaro;;NULL;;NULL;;10/01/2015 15:16:13;;;UPDATE
 H36;;;;;;;10/11/2015 15:16:13;;;UPDATE
 H3;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H4;;;;;;;10/01/2015 15:16:13;;;UPDATE
-H16;Mar√≠a;Garcia;Garcia;687569856;iiu@email.com;"Inspector;calidad";10/01/2015 15:16:13;18000;false;CREATE
 H38;;;L√≥pez;;;;10/11/2015 15:16:13;;;UPDATE
 H5;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H15;Andr√©s;;;;NULL;;10/01/2015 15:17:13;;;UPDATE
@@ -42,9 +38,6 @@ H17;;;NULL;;;;10/01/2015 15:16:13;;;UPDATE
 H8;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H9;;;;;;;10/01/2015 15:16:13;;;UPDATE
 H19;;;;;;;10/01/2015 15:16:13;;;UPDATE
-H40;Adrian;Lomillo;Casillas;621459870;yjjyuy@email.com;Comercial;11/10/2015 15:16:13;18000;false;DELETE
-H48;Lucia;Pardo;Bazan;698745036;seerfa@email.com;Reponedor;21/10/2015 15:16:13;18000;false;DELETE
 H13;Javier;Serrano;Perez;687456289;iuyfc@email.com;Gerente Tienda;01/10/2015 15:16:13;18000;false;DELETE
 H35;Pablo;DÌaz;Salinas;632642642;pdiazs@email.com;Analista;11/10/2015 15:16:13;18000;false;DELETE
 H6;Paula;Campos;Fernandez;666444222;opi9uiyh@email.com;Comercial;01/10/2015 15:16:13;18000;false;DELETE
-H39;Maria del Mar;Gonz·lez;Gutierrez;665825681;marimargogu@email.com;Administrativo;11/10/2015 15:16:13;18000;false;DELETE

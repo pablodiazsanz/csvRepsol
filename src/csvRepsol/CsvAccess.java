@@ -57,7 +57,7 @@ public class CsvAccess {
 	 * @param nameCSV Nombre del csv que quieres leer
 	 * @return HasMap De los empleados con su id como key
 	 */
-	public HashMap<String, Employee> readCSV(String nameCSV) {
+	public HashMap<String, Employee> readCSV(String nameCSV) throws SiaException{
 		// Creamos el HashMap y obtenemos el fichero CSV
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(nameCSV);
@@ -98,24 +98,27 @@ public class CsvAccess {
 					// Añadimos al HashMap el objeto Employee que utiliza de clave el ID de ese
 					// empleado
 					emp = createEmployee(employeeData, columnsOrder);
-					map.put(emp.getId(), emp);
+					map.put(employeeID, emp);
 
 				} catch (NullPointerException e) {
 					log.warn("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
-
+					
 				} catch (IndexOutOfBoundsException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line
 							+ "}\n No se ha podido crear el objeto empleado. Fallo al leer linea", e);
-
+					map.put(employeeID, null);
+					
 				} catch (ParseException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line + "}\n No se ha podido crear el objeto empleado.", e);
-
+					map.put(employeeID, null);
+					
 				} catch (NumberFormatException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line
 							+ "}\n No se ha podido crear el objeto empleado. Numero introducido incorrecto", e);
+					map.put(employeeID, null);
 
 				} catch (Exception e) {
 					log.error("Fallo generico en la linea (" + contLine + ") del Fichero \"" + nameCSV + "\"", e);
@@ -128,9 +131,15 @@ public class CsvAccess {
 
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado: \"" + nameCSV + "\"", e);
+			throw new SiaException();
 
 		} catch (IOException e) {
 			log.error("Fallo de entrada o salida", e);
+			throw new SiaException();
+
+		} catch (NullPointerException e) {
+			log.error("El fichero al que accedemos está vacio", e);
+			throw new SiaException();
 
 		} finally {
 			try {
