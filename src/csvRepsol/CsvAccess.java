@@ -13,7 +13,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.TimeZone;
-
 import org.apache.log4j.Logger;
 
 public class CsvAccess {
@@ -36,18 +35,23 @@ public class CsvAccess {
 		this.config = config;
 	}
 
-	public void setConfig(PropertyFile config) {
+	public void setConfig(PropertyFile config) throws SiaException {
 		this.config = config;
-		id = config.getProperty(PropertyFile.HEAD_ID);
-		name = config.getProperty(PropertyFile.HEAD_NAME);
-		surname1 = config.getProperty(PropertyFile.HEAD_SURNAME1);
-		surname2 = config.getProperty(PropertyFile.HEAD_SURNAME2);
-		phone = config.getProperty(PropertyFile.HEAD_PHONE);
-		email = config.getProperty(PropertyFile.HEAD_EMAIL);
-		job = config.getProperty(PropertyFile.HEAD_JOB);
-		hiringDate = config.getProperty(PropertyFile.HEAD_HIRING_DATE);
-		yearSalary = config.getProperty(PropertyFile.HEAD_YEAR_SALARY);
-		sickLeave = config.getProperty(PropertyFile.HEAD_SICK_LEAVE);
+		try {
+			id = config.getProperty(PropertyFile.HEAD_ID);
+			name = config.getProperty(PropertyFile.HEAD_NAME);
+			surname1 = config.getProperty(PropertyFile.HEAD_SURNAME1);
+			surname2 = config.getProperty(PropertyFile.HEAD_SURNAME2);
+			phone = config.getProperty(PropertyFile.HEAD_PHONE);
+			email = config.getProperty(PropertyFile.HEAD_EMAIL);
+			job = config.getProperty(PropertyFile.HEAD_JOB);
+			hiringDate = config.getProperty(PropertyFile.HEAD_HIRING_DATE);
+			yearSalary = config.getProperty(PropertyFile.HEAD_YEAR_SALARY);
+			sickLeave = config.getProperty(PropertyFile.HEAD_SICK_LEAVE);
+		} catch (SiaException e) {
+			log.error("property perdida", e);
+			throw new SiaException(SiaExceptionCodes.MISSING_PROPERTY, e);
+		}
 	}
 
 	/**
@@ -57,7 +61,7 @@ public class CsvAccess {
 	 * @param nameCSV Nombre del csv que quieres leer
 	 * @return HasMap De los empleados con su id como key
 	 */
-	public HashMap<String, Employee> readCSV(String nameCSV) throws SiaException{
+	public HashMap<String, Employee> readCSV(String nameCSV) throws SiaException {
 		// Creamos el HashMap y obtenemos el fichero CSV
 		HashMap<String, Employee> map = new HashMap<>();
 		File f = new File(nameCSV);
@@ -102,18 +106,18 @@ public class CsvAccess {
 
 				} catch (NullPointerException e) {
 					log.warn("Linea (" + contLine + ") del Fichero \"" + nameCSV + "\" esta vacia", e);
-					
+
 				} catch (IndexOutOfBoundsException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line
 							+ "}\n No se ha podido crear el objeto empleado. Fallo al leer linea", e);
 					map.put(employeeID, null);
-					
+
 				} catch (ParseException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line + "}\n No se ha podido crear el objeto empleado.", e);
 					map.put(employeeID, null);
-					
+
 				} catch (NumberFormatException e) {
 					log.error("ID: [" + employeeID + "] - NºLinea: (" + contLine + ") - Fichero: \"" + nameCSV
 							+ "\" - Linea: {" + line
@@ -131,16 +135,13 @@ public class CsvAccess {
 
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado: \"" + nameCSV + "\"", e);
-			throw new SiaException();
-
+			throw new SiaException(SiaExceptionCodes.MISSING_FILE, e);
 		} catch (IOException e) {
 			log.error("Fallo de entrada o salida", e);
-			throw new SiaException();
-
+			throw new SiaException(SiaExceptionCodes.IN_OUT, e);
 		} catch (NullPointerException e) {
 			log.error("El fichero al que accedemos está vacio", e);
-			throw new SiaException();
-
+			throw new SiaException(SiaExceptionCodes.EMPTY_FILE, e);
 		} finally {
 			try {
 				br.close();
@@ -152,7 +153,9 @@ public class CsvAccess {
 
 			}
 		}
-
+		if (map.keySet().size() <= 0) {
+			throw new SiaException("fichero con lineas erroneas");
+		}
 		return map;
 	}
 
@@ -331,10 +334,13 @@ public class CsvAccess {
 	/**
 	 * Este metodo crea o sobreescribe el fichero result.csv para guardar la
 	 * información final.
+	 * 
+	 * @throws SiaException
 	 */
-	public void createCSV() {
+	public void createCSV() throws SiaException {
 		try {
-			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT));
+			FileWriter fw;
+			fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 			log.trace(fw);
@@ -348,8 +354,9 @@ public class CsvAccess {
 	 *
 	 * @param employee El empleado que queremos añadir
 	 * @param status   La accion que realizamos con el empleado, DELETE o CREATE
+	 * @throws SiaException
 	 */
-	public void writeCSV(Employee employee, String status) {
+	public void writeCSV(Employee employee, String status) throws SiaException {
 		try {
 			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
@@ -371,8 +378,10 @@ public class CsvAccess {
 	 *                        cadena, los que no se van a modificar.
 	 * @param status          La accion que realizamos con el empleado, en este caso
 	 *                        UPDATE.
+	 * @throws SiaException
 	 */
-	public void writeUpdatedEmployeeCSV(Employee updatedEmployee, List<String> extraData, String status) {
+	public void writeUpdatedEmployeeCSV(Employee updatedEmployee, List<String> extraData, String status)
+			throws SiaException {
 
 		// Creamos esta variable para enviarle al fichero CSV el contenido.
 		String updatedData;

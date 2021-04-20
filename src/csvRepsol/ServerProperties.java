@@ -9,8 +9,8 @@ public class ServerProperties extends PropertyFile {
 	public static String PATH_RESULT = "DEFAULT.File.CSV.result";	
 	public static String PATH_SERVER = "DEFAULT.File.CSV.server";	
 	
-	public static String src = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
-	//public static String src = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
+	//public static String src = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+	public static String src = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
 
 	public ServerProperties() {
 		super(src);

@@ -25,8 +25,9 @@ public class Manager {
 	 * @param serverData Esta lista contiene los empleados que tiene el csv del
 	 *                   servidor
 	 * @param dao        Le pasamos el objeto CsvAccess que estamos utilizando
+	 * @throws SiaException 
 	 */
-	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao) {
+	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao) throws SiaException {
 		log.trace("Empezamos la comparacion de usuarios");
 
 		// En este bucle vamos a recorrer todos los empleados de cliente para
@@ -103,8 +104,9 @@ public class Manager {
 	 * @param serverEmployee Este empleado se obtiene de la lista de clentes.
 	 * @return Devuelve el empleado con el identificador y con las modificaciones
 	 *         que tiene.
+	 * @throws SiaException 
 	 */
-	private void updateEmployee(Employee clientEmployee, Employee serverEmployee) {
+	private void updateEmployee(Employee clientEmployee, Employee serverEmployee) throws SiaException {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
 		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
 		log.trace("Empleado vacío creado");

@@ -47,13 +47,14 @@ public abstract class PropertyFile {
 	 * @param property nombre completo de la variable buscada
 	 * @return el valor que le corresponde en el ficheroi properties
 	 */
-	public String getProperty(String property) {
+	public String getProperty(String property) throws SiaException {
 		String value = null;
 		try {
 			value = file.getProperty(property);
 			log.trace(property + " leida correctamente");
 		} catch (Exception e) {
 			log.error(property + " no encontrada");
+			throw new SiaException(SiaExceptionCodes.MISSING_PROPERTY, e);
 		}
 		return value;
 	}

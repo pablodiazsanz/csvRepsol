@@ -24,11 +24,19 @@ public class MainClass {
 			Manager manager = new Manager(csvAccess);
 			
 			// Creamos o sobreescribimos el fichero CSV que vamos a sacar con las operaciones
-			csvAccess.createCSV();
+			try {
+				csvAccess.createCSV();
+			} catch (SiaException e1) {
+				log.error("fallo al crear csv", e1);
+			}
 			log.trace("Se ha creado o sobreescrito el tercer CSV correctamente");
 			
 			// Establecemos en el objeto CsvAccess el fichero de propiedades del cliente
-			csvAccess.setConfig(clientConfig);
+			try {
+				csvAccess.setConfig(clientConfig);
+			} catch (SiaException e1) {
+				log.error("fallo al buscar propiedades", e1);
+			}
 			
 			try {
 				// Obtenemos los datos del fichero del cliente
