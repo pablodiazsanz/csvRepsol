@@ -7,8 +7,8 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-public abstract class PropertyFile {
-	
+public class PropertyFile {
+	public static String PATH = "DEFAULT.File.CSV";
 	public static String HEAD_ID = "DEFAULT.File.CSV.head.ID";
 	public static String HEAD_NAME = "DEFAULT.File.CSV.head.NAME";
 	public static String HEAD_SURNAME1 = "DEFAULT.File.CSV.head.FIRST_SURNAME" ;
@@ -37,7 +37,33 @@ public abstract class PropertyFile {
 	 * 
 	 * @return true en caso de encontrar todos los datos y false si no
 	 */
-	public abstract boolean checkConfig();
+	public boolean checkConfig() {
+		boolean readed = true;
+		try {
+			ip = new FileInputStream(src);
+			file.load(ip);
+			file.getProperty(PATH);
+			file.getProperty(HEAD_ID);
+			file.getProperty(HEAD_NAME);
+			file.getProperty(HEAD_SURNAME1);
+			file.getProperty(HEAD_SURNAME2);
+			file.getProperty(HEAD_PHONE);
+			file.getProperty(HEAD_EMAIL);
+			file.getProperty(HEAD_JOB);
+			file.getProperty(HEAD_HIRING_DATE);
+			file.getProperty(HEAD_YEAR_SALARY);
+			file.getProperty(HEAD_SICK_LEAVE);
+			log.trace("Fichero config de cliente leido exitosamente");
+		} catch (FileNotFoundException e) {
+			log.error("Fichero no encontrado", e);
+			readed = false;
+
+		} catch (IOException e) {
+			log.error("Fallo de entrada o salida", e);
+			readed = false;
+		}
+		return readed;
+	}
 	
 
 	/**

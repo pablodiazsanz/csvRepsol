@@ -340,7 +340,7 @@ public class CsvAccess {
 	public void createCSV() throws SiaException {
 		try {
 			FileWriter fw;
-			fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT));
+			fw = new FileWriter(config.getProperty(PropertyFile.PATH));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 			log.trace(fw);
@@ -358,7 +358,7 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) throws SiaException {
 		try {
-			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT), true);
+			FileWriter fw = new FileWriter(config.getProperty(PropertyFile.PATH), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
 			log.info("[" + employee.getId() + "] - \"" + status + "\"");
@@ -437,7 +437,7 @@ public class CsvAccess {
 				+ ";" + updatedEmployee.getJob() + ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 		// Añadimos la linea de datos al fichero CSV.
 		try {
-			FileWriter fw = new FileWriter(config.getProperty(ServerProperties.PATH_RESULT), true);
+			FileWriter fw = new FileWriter(config.getProperty(PropertyFile.PATH), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");
