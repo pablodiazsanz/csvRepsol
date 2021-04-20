@@ -18,13 +18,13 @@ public class MainClass {
 	public static void main(String[] args) {
 		// iniciamos los src de los properties
 
-		String srcClient = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
-		String srcServer = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
-		String srcResult = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\resultConfig.properties";
+		//String srcClient = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
+		//String srcServer = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+		//String srcResult = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\resultConfig.properties";
 
-		//String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
-		//String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
-		//String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
+		String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
+		String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
+		String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
 
 		// Inicializamos las propiedades del cliente y del servidor
 		clientConfig = new PropertyFile(srcClient);
