@@ -6234,3 +6234,126 @@ INFO    2021-04-20 13:58:43,135 [main] csvRepsol.CsvAccess  - [H19] - "UPDATE"
 INFO    2021-04-20 13:58:43,154 [main] csvRepsol.CsvAccess  - [H13] - "DELETE"
 INFO    2021-04-20 13:58:43,186 [main] csvRepsol.CsvAccess  - [H35] - "DELETE"
 INFO    2021-04-20 13:58:43,207 [main] csvRepsol.CsvAccess  - [H6] - "DELETE"
+WARN    2021-04-20 16:53:06,393 [main] csvRepsol.dataAccess.CsvAccess  - Linea (17) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: date must not be null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.entities.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3365)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:334)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+WARN    2021-04-20 16:53:06,405 [main] csvRepsol.dataAccess.CsvAccess  - Linea (18) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: date must not be null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Calendar.setTime(Calendar.java:1802)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:975)
+	at java.base/java.text.SimpleDateFormat.format(SimpleDateFormat.java:968)
+	at java.base/java.text.DateFormat.format(DateFormat.java:375)
+	at csvRepsol.entities.Employee.toString(Employee.java:115)
+	at java.base/java.lang.String.valueOf(String.java:3365)
+	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:334)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+ERROR   2021-04-20 16:53:06,553 [main] csvRepsol.dataAccess.CsvAccess  - ID: [H39] - NºLinea: (34) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Maria del Mar;Gutierrez;GonzÃ¡lez;false;665825681;marimargogu@email.com;Administrativo;10/11/2015:32;18000;H39}
+ No se ha podido crear el objeto empleado.
+java.text.ParseException: Unparseable date: "10/11/2015:32"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:313)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+ERROR   2021-04-20 16:53:06,560 [main] csvRepsol.dataAccess.CsvAccess  - ID: [H40] - NºLinea: (35) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Adrian; Casillas ; Lomillo;false;621459870; yjjyuy@email.com;Comercial;10/11/2015 15:16:13;180+00;H40}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "180+00"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:317)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+ERROR   2021-04-20 16:53:06,588 [main] csvRepsol.dataAccess.CsvAccess  - ID: [H48] - NºLinea: (41) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Lucia;Bazan;Pardo;false;698745036;seerfa@email.com;Reponedor;10/21/2015 15:16:13;18*000;H48}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "18*000"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:317)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+ERROR   2021-04-20 16:53:06,604 [main] csvRepsol.dataAccess.CsvAccess  - ID: [null] - NºLinea: (47) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" - Linea: {Elisa;Vacias;Casas;false;Programador Senior;10/1/2015;18000;10/21/2015 15:16:13;H60}
+ No se ha podido crear el objeto empleado. Numero introducido incorrecto
+java.lang.NumberFormatException: For input string: "H60"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:660)
+	at java.base/java.lang.Integer.parseInt(Integer.java:778)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:317)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+WARN    2021-04-20 16:53:06,611 [main] csvRepsol.dataAccess.CsvAccess  - Linea (51) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\client.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.dataAccess.CsvAccess.getDataFromLine(CsvAccess.java:190)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:101)
+	at csvRepsol.MainClass.main(MainClass.java:55)
+ERROR   2021-04-20 16:53:06,688 [main] csvRepsol.dataAccess.CsvAccess  - ID: [H16] - NºLinea: (17) - Fichero: "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" - Linea: {H16;Marï¿½a;Garcia;Garcia;687569856;iiu@email.com;Inspector de calidad;1/10/2015;18000;false}
+ No se ha podido crear el objeto empleado.
+java.text.ParseException: Unparseable date: "1/10/2015"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:396)
+	at csvRepsol.dataAccess.CsvAccess.createEmployee(CsvAccess.java:313)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:108)
+	at csvRepsol.MainClass.main(MainClass.java:62)
+WARN    2021-04-20 16:53:06,800 [main] csvRepsol.dataAccess.CsvAccess  - Linea (48) del Fichero "C:\Users\pdiazs\eclipse-workspace\csvRepsol\csv\server.csv" esta vacia
+java.lang.NullPointerException: Cannot invoke "String.length()" because "line" is null
+	at csvRepsol.dataAccess.CsvAccess.getDataFromLine(CsvAccess.java:190)
+	at csvRepsol.dataAccess.CsvAccess.readCSV(CsvAccess.java:101)
+	at csvRepsol.MainClass.main(MainClass.java:62)
+INFO    2021-04-20 16:53:06,810 [main] csvRepsol.dataAccess.CsvAccess  - [H61] - "CREATE"
+INFO    2021-04-20 16:53:06,818 [main] csvRepsol.dataAccess.CsvAccess  - [H63] - "CREATE"
+INFO    2021-04-20 16:53:06,832 [main] csvRepsol.dataAccess.CsvAccess  - [H62] - "CREATE"
+INFO    2021-04-20 16:53:06,882 [main] csvRepsol.dataAccess.CsvAccess  - [H21] - "UPDATE"
+INFO    2021-04-20 16:53:06,887 [main] csvRepsol.dataAccess.CsvAccess  - [H43] - "UPDATE"
+INFO    2021-04-20 16:53:06,892 [main] csvRepsol.dataAccess.CsvAccess  - [H23] - "UPDATE"
+INFO    2021-04-20 16:53:06,903 [main] csvRepsol.dataAccess.CsvAccess  - [H45] - "UPDATE"
+INFO    2021-04-20 16:53:06,907 [main] csvRepsol.dataAccess.CsvAccess  - [H22] - "UPDATE"
+INFO    2021-04-20 16:53:06,915 [main] csvRepsol.dataAccess.CsvAccess  - [H44] - "UPDATE"
+INFO    2021-04-20 16:53:06,927 [main] csvRepsol.dataAccess.CsvAccess  - [H25] - "UPDATE"
+INFO    2021-04-20 16:53:06,938 [main] csvRepsol.dataAccess.CsvAccess  - [H47] - "UPDATE"
+INFO    2021-04-20 16:53:06,944 [main] csvRepsol.dataAccess.CsvAccess  - [H24] - "UPDATE"
+INFO    2021-04-20 16:53:06,957 [main] csvRepsol.dataAccess.CsvAccess  - [H46] - "UPDATE"
+INFO    2021-04-20 16:53:06,961 [main] csvRepsol.dataAccess.CsvAccess  - [H27] - "UPDATE"
+INFO    2021-04-20 16:53:06,969 [main] csvRepsol.dataAccess.CsvAccess  - [H49] - "UPDATE"
+INFO    2021-04-20 16:53:06,975 [main] csvRepsol.dataAccess.CsvAccess  - [H26] - "UPDATE"
+INFO    2021-04-20 16:53:06,978 [main] csvRepsol.dataAccess.CsvAccess  - [H29] - "UPDATE"
+INFO    2021-04-20 16:53:06,985 [main] csvRepsol.dataAccess.CsvAccess  - [H50] - "UPDATE"
+INFO    2021-04-20 16:53:06,992 [main] csvRepsol.dataAccess.CsvAccess  - [H52] - "UPDATE"
+INFO    2021-04-20 16:53:06,996 [main] csvRepsol.dataAccess.CsvAccess  - [H51] - "UPDATE"
+INFO    2021-04-20 16:53:07,007 [main] csvRepsol.dataAccess.CsvAccess  - [H10] - "UPDATE"
+INFO    2021-04-20 16:53:07,012 [main] csvRepsol.dataAccess.CsvAccess  - [H31] - "UPDATE"
+INFO    2021-04-20 16:53:07,023 [main] csvRepsol.dataAccess.CsvAccess  - [H53] - "UPDATE"
+INFO    2021-04-20 16:53:07,028 [main] csvRepsol.dataAccess.CsvAccess  - [H12] - "UPDATE"
+INFO    2021-04-20 16:53:07,036 [main] csvRepsol.dataAccess.CsvAccess  - [H1] - "UPDATE"
+INFO    2021-04-20 16:53:07,039 [main] csvRepsol.dataAccess.CsvAccess  - [H11] - "UPDATE"
+INFO    2021-04-20 16:53:07,042 [main] csvRepsol.dataAccess.CsvAccess  - [H33] - "UPDATE"
+INFO    2021-04-20 16:53:07,045 [main] csvRepsol.dataAccess.CsvAccess  - [H2] - "UPDATE"
+INFO    2021-04-20 16:53:07,054 [main] csvRepsol.dataAccess.CsvAccess  - [H14] - "UPDATE"
+INFO    2021-04-20 16:53:07,058 [main] csvRepsol.dataAccess.CsvAccess  - [H36] - "UPDATE"
+INFO    2021-04-20 16:53:07,061 [main] csvRepsol.dataAccess.CsvAccess  - [H3] - "UPDATE"
+INFO    2021-04-20 16:53:07,067 [main] csvRepsol.dataAccess.CsvAccess  - [H4] - "UPDATE"
+INFO    2021-04-20 16:53:07,073 [main] csvRepsol.dataAccess.CsvAccess  - [H16] - "CREATE"
+INFO    2021-04-20 16:53:07,075 [main] csvRepsol.dataAccess.CsvAccess  - [H38] - "UPDATE"
+INFO    2021-04-20 16:53:07,078 [main] csvRepsol.dataAccess.CsvAccess  - [H5] - "UPDATE"
+INFO    2021-04-20 16:53:07,083 [main] csvRepsol.dataAccess.CsvAccess  - [H15] - "UPDATE"
+INFO    2021-04-20 16:53:07,085 [main] csvRepsol.dataAccess.CsvAccess  - [H37] - "UPDATE"
+INFO    2021-04-20 16:53:07,088 [main] csvRepsol.dataAccess.CsvAccess  - [H18] - "UPDATE"
+INFO    2021-04-20 16:53:07,091 [main] csvRepsol.dataAccess.CsvAccess  - [H7] - "UPDATE"
+INFO    2021-04-20 16:53:07,094 [main] csvRepsol.dataAccess.CsvAccess  - [H17] - "UPDATE"
+INFO    2021-04-20 16:53:07,106 [main] csvRepsol.dataAccess.CsvAccess  - [H8] - "UPDATE"
+INFO    2021-04-20 16:53:07,112 [main] csvRepsol.dataAccess.CsvAccess  - [H9] - "UPDATE"
+INFO    2021-04-20 16:53:07,135 [main] csvRepsol.dataAccess.CsvAccess  - [H19] - "UPDATE"
+INFO    2021-04-20 16:53:07,142 [main] csvRepsol.dataAccess.CsvAccess  - [H13] - "DELETE"
+INFO    2021-04-20 16:53:07,185 [main] csvRepsol.dataAccess.CsvAccess  - [H35] - "DELETE"
+INFO    2021-04-20 16:53:07,218 [main] csvRepsol.dataAccess.CsvAccess  - [H6] - "DELETE"

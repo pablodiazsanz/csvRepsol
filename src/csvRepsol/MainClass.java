@@ -4,11 +4,11 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
-import csvRepsol.AccesoDatos.CsvAccess;
-import csvRepsol.AccesoDatos.PropertyFile;
-import csvRepsol.entidades.Employee;
+import csvRepsol.businessLogic.Manager;
+import csvRepsol.dataAccess.CsvAccess;
+import csvRepsol.dataAccess.PropertyFile;
+import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
-import csvRepsol.negocio.Manager;
 
 public class MainClass {
 
@@ -16,15 +16,16 @@ public class MainClass {
 	private static PropertyFile clientConfig, serverConfig, resultConfig;
 
 	public static void main(String[] args) {
-		//iniciamos los src de los properties
-		/*
-		 * String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
-		 * String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
-		 * String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
-		 */
-		String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
-		String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
-		String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
+		// iniciamos los src de los properties
+
+		String srcClient = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
+		String srcServer = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+		String srcResult = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\resultConfig.properties";
+
+		//String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
+		//String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
+		//String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
+
 		// Inicializamos las propiedades del cliente y del servidor
 		clientConfig = new PropertyFile(srcClient);
 		serverConfig = new PropertyFile(srcServer);
@@ -51,16 +52,14 @@ public class MainClass {
 			try {
 				csvAccess.setConfig(clientConfig);
 				// Obtenemos los datos del fichero del cliente
-				HashMap<String, Employee> clientData = csvAccess
-						.readCSV(clientConfig.getProperty(PropertyFile.PATH));
+				HashMap<String, Employee> clientData = csvAccess.readCSV(clientConfig.getProperty(PropertyFile.PATH));
 				log.trace("Se han obtenido los datos del  fichero del cliente correctamente");
 
 				// Establecemos en el objeto CsvAccess el fichero de propiedades del servidor
 				csvAccess.setConfig(serverConfig);
 
 				// Obtenemos los datos del fichero del servidor
-				HashMap<String, Employee> serverData = csvAccess
-						.readCSV(serverConfig.getProperty(PropertyFile.PATH));
+				HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty(PropertyFile.PATH));
 				log.trace("Se han obtenido los datos del  fichero del servidor correctamente");
 
 				// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer
