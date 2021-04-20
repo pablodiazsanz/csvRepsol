@@ -1,10 +1,14 @@
-package csvRepsol;
+package csvRepsol.negocio;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+
+import csvRepsol.AccesoDatos.CsvAccess;
+import csvRepsol.entidades.Employee;
+import csvRepsol.exceptions.SiaException;
 
 public class Manager {
 

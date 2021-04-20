@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 
+import csvRepsol.AccesoDatos.CsvAccess;
+import csvRepsol.AccesoDatos.PropertyFile;
+import csvRepsol.entidades.Employee;
+import csvRepsol.exceptions.SiaException;
+import csvRepsol.negocio.Manager;
+
 public class MainClass {
 
 	private static Logger log = Logger.getLogger(MainClass.class);

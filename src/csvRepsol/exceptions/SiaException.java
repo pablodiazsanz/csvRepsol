@@ -1,4 +1,4 @@
-package csvRepsol;
+package csvRepsol.exceptions;
 
 public class SiaException extends Exception {
 

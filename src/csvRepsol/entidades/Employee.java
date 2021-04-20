@@ -1,4 +1,4 @@
-package csvRepsol;
+package csvRepsol.entidades;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

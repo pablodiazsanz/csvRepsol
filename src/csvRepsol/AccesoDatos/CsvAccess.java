@@ -1,4 +1,4 @@
-package csvRepsol;
+package csvRepsol.AccesoDatos;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,6 +14,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.TimeZone;
 import org.apache.log4j.Logger;
+
+import csvRepsol.entidades.Employee;
+import csvRepsol.exceptions.SiaException;
+import csvRepsol.exceptions.SiaExceptionCodes;
 
 public class CsvAccess {
 
