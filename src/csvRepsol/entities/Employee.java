@@ -110,13 +110,13 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		
+
 		// Formateamos la fecha para obtenerla como queremos
 		String hiringDateFormatted = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(hiringDate);
-		
+
 		return "Employee [id=" + id + ", name=" + name + ", surname1=" + surname1 + ", surname2=" + surname2 + ", tlf="
-				+ tlf + ", mail=" + mail + ", job=" + job + ", hiringDate=" + hiringDateFormatted
-				+ ", yearSalary=" + yearSalary + ", sickLeave=" + sickLeave + "]";
+				+ tlf + ", mail=" + mail + ", job=" + job + ", hiringDate=" + hiringDateFormatted + ", yearSalary="
+				+ yearSalary + ", sickLeave=" + sickLeave + "]";
 	}
 
 	/**
@@ -126,11 +126,11 @@ public class Employee {
 	 * @return String con la linea en csv
 	 */
 	public String toCSV() {
-		
+
 		// Formateamos la fecha para pasarsela al fichero CSV como queremos
 		String hiringDateFormatted = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(hiringDate);
 
-		return id + ";" + name + ";" + surname1 + ";" + surname2 + ";" + tlf + ";" + mail + ";" + job +
-				";" + hiringDateFormatted + ";" + yearSalary + ";" + sickLeave;
+		return id + ";" + name + ";" + surname1 + ";" + surname2 + ";" + tlf + ";" + mail + ";" + job + ";"
+				+ hiringDateFormatted + ";" + yearSalary + ";" + sickLeave;
 	}
 }
