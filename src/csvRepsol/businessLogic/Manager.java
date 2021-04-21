@@ -139,31 +139,43 @@ public class Manager {
 			updatedEmployee.setName(clientEmployee.getName());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (nombre) a: {"
 					+ updatedEmployee.getName() + "}");
+		} else {
+			extraData.add("name");
 		}
 		if (!clientEmployee.getSurname1().equalsIgnoreCase(serverEmployee.getSurname1())) {
 			updatedEmployee.setSurname1(clientEmployee.getSurname1());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (1º apellido) a: {"
 					+ updatedEmployee.getSurname1() + "}");
+		} else {
+			extraData.add("surname1");
 		}
 		if (!clientEmployee.getSurname2().equalsIgnoreCase(serverEmployee.getSurname2())) {
 			updatedEmployee.setSurname2(clientEmployee.getSurname2());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (2º apellido) a: {"
 					+ updatedEmployee.getSurname2() + "}");
+		} else {
+			extraData.add("surname2");
 		}
 		if (!clientEmployee.getTlf().equalsIgnoreCase(serverEmployee.getTlf())) {
 			updatedEmployee.setTlf(clientEmployee.getTlf());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (telefono) a: {"
 					+ updatedEmployee.getTlf() + "}");
+		} else {
+			extraData.add("phone");
 		}
 		if (!clientEmployee.getMail().equalsIgnoreCase(serverEmployee.getMail())) {
 			updatedEmployee.setMail(clientEmployee.getMail());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (Email) a: {" + updatedEmployee.getMail()
 					+ "}");
+		} else {
+			extraData.add("email");
 		}
 		if (!clientEmployee.getJob().equalsIgnoreCase(serverEmployee.getJob())) {
 			updatedEmployee.setJob(clientEmployee.getJob());
 			log.debug("el empleado [" + updatedEmployee.getId() + "] cambia el (puesto de trabajo) a: {"
 					+ updatedEmployee.getJob() + "}");
+		} else {
+			extraData.add("job");
 		}
 		if (clientEmployee.getHiringDate().compareTo(serverEmployee.getHiringDate()) != 0) {
 			updatedEmployee.setHiringDate(clientEmployee.getHiringDate());
@@ -188,7 +200,7 @@ public class Manager {
 		}
 
 		if (csvToDB) {
-			DBAccess.updateEmployee(updatedEmployee, extraData);
+			DBAccess.updateEmployee(clientEmployee, extraData);
 		} else {
 			dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
 		}

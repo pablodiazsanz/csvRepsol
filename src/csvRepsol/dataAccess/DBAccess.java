@@ -1,10 +1,13 @@
 package csvRepsol.dataAccess;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 
@@ -33,7 +36,7 @@ public class DBAccess {
 		HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 		try {
 			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-			String query = "SELECT * FROM employees;";
+			String query = "SELECT * FROM employee;";
 			PreparedStatement stmt = conn.prepareStatement(query);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
@@ -54,8 +57,111 @@ public class DBAccess {
 
 	}
 
-	public static void updateEmployee(Employee emp, List<String> extraData) {
-	
+	public static void updateEmployee(Employee updatedEmployee, List<String> extraData) {
+		// Creamos esta variable para enviarle al fichero CSV el contenido.
+				String query = "UPDATE employee SET ";
+
+				/*
+				 * Estas variables son las que vamos a darle a la cadena updatedData para pasar
+				 * los datos. Estas cadenas se van a modificar si la lista extraData no contiene
+				 * el dato
+				 */
+
+				// Estas variables son las vamos a utilizar para comprobar si el dato ha
+				// cambiado o no.
+				boolean name = true;
+				boolean surname1 = true;
+				boolean surname2 = true;
+				boolean phone = true;
+				boolean email = true;
+				boolean job = true;
+				boolean hiringDate = true;
+				boolean yearSalary = true;
+				boolean sickLeave = true;
+
+				// Comprobamos que la lista no está vacia.
+				if (!extraData.isEmpty()) {
+
+					// Recorremos la lista para saber que datos no se han cambiado.
+					for (int i = 0; i < extraData.size(); i++) {
+
+						if (extraData.get(i).equals("name")) {
+							name = false;
+							
+						} else if (extraData.get(i).equals("surname1")) {
+							surname1 = false;
+							
+						} else if (extraData.get(i).equals("surname2")) {
+							surname2 = false;
+							
+						} else if (extraData.get(i).equals("phone")) {
+							phone = false;
+							
+						} else if (extraData.get(i).equals("email")) {
+							email = false;
+							
+						} else if (extraData.get(i).equals("job")) {
+							job = false;
+							
+						} else if (extraData.get(i).equals("hiringDate")) {
+							hiringDate = false;
+							
+						} else if (extraData.get(i).equals("yearSalary")) {
+							yearSalary = false;
+							
+						} else if (extraData.get(i).equals("sickLeave")) {
+							sickLeave = false;
+						}
+
+					}
+				}
+
+				// Si los datos han sido cambiados, establecemos el dato para pasarselo al
+				// fichero CSV.
+				if (name) {
+					query += "name = '" + updatedEmployee.getName() + "' ";
+				}
+				if (surname1) {
+					query += "first_surname = '" + updatedEmployee.getSurname1() + "' ";
+				}
+				if (surname2) {
+					query += "second_surname = '" + updatedEmployee.getSurname2() + "' ";
+				}
+				if (phone) {
+					query += "phone = '" + updatedEmployee.getTlf() + "' ";
+				}
+				if (email) {
+					query += "email = '" + updatedEmployee.getMail() + "' ";
+				}
+				if (job) {
+					query += "job = '" + updatedEmployee.getJob() + "' ";
+				}
+				if (hiringDate) {
+					query += "hiring_date = '" + updatedEmployee.getHiringDate() + "' ";
+				}
+				if (yearSalary) {
+					query += "year_salary = '" + updatedEmployee.getYearSalary() + "' ";
+				}
+				if (sickLeave) {
+					query += "sick_leave = '" + updatedEmployee.isSickLeave() + "' ";
+				}
+
+				// Metemos los datos en la cadena que vamos a darle al fichero CSV con los datos
+				// correctos.
+				query += "WHERE ID = '" + updatedEmployee.getId() + "';";
+				// Añadimos la linea de datos al fichero CSV.
+				
+				try {
+					conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+					PreparedStatement stmt = conn.prepareStatement(query);
+					ResultSet rset = stmt.executeQuery();
+					log.trace("empleado "+updatedEmployee.getId()+" actualizado con exito");
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+
 	}
 
 	public static void createEmployee(Employee emp) {
