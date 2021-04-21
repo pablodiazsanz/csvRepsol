@@ -33,7 +33,7 @@ public class MainClass {
 		resultConfig = new PropertyFile(srcResult);
 
 		// Comprobamos que obtenemos de los ficheros estén rellenos
-		if (clientConfig.checkConfig() && serverConfig.checkConfig() && resultConfig.checkConfig()) {
+		if (clientConfig.checkConfig() && serverConfig.checkConfig() && resultConfig.checkConfig() && DBAccess.tryConnection()) {
 			log.trace("Arranca la aplicación");
 
 			CsvAccess csvAccess = new CsvAccess(resultConfig);
