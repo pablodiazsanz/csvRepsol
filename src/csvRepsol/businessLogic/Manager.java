@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import csvRepsol.dataAccess.CsvAccess;
+import csvRepsol.dataAccess.DBAccess;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
 
@@ -29,9 +30,10 @@ public class Manager {
 	 * @param serverData Esta lista contiene los empleados que tiene el csv del
 	 *                   servidor
 	 * @param dao        Le pasamos el objeto CsvAccess que estamos utilizando
-	 * @throws SiaException 
+	 * @throws SiaException
 	 */
-	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao) throws SiaException {
+	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao,
+			boolean csvToDB) throws SiaException {
 		log.trace("Empezamos la comparacion de usuarios");
 
 		// En este bucle vamos a recorrer todos los empleados de cliente para
@@ -40,7 +42,7 @@ public class Manager {
 
 			if (clientData.get(i) == null) {
 				serverData.remove(i);
-				
+
 			} else {
 
 				/*
@@ -64,7 +66,7 @@ public class Manager {
 
 						log.trace("Entramos en el métodp updateEmployee para actualizar al empleado ["
 								+ clientData.get(i).getId() + "]");
-						updateEmployee(clientData.get(i), serverData.get(i));
+						updateEmployee(clientData.get(i), serverData.get(i), csvToDB);
 						log.debug("Modificando al empleado: " + clientData.get(i).toString() + "\n datos anteriores: "
 								+ serverData.get(i).toString());
 
@@ -83,7 +85,11 @@ public class Manager {
 						serverData.remove(i);
 					}
 					log.debug("Creando al empleado: " + clientData.get(i).toString());
-					dao.writeCSV(clientData.get(i), "CREATE");
+					if (csvToDB) {
+						DBAccess.createEmployee(clientData.get(i));
+					} else {
+						dao.writeCSV(clientData.get(i), "CREATE");
+					}
 				}
 			}
 		}
@@ -94,7 +100,11 @@ public class Manager {
 		log.trace("Empezamos el borrado de usuarios");
 		for (String key : serverData.keySet()) {
 			log.debug("Eliminando al empleado: " + serverData.get(key).toString());
-			dao.writeCSV(serverData.get(key), "DELETE");
+			if (csvToDB) {
+				DBAccess.deleteEmployee(serverData.get(key));
+			} else {
+				dao.writeCSV(serverData.get(key), "DELETE");
+			}
 		}
 	}
 
@@ -108,9 +118,9 @@ public class Manager {
 	 * @param serverEmployee Este empleado se obtiene de la lista de clentes.
 	 * @return Devuelve el empleado con el identificador y con las modificaciones
 	 *         que tiene.
-	 * @throws SiaException 
+	 * @throws SiaException
 	 */
-	private void updateEmployee(Employee clientEmployee, Employee serverEmployee) throws SiaException {
+	private void updateEmployee(Employee clientEmployee, Employee serverEmployee, boolean csvToDB) throws SiaException {
 		// Creamos un empleado vacío con el id de los que vamos a comparar
 		Employee updatedEmployee = new Employee(clientEmployee.getId(), "", "", "", "", "", "", null, -1, false);
 		log.trace("Empleado vacío creado");
@@ -177,7 +187,12 @@ public class Manager {
 			extraData.add("sickLeave");
 		}
 
-		dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
+		if (csvToDB) {
+			DBAccess.updateEmployee(updatedEmployee, extraData);
+		} else {
+			dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
+		}
+		
 		log.trace("Mandamos a escribir el usuario en el csv result");
 	}
 }

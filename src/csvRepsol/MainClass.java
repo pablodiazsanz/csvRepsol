@@ -68,7 +68,7 @@ public class MainClass {
 				// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer
 				// fichero CSV con las operaciones realizadas por el cliente.
 				csvAccess.setConfig(resultConfig);
-				manager.compare(clientData, serverData, csvAccess);
+				manager.compare(clientData, serverData, csvAccess, true);
 				log.trace("Se han realizado las comparaciones correctamente y en el tercer CSV se "
 						+ "han metido las creaciones, modificaciones y eliminaciones de empleados");
 
