@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import csvRepsol.businessLogic.Manager;
 import csvRepsol.dataAccess.CsvAccess;
+import csvRepsol.dataAccess.DBAccess;
 import csvRepsol.dataAccess.PropertyFile;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
@@ -60,6 +61,8 @@ public class MainClass {
 
 				// Obtenemos los datos del fichero del servidor
 				HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty(PropertyFile.PATH));
+				HashMap<String, Employee> serverDataDB = DBAccess.getEmployeesFromServer();
+				
 				log.trace("Se han obtenido los datos del  fichero del servidor correctamente");
 
 				// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer

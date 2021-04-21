@@ -13,22 +13,13 @@ import javax.naming.spi.DirStateFactory.Result;
 
 import org.apache.log4j.Logger;
 
+import csvRepsol.constants.EmployeeConstants;
 import csvRepsol.entities.Employee;
 
 public class DBAccess {
 
 	private static Connection conn;
 	private static Logger log = Logger.getLogger(DBAccess.class);
-	private final static int ID = 0;
-	private final static int NAME = 1;
-	private final static int SURNAME1 = 2;
-	private final static int SURNAME2 = 3;
-	private final static int PHONE = 4;
-	private final static int EMAIL = 5;
-	private final static int JOB = 6;
-	private final static int HIRING_DATE = 7;
-	private final static int YEAR_SALARY = 8;
-	private final static int SICK_LEAVE = 9;
 
 	public static boolean tryConnection() {
 		boolean conectado = true;
@@ -42,18 +33,21 @@ public class DBAccess {
 		return conectado;
 	}
 
-	public static List<Employee> getEmployeesFromServer() {
-		List<Employee> employeeList = new ArrayList<Employee>();
+	public static HashMap<String, Employee> getEmployeesFromServer() {
+		HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 		try {
 			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-			String qwuery = "SELECT * FROM employees;";
-			PreparedStatement stmt = conn.prepareStatement(qwuery);
+			String query = "SELECT * FROM employees;";
+			PreparedStatement stmt = conn.prepareStatement(query);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
-				Employee emp = new Employee(rset.getString(ID), rset.getString(NAME), rset.getString(SURNAME1),
-						rset.getString(SURNAME2), rset.getString(PHONE), rset.getString(EMAIL), rset.getString(JOB),
-						rset.getDate(HIRING_DATE), rset.getInt(YEAR_SALARY), rset.getBoolean(SICK_LEAVE));
-				employeeList.add(emp);
+				Employee emp = new Employee(rset.getString(EmployeeConstants.ID),
+						rset.getString(EmployeeConstants.NAME), rset.getString(EmployeeConstants.SURNAME1),
+						rset.getString(EmployeeConstants.SURNAME2), rset.getString(EmployeeConstants.PHONE),
+						rset.getString(EmployeeConstants.EMAIL), rset.getString(EmployeeConstants.JOB),
+						rset.getDate(EmployeeConstants.HIRING_DATE), rset.getInt(EmployeeConstants.YEAR_SALARY),
+						rset.getBoolean(EmployeeConstants.SICK_LEAVE));
+				employeeList.put(rset.getString(EmployeeConstants.ID), emp);
 			}
 
 		} catch (SQLException e) {
@@ -65,7 +59,13 @@ public class DBAccess {
 	}
 
 	public static void updateEmployee(Employee emp) {
-
+		try {
+			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static void createEmployee(Employee emp) {
