@@ -205,8 +205,7 @@ public class Manager {
 			DBAccess.updateEmployee(clientEmployee, extraData);
 		} else {
 			dao.writeUpdatedEmployeeCSV(updatedEmployee, extraData, "UPDATE");
+			log.trace("Mandamos a escribir el usuario en el csv result");
 		}
-		
-		log.trace("Mandamos a escribir el usuario en el csv result");
 	}
 }
