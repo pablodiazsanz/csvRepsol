@@ -5,12 +5,21 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-
+/**
+ * Esta clase se usa para sacar la logica de la clase de CsvAccess
+ *
+ */
 public class CsvLogic {
 	
 	private Logger log = Logger.getLogger(CsvLogic.class);
 	
-	
+	/**
+	 * Devuelve un HashMap ordenando el nombre de cada columna con su posicion
+	 * la key es la posicion que tiene en la linea y el valor es el nombre
+	 * 
+	 * @param line string con la linea del csv que organiza las columnas
+	 * @return HashMap<Integuer, String>
+	 */
 	public HashMap<Integer, String> getOrderColums(String line) {
 		String[] columnsTitle = line.split(";");
 		HashMap<Integer, String> columnsOrder = new HashMap<Integer, String>();
