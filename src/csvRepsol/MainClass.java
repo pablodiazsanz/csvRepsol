@@ -48,50 +48,48 @@ public class MainClass {
 		CsvProperty resultConfig = new CsvProperty(PropertyConstants.PATH_RESULT_PROPERTY_FILE);
 
 		// Comprobamos que los datos que obtenemos de los ficheros estén rellenos
-		if (clientConfig.checkConfig() && serverConfig.checkConfig() && resultConfig.checkConfig()) {
-			log.trace("Arranca la aplicación");
+		try {
+			if (clientConfig.checkConfig() && serverConfig.checkConfig() && resultConfig.checkConfig()) {
+				log.trace("Arranca la aplicación");
 
-			try {
-				// Creamos o sobreescribimos el fichero CSV que vamos a sacar con las
-				// operaciones
-				CsvAccess csvAccess = new CsvAccess(resultConfig);
+					// Creamos o sobreescribimos el fichero CSV que vamos a sacar con las
+					// operaciones
+					CsvAccess csvAccess = new CsvAccess(resultConfig);
 
-				csvAccess.createCSV();
+					csvAccess.createCSV();
 
-				log.trace("Se ha creado o sobreescrito el tercer CSV correctamente");
+					log.trace("Se ha creado o sobreescrito el tercer CSV correctamente");
 
-				// Establecemos en el objeto CsvAccess el fichero de propiedades del cliente
-				csvAccess.setConfig(clientConfig);
+					// Establecemos en el objeto CsvAccess el fichero de propiedades del cliente
+					csvAccess.setConfig(clientConfig);
 
-				// Obtenemos los datos del fichero del cliente
-				HashMap<String, Employee> clientData = csvAccess
-						.readCSV(clientConfig.getProperty(PropertyConstants.CSV_PATH));
-				log.trace("Se han obtenido los datos del fichero del cliente correctamente");
+					// Obtenemos los datos del fichero del cliente
+					HashMap<String, Employee> clientData = csvAccess
+							.readCSV(clientConfig.getProperty(PropertyConstants.CSV_PATH));
+					log.trace("Se han obtenido los datos del fichero del cliente correctamente");
 
-				// Establecemos en el objeto CsvAccess el fichero de propiedades del servidor
-				csvAccess.setConfig(serverConfig);
+					// Establecemos en el objeto CsvAccess el fichero de propiedades del servidor
+					csvAccess.setConfig(serverConfig);
 
-				// Obtenemos los datos del fichero del servidor
-				HashMap<String, Employee> serverData = csvAccess
-						.readCSV(serverConfig.getProperty(PropertyConstants.CSV_PATH));
+					// Obtenemos los datos del fichero del servidor
+					HashMap<String, Employee> serverData = csvAccess
+							.readCSV(serverConfig.getProperty(PropertyConstants.CSV_PATH));
 
-				log.trace("Se han obtenido los datos del fichero del servidor correctamente");
+					log.trace("Se han obtenido los datos del fichero del servidor correctamente");
 
-				// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer
-				// fichero CSV con las operaciones realizadas por el cliente.
-				csvAccess.setConfig(resultConfig);
+					// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer
+					// fichero CSV con las operaciones realizadas por el cliente.
+					csvAccess.setConfig(resultConfig);
 
-				Manager manager = new Manager(csvAccess);
-				manager.compare(clientData, serverData, csvToDatabase);
-				log.trace("Se han realizado las comparaciones correctamente y en el tercer CSV se "
-						+ "han metido las creaciones, modificaciones y eliminaciones de empleados");
+					Manager manager = new Manager(csvAccess);
+					manager.compare(clientData, serverData, csvToDatabase);
+					log.trace("Se han realizado las comparaciones correctamente y en el tercer CSV se "
+							+ "han metido las creaciones, modificaciones y eliminaciones de empleados");
 
-			} catch (SiaException e) {
-				log.error("Ha ocurrido un error", e);
-
+				log.trace("Finaliza la aplicación");
 			}
-
-			log.trace("Finaliza la aplicación");
+		} catch (SiaException e) {
+			log.error("ha ocorrido un error", e);
 		}
 
 	}

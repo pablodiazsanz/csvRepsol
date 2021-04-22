@@ -19,7 +19,10 @@ import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
 import csvRepsol.exceptions.SiaExceptionCodes;
-
+/**
+ * Clase que conecta e interractua con la base de datos
+ *
+ */
 public class DBAccess {
 
 	//objeto que conecta con la BBDD

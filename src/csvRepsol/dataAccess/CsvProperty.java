@@ -11,7 +11,8 @@ import csvRepsol.constants.PropertyConstants;
 import csvRepsol.exceptions.SiaException;
 import csvRepsol.exceptions.SiaExceptionCodes;
 /**
- * 
+ * Clase que lee los fichero properties orientados a los csv y comprueba que estan correctos
+ * tambien se usa para iteractura con ellos
  *
  */
 public class CsvProperty {
@@ -31,9 +32,10 @@ public class CsvProperty {
 	 * Comprueba los datos del archivo properties para saber que estan todo los
 	 * datos y devuelve true de ser correcto y false de no ser asi
 	 * 
-	 * @return true en caso de encontrar todos los datos y false si no
+	 * @return true en caso de encontrar todos los datos
+	 * @throws SiaException si no encuentra algun dato
 	 */
-	public boolean checkConfig() {
+	public boolean checkConfig() throws SiaException {
 		boolean readed = true;
 		try {
 			ip = new FileInputStream(src);
@@ -52,11 +54,11 @@ public class CsvProperty {
 			log.trace("Fichero config de cliente leido exitosamente");
 		} catch (FileNotFoundException e) {
 			log.error("Fichero no encontrado", e);
-			readed = false;
-
+			throw new SiaException(SiaExceptionCodes.MISSING_FILE, e);
+			
 		} catch (IOException e) {
 			log.error("Fallo de entrada o salida", e);
-			readed = false;
+			throw new SiaException(SiaExceptionCodes.MISSING_FILE, e);
 		}
 		return readed;
 	}

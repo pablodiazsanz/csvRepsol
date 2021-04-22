@@ -10,7 +10,11 @@ import csvRepsol.dataAccess.CsvAccess;
 import csvRepsol.dataAccess.DBAccess;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
-
+/**
+ * Clase que introduce la logica de negocio entorno a la comparacion de los datos
+ * indiferentemente del origen de estos
+ *
+ */
 public class Manager {
 
 	private Logger log = Logger.getLogger(Manager.class);

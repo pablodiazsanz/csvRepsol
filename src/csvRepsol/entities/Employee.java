@@ -3,7 +3,10 @@ package csvRepsol.entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
-
+/**
+ * Objeto empleado que gusrada los datos que nos interesas de estos
+ *
+ */
 public class Employee {
 	private String id, name, surname1, surname2, tlf, mail, job;
 	private Date hiringDate;

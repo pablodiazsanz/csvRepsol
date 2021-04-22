@@ -8,7 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +18,10 @@ import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
 import csvRepsol.exceptions.SiaExceptionCodes;
-
+/**
+ * Clase que interactua con los csv, recuperando los datos o escribiendo sobre ellos
+ *
+ */
 public class CsvAccess {
 
 	private Logger log = Logger.getLogger(CsvAccess.class);
