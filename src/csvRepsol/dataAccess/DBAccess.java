@@ -1,6 +1,7 @@
 package csvRepsol.dataAccess;
 
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,24 +11,43 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import csvRepsol.constants.EmployeeConstants;
+import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
 
 public class DBAccess {
 
 	private static Connection conn;
 	private static Logger log = Logger.getLogger(DBAccess.class);
+	private static Properties file;
+	private static FileInputStream ip;
+	private static String driver, user, pwd;
 
 	public static boolean tryConnection() {
 		boolean conectado = true;
 		try {
-			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+			file = new Properties();
+			ip = new FileInputStream(PropertyConstants.PATH_SERVER_PROPERTY_FILE);
+			file.load(ip);
+			
+			driver = file.getProperty(PropertyConstants.DB_DRIVER);
+			user = file.getProperty(PropertyConstants.DB_USERNAME);
+			pwd = file.getProperty(PropertyConstants.DB_PASSWORD);
+			
+			conn = DriverManager.getConnection(driver, user, pwd);
 			conn.close();
 		} catch (SQLException e) {
 			log.error("no conectado", e);
 			conectado = false;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return conectado;
 	}
@@ -35,7 +55,7 @@ public class DBAccess {
 	public static HashMap<String, Employee> getEmployeesFromServer() {
 		HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 		try {
-			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+			conn = DriverManager.getConnection(driver, user, pwd);
 			String query = "SELECT * FROM employee;";
 			PreparedStatement stmt = conn.prepareStatement(query);
 			ResultSet rset = stmt.executeQuery();
@@ -155,7 +175,7 @@ public class DBAccess {
 		// Añadimos la linea de datos al fichero CSV.
 
 		try {
-			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+			conn = DriverManager.getConnection(driver, user, pwd);
 			PreparedStatement stmt = conn.prepareStatement(query);
 			stmt.executeUpdate();
 			log.trace("empleado " + updatedEmployee.getId() + " actualizado con exito");
@@ -168,7 +188,7 @@ public class DBAccess {
 
 	public static void createEmployee(Employee emp) {
 		try {
-			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+			conn = DriverManager.getConnection(driver, user, pwd);
 			String query = "INSERT INTO employee(id,name,first_surname,second_surname,phone,email,job,hiring_date,year_salary,sick_leave) VALUES ('"
 					+ emp.getId() + "','" + emp.getName() + "','" + emp.getSurname1() + "','" + emp.getSurname2() + "',"
 					+ emp.getTlf() + ",'" + emp.getMail() + "','" + emp.getJob() + "',parsedatetime('"
@@ -184,7 +204,7 @@ public class DBAccess {
 
 	public static void deleteEmployee(Employee emp) {
 		try {
-			conn = DriverManager.getConnection("jdbc:h2:~/test", "sa", "");
+			conn = DriverManager.getConnection(driver, user, pwd);
 			String query = "DELETE FROM employee WHERE ID = '" + emp.getId() + "';";
 			PreparedStatement stmt = conn.prepareStatement(query);
 			stmt.execute();

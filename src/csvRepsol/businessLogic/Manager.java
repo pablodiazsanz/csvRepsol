@@ -15,6 +15,8 @@ public class Manager {
 
 	private Logger log = Logger.getLogger(Manager.class);
 	private CsvAccess dao;
+	
+	public Manager() {}
 
 	public Manager(CsvAccess dao) {
 		this.dao = dao;
@@ -32,7 +34,7 @@ public class Manager {
 	 * @param dao        Le pasamos el objeto CsvAccess que estamos utilizando
 	 * @throws SiaException
 	 */
-	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData, CsvAccess dao,
+	public void compare(HashMap<String, Employee> clientData, HashMap<String, Employee> serverData,
 			boolean csvToDB) throws SiaException {
 		log.trace("Empezamos la comparacion de usuarios");
 

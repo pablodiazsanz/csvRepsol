@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.TimeZone;
 import org.apache.log4j.Logger;
 
+import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
 import csvRepsol.exceptions.SiaExceptionCodes;
@@ -36,23 +37,38 @@ public class CsvAccess {
 	private String yearSalary = "";
 	private String sickLeave = "";
 
-	public CsvAccess(PropertyFile config) {
+	public CsvAccess(PropertyFile config) throws SiaException {
 		this.config = config;
+		try {
+			id = config.getProperty(PropertyConstants.CSV_HEAD_ID);
+			name = config.getProperty(PropertyConstants.CSV_HEAD_NAME);
+			surname1 = config.getProperty(PropertyConstants.CSV_HEAD_SURNAME1);
+			surname2 = config.getProperty(PropertyConstants.CSV_HEAD_SURNAME2);
+			phone = config.getProperty(PropertyConstants.CSV_HEAD_PHONE);
+			email = config.getProperty(PropertyConstants.CSV_HEAD_EMAIL);
+			job = config.getProperty(PropertyConstants.CSV_HEAD_JOB);
+			hiringDate = config.getProperty(PropertyConstants.CSV_HEAD_HIRING_DATE);
+			yearSalary = config.getProperty(PropertyConstants.CSV_HEAD_YEAR_SALARY);
+			sickLeave = config.getProperty(PropertyConstants.CSV_HEAD_SICK_LEAVE);
+		} catch (SiaException e) {
+			log.error("property perdida", e);
+			throw new SiaException(SiaExceptionCodes.MISSING_PROPERTY, e);
+		}
 	}
 
 	public void setConfig(PropertyFile config) throws SiaException {
 		this.config = config;
 		try {
-			id = config.getProperty(PropertyFile.HEAD_ID);
-			name = config.getProperty(PropertyFile.HEAD_NAME);
-			surname1 = config.getProperty(PropertyFile.HEAD_SURNAME1);
-			surname2 = config.getProperty(PropertyFile.HEAD_SURNAME2);
-			phone = config.getProperty(PropertyFile.HEAD_PHONE);
-			email = config.getProperty(PropertyFile.HEAD_EMAIL);
-			job = config.getProperty(PropertyFile.HEAD_JOB);
-			hiringDate = config.getProperty(PropertyFile.HEAD_HIRING_DATE);
-			yearSalary = config.getProperty(PropertyFile.HEAD_YEAR_SALARY);
-			sickLeave = config.getProperty(PropertyFile.HEAD_SICK_LEAVE);
+			id = config.getProperty(PropertyConstants.CSV_HEAD_ID);
+			name = config.getProperty(PropertyConstants.CSV_HEAD_NAME);
+			surname1 = config.getProperty(PropertyConstants.CSV_HEAD_SURNAME1);
+			surname2 = config.getProperty(PropertyConstants.CSV_HEAD_SURNAME2);
+			phone = config.getProperty(PropertyConstants.CSV_HEAD_PHONE);
+			email = config.getProperty(PropertyConstants.CSV_HEAD_EMAIL);
+			job = config.getProperty(PropertyConstants.CSV_HEAD_JOB);
+			hiringDate = config.getProperty(PropertyConstants.CSV_HEAD_HIRING_DATE);
+			yearSalary = config.getProperty(PropertyConstants.CSV_HEAD_YEAR_SALARY);
+			sickLeave = config.getProperty(PropertyConstants.CSV_HEAD_SICK_LEAVE);
 		} catch (SiaException e) {
 			log.error("property perdida", e);
 			throw new SiaException(SiaExceptionCodes.MISSING_PROPERTY, e);
@@ -256,7 +272,7 @@ public class CsvAccess {
 	public void createCSV() throws SiaException {
 		try {
 			FileWriter fw;
-			fw = new FileWriter(config.getProperty(PropertyFile.PATH));
+			fw = new FileWriter(config.getProperty(PropertyConstants.CSV_PATH));
 			fw.write("id;name;first surname;second surname;phone;email;job;hiring_date;year_salary;sick_leave;status");
 			fw.close();
 			log.trace(fw);
@@ -274,7 +290,7 @@ public class CsvAccess {
 	 */
 	public void writeCSV(Employee employee, String status) throws SiaException {
 		try {
-			FileWriter fw = new FileWriter(config.getProperty(PropertyFile.PATH), true);
+			FileWriter fw = new FileWriter(config.getProperty(PropertyConstants.CSV_PATH), true);
 			fw.write("\n" + employee.toCSV() + ";" + status);
 			fw.close();
 			log.info("[" + employee.getId() + "] - \"" + status + "\"");
@@ -353,7 +369,7 @@ public class CsvAccess {
 				+ ";" + updatedEmployee.getJob() + ";" + hiringDate + ";" + yearSalary + ";" + sickLeave;
 		// Añadimos la linea de datos al fichero CSV.
 		try {
-			FileWriter fw = new FileWriter(config.getProperty(PropertyFile.PATH), true);
+			FileWriter fw = new FileWriter(config.getProperty(PropertyConstants.CSV_PATH), true);
 			fw.write("\n" + updatedData + ";" + status);
 			fw.close();
 			log.info("[" + updatedEmployee.getId() + "] - \"" + status + "\"");
