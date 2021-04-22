@@ -14,15 +14,17 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import csvRepsol.constants.DataBaseConstants;
+import csvRepsol.constants.DatabaseConstants;
 import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
+import csvRepsol.exceptions.SiaException;
+import csvRepsol.exceptions.SiaExceptionCodes;
 
 public class DBAccess {
 
-	//objeto que conecta con la BBDDE
+	//objeto que conecta con la BBDD
 	private static Connection conn;
-	//loggger para porder escribir las trazas del codigo en los logs
+	//loggger para poder escribir las trazas del codigo en los logs
 	private static Logger log = Logger.getLogger(DBAccess.class);
 	//objetos para leer el archivo properties
 	private static Properties file;
@@ -40,8 +42,9 @@ public class DBAccess {
 	 * tambien comprueba que los datos del fichero properties del servidor estan corrrectos
 	 * 
 	 * @return true si todo esta bien, false si falla algo
+	 * @throws SiaException 
 	 */
-	public static boolean tryConnection() {
+	public static boolean tryConnection() throws SiaException {
 		boolean conectado = true;
 		try {
 			file = new Properties();
@@ -55,14 +58,14 @@ public class DBAccess {
 			conn = DriverManager.getConnection(driver, user, pwd);
 			conn.close();
 		} catch (SQLException e) {
-			log.error("no conectado", e);
-			conectado = false;
+			log.error("Error de conexion a la bbdd");
+			throw new SiaException(SiaExceptionCodes.SQL_ERROR, e);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error("No se ha encontrado el fichero o este no existe");
+			throw new SiaException(SiaExceptionCodes.MISSING_FILE, e);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error("Error de entrada o salida de datos");
+			throw new SiaException(SiaExceptionCodes.IN_OUT, e);
 		}
 		return conectado;
 	}
@@ -72,8 +75,9 @@ public class DBAccess {
 	 * clave es su ID
 	 * 
 	 * @return HasMap<String, Employee> con la lista de empleados y su id por key
+	 * @throws SiaException 
 	 */
-	public static HashMap<String, Employee> getEmployeesFromServer() {
+	public static HashMap<String, Employee> getEmployeesFromServer() throws SiaException {
 		HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);
@@ -81,17 +85,18 @@ public class DBAccess {
 			PreparedStatement stmt = conn.prepareStatement(query);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
-				Employee emp = new Employee(rset.getString(DataBaseConstants.ID),
-						rset.getString(DataBaseConstants.NAME), rset.getString(DataBaseConstants.SURNAME1),
-						rset.getString(DataBaseConstants.SURNAME2), rset.getString(DataBaseConstants.PHONE),
-						rset.getString(DataBaseConstants.EMAIL), rset.getString(DataBaseConstants.JOB),
-						rset.getDate(DataBaseConstants.HIRING_DATE), rset.getInt(DataBaseConstants.YEAR_SALARY),
-						rset.getBoolean(DataBaseConstants.SICK_LEAVE));
-				employeeList.put(rset.getString(DataBaseConstants.ID), emp);
+				Employee emp = new Employee(rset.getString(DatabaseConstants.ID),
+						rset.getString(DatabaseConstants.NAME), rset.getString(DatabaseConstants.SURNAME1),
+						rset.getString(DatabaseConstants.SURNAME2), rset.getString(DatabaseConstants.PHONE),
+						rset.getString(DatabaseConstants.EMAIL), rset.getString(DatabaseConstants.JOB),
+						rset.getDate(DatabaseConstants.HIRING_DATE), rset.getInt(DatabaseConstants.YEAR_SALARY),
+						rset.getBoolean(DatabaseConstants.SICK_LEAVE));
+				employeeList.put(rset.getString(DatabaseConstants.ID), emp);
 			}
 
 		} catch (SQLException e) {
-			log.error("ni idea nano", e);
+			log.error("Error al obtener datos de la bbdd");
+			throw new SiaException(SiaExceptionCodes.SQL_ERROR, e);
 		}
 
 		return employeeList;
@@ -105,8 +110,9 @@ public class DBAccess {
 	 * 
 	 * @param updatedEmployee empeado a modificar
 	 * @param extraData       Datos que NO se van a modificar
+	 * @throws SiaException 
 	 */
-	public static void updateEmployee(Employee updatedEmployee, List<String> extraData) {
+	public static void updateEmployee(Employee updatedEmployee, List<String> extraData) throws SiaException {
 		// Creamos esta variable para enviarle al fichero CSV el contenido.
 		String query = "UPDATE employee SET";
 
@@ -206,21 +212,23 @@ public class DBAccess {
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);
 			PreparedStatement stmt = conn.prepareStatement(query);
+			log.trace(query);
 			stmt.executeUpdate();
-			log.trace("empleado " + updatedEmployee.getId() + " actualizado con exito");
+			log.info("[" + updatedEmployee.getId() + "] - UPDATE");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			log.error("No se han podido modificar datos de la bbdd");
+			throw new SiaException(SiaExceptionCodes.SQL_ERROR, e);
 		}
 
 	}
 
 	/**
-	 * da d alta al empleado pasado por parametro en la base de datos
+	 * Da de alta al empleado pasado por parametro en la base de datos
 	 * 
 	 * @param emp empleado a dar de alta
+	 * @throws SiaException 
 	 */
-	public static void createEmployee(Employee emp) {
+	public static void createEmployee(Employee emp) throws SiaException {
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);
 			String query = "INSERT INTO employee(id,name,first_surname,second_surname,phone,email,job,hiring_date,year_salary,sick_leave) VALUES ('"
@@ -228,28 +236,33 @@ public class DBAccess {
 					+ emp.getTlf() + ",'" + emp.getMail() + "','" + emp.getJob() + "',parsedatetime('"
 					+ new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(emp.getHiringDate())
 					+ "', 'dd/MM/yyyy HH:mm:ss')," + emp.getYearSalary() + "," + emp.isSickLeave() + ");";
+			log.trace(query);
 			PreparedStatement stmt = conn.prepareStatement(query);
 			stmt.execute();
-			log.trace("empleado " + emp.getId() + " creado con exito");
+			log.info("[" + emp.getId() + "] - CREATE");
 		} catch (SQLException e) {
-			log.error("no ha podido crear al empleado:" + emp.getId(), e);
+			log.error("no ha podido crear al empleado:" + emp.getId());
+			throw new SiaException(SiaExceptionCodes.SQL_ERROR, e);
 		}
 	}
 
 	/**
-	 * borra el empleado pasado por parametro de la base de datos
+	 * Borra el empleado pasado por parametro de la base de datos
 	 * 
 	 * @param emp empleado a borrar
+	 * @throws SiaException 
 	 */
-	public static void deleteEmployee(Employee emp) {
+	public static void deleteEmployee(Employee emp) throws SiaException {
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);
 			String query = "DELETE FROM employee WHERE ID = '" + emp.getId() + "';";
+			log.trace(query);
 			PreparedStatement stmt = conn.prepareStatement(query);
 			stmt.execute();
-			log.trace("empleado " + emp.getId() + " borrado con exito");
+			log.info("[" + emp.getId() + "] - DELETE");
 		} catch (SQLException e) {
-			log.error("no ha podido borrar al empleado:" + emp.getId(), e);
+			log.error("no ha podido borrar al empleado:" + emp.getId());
+			throw new SiaException(SiaExceptionCodes.SQL_ERROR, e);
 		}
 	}
 

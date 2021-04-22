@@ -97,18 +97,18 @@ public class MainClass {
 	}
 
 	private static void startDatabaseSynchronization() {
-		//Inicializamos las propiedades del cliente
+		// Inicializamos las propiedades del cliente
 		CsvProperty clientConfig = new CsvProperty(PropertyConstants.PATH_CLIENT_PROPERTY_FILE);
 
 		CsvAccess csvAccess;
 		Manager manager;
 
-		// Comprobamos que el fichero de cliente este relleno y que se acceda a la base
-		// de datos correctamente, con los datos del fichero de servidor
-		if (clientConfig.checkConfig() && DBAccess.tryConnection()) {
-			log.trace("Arranca la aplicación");
+		try {
+			// Comprobamos que el fichero de cliente este relleno y que se acceda a la base
+			// de datos correctamente, con los datos del fichero de servidor
+			if (clientConfig.checkConfig() && DBAccess.tryConnection()) {
+				log.trace("Arranca la aplicación");
 
-			try {
 				// Establecemos en el objeto CsvAccess el fichero de propiedades de operaciones
 				csvAccess = new CsvAccess(clientConfig);
 
@@ -126,13 +126,14 @@ public class MainClass {
 
 				manager.compare(clientData, serverDataDB, csvToDatabase);
 				log.trace("Se ha sincronizado correctamente la base de datos");
-
-			} catch (SiaException e) {
-				log.error("Ha ocurrido un error", e);
-
 			}
 
-			log.trace("Finaliza la aplicación");
+		} catch (SiaException e) {
+			log.error("Ha ocurrido un error", e);
+
 		}
+
+		log.trace("Finaliza la aplicación");
+
 	}
 }

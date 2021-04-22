@@ -7,7 +7,7 @@ package csvRepsol.constants;
  * NOTA: los valores de columnas en BBDD empiezan en 1
  * 
  */
-public class DataBaseConstants {
+public class DatabaseConstants {
 	
 	public final static int ID = 1;
 	public final static int NAME = 2;

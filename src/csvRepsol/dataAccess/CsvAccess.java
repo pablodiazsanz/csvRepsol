@@ -278,6 +278,7 @@ public class CsvAccess {
 			log.trace(fw);
 		} catch (IOException e) {
 			log.error("Fallo al escribir la información de la cabecera");
+			throw new SiaException(SiaExceptionCodes.IN_OUT, e);
 		}
 	}
 
@@ -296,6 +297,7 @@ public class CsvAccess {
 			log.info("[" + employee.getId() + "] - \"" + status + "\"");
 		} catch (IOException e) {
 			log.error("[" + employee.getId() + "] - Fallo al escribir al usuario");
+			throw new SiaException(SiaExceptionCodes.IN_OUT, e);
 		}
 	}
 
@@ -376,6 +378,7 @@ public class CsvAccess {
 
 		} catch (IOException e) {
 			log.error("[" + updatedEmployee.getId() + "] - Fallo al escribir al usuario");
+			throw new SiaException(SiaExceptionCodes.IN_OUT, e);
 		}
 
 	}

@@ -18,4 +18,6 @@ public class SiaExceptionCodes {
 	public static final String EMPTY_FILE = "007";
 	// La propiedad que buscamos no existe.
 	public static final String MISSING_PROPERTY = "008";
+	// Error de ejecución contra la base de datos
+	public static final String SQL_ERROR = "009";
 }
