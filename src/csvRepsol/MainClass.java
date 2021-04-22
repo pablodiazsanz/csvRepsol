@@ -8,7 +8,7 @@ import csvRepsol.businessLogic.Manager;
 import csvRepsol.constants.PropertyConstants;
 import csvRepsol.dataAccess.CsvAccess;
 import csvRepsol.dataAccess.DBAccess;
-import csvRepsol.dataAccess.PropertyFile;
+import csvRepsol.dataAccess.CsvProperty;
 import csvRepsol.entities.Employee;
 import csvRepsol.exceptions.SiaException;
 
@@ -31,9 +31,9 @@ public class MainClass {
 
 	private static void startCsvComparation() {
 		// Inicializamos las propiedades del cliente y del servidor
-		PropertyFile clientConfig = new PropertyFile(PropertyConstants.PATH_CLIENT_PROPERTY_FILE);
-		PropertyFile serverConfig = new PropertyFile(PropertyConstants.PATH_SERVER_PROPERTY_FILE);
-		PropertyFile resultConfig = new PropertyFile(PropertyConstants.PATH_RESULT_PROPERTY_FILE);
+		CsvProperty clientConfig = new CsvProperty(PropertyConstants.PATH_CLIENT_PROPERTY_FILE);
+		CsvProperty serverConfig = new CsvProperty(PropertyConstants.PATH_SERVER_PROPERTY_FILE);
+		CsvProperty resultConfig = new CsvProperty(PropertyConstants.PATH_RESULT_PROPERTY_FILE);
 
 		// Comprobamos que obtenemos de los ficheros estén rellenos
 		if (clientConfig.checkConfig() && serverConfig.checkConfig() && resultConfig.checkConfig()) {
@@ -86,7 +86,7 @@ public class MainClass {
 	}
 
 	private static void startDatabaseSynchronization() {
-		PropertyFile clientConfig = new PropertyFile(PropertyConstants.PATH_CLIENT_PROPERTY_FILE);
+		CsvProperty clientConfig = new CsvProperty(PropertyConstants.PATH_CLIENT_PROPERTY_FILE);
 		CsvAccess csvAccess;
 		Manager manager;
 

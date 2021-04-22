@@ -10,22 +10,25 @@ import org.apache.log4j.Logger;
 import csvRepsol.constants.PropertyConstants;
 import csvRepsol.exceptions.SiaException;
 import csvRepsol.exceptions.SiaExceptionCodes;
-
-public class PropertyFile {
+/**
+ * 
+ *
+ */
+public class CsvProperty {
 
 	protected Properties file;
 	protected FileInputStream ip;
-	protected Logger log = Logger.getLogger(PropertyFile.class);
+	protected Logger log = Logger.getLogger(CsvProperty.class);
 	protected String src;
 
-	public PropertyFile(String src) {
+	public CsvProperty(String src) {
 		super();
 		this.src = src;
 		file = new Properties();
 	}
 
 	/**
-	 * Comprueba los datos del config oportuno para saber que estan todo los
+	 * Comprueba los datos del archivo properties para saber que estan todo los
 	 * datos y devuelve true de ser correcto y false de no ser asi
 	 * 
 	 * @return true en caso de encontrar todos los datos y false si no

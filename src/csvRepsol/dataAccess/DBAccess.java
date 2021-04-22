@@ -14,29 +14,44 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-import csvRepsol.constants.EmployeeConstants;
+import csvRepsol.constants.DataBaseConstants;
 import csvRepsol.constants.PropertyConstants;
 import csvRepsol.entities.Employee;
 
 public class DBAccess {
 
+	//objeto que conecta con la BBDDE
 	private static Connection conn;
+	//loggger para porder escribir las trazas del codigo en los logs
 	private static Logger log = Logger.getLogger(DBAccess.class);
+	//objetos para leer el archivo properties
 	private static Properties file;
 	private static FileInputStream ip;
-	private static String driver, user, pwd;
+	//datos de conexion a la BBDD
+	//direccion de la BBDD
+	private static String driver;
+	//Usuario que se loguea en la BBDD
+	private static String user;
+	//Contraseña del uisuario que se logea
+	private static String pwd;
 
+	/**
+	 * Comprueba que la conexion a BBDD se realiza correctamente y 
+	 * tambien comprueba que los datos del fichero properties del servidor estan corrrectos
+	 * 
+	 * @return true si todo esta bien, false si falla algo
+	 */
 	public static boolean tryConnection() {
 		boolean conectado = true;
 		try {
 			file = new Properties();
 			ip = new FileInputStream(PropertyConstants.PATH_SERVER_PROPERTY_FILE);
 			file.load(ip);
-			
+
 			driver = file.getProperty(PropertyConstants.DB_DRIVER);
 			user = file.getProperty(PropertyConstants.DB_USERNAME);
 			pwd = file.getProperty(PropertyConstants.DB_PASSWORD);
-			
+
 			conn = DriverManager.getConnection(driver, user, pwd);
 			conn.close();
 		} catch (SQLException e) {
@@ -52,6 +67,12 @@ public class DBAccess {
 		return conectado;
 	}
 
+	/**
+	 * Busca en la BBDD la lista de empleados y la devuelve en un HashMap donde la
+	 * clave es su ID
+	 * 
+	 * @return HasMap<String, Employee> con la lista de empleados y su id por key
+	 */
 	public static HashMap<String, Employee> getEmployeesFromServer() {
 		HashMap<String, Employee> employeeList = new HashMap<String, Employee>();
 		try {
@@ -60,13 +81,13 @@ public class DBAccess {
 			PreparedStatement stmt = conn.prepareStatement(query);
 			ResultSet rset = stmt.executeQuery();
 			while (rset.next()) {
-				Employee emp = new Employee(rset.getString(EmployeeConstants.ID),
-						rset.getString(EmployeeConstants.NAME), rset.getString(EmployeeConstants.SURNAME1),
-						rset.getString(EmployeeConstants.SURNAME2), rset.getString(EmployeeConstants.PHONE),
-						rset.getString(EmployeeConstants.EMAIL), rset.getString(EmployeeConstants.JOB),
-						rset.getDate(EmployeeConstants.HIRING_DATE), rset.getInt(EmployeeConstants.YEAR_SALARY),
-						rset.getBoolean(EmployeeConstants.SICK_LEAVE));
-				employeeList.put(rset.getString(EmployeeConstants.ID), emp);
+				Employee emp = new Employee(rset.getString(DataBaseConstants.ID),
+						rset.getString(DataBaseConstants.NAME), rset.getString(DataBaseConstants.SURNAME1),
+						rset.getString(DataBaseConstants.SURNAME2), rset.getString(DataBaseConstants.PHONE),
+						rset.getString(DataBaseConstants.EMAIL), rset.getString(DataBaseConstants.JOB),
+						rset.getDate(DataBaseConstants.HIRING_DATE), rset.getInt(DataBaseConstants.YEAR_SALARY),
+						rset.getBoolean(DataBaseConstants.SICK_LEAVE));
+				employeeList.put(rset.getString(DataBaseConstants.ID), emp);
 			}
 
 		} catch (SQLException e) {
@@ -77,6 +98,14 @@ public class DBAccess {
 
 	}
 
+	/**
+	 * 
+	 * Modifica el usuario pasado por parametro con los datos NO pasados por el
+	 * segundo parametro en la BBDD
+	 * 
+	 * @param updatedEmployee empeado a modificar
+	 * @param extraData       Datos que NO se van a modificar
+	 */
 	public static void updateEmployee(Employee updatedEmployee, List<String> extraData) {
 		// Creamos esta variable para enviarle al fichero CSV el contenido.
 		String query = "UPDATE employee SET";
@@ -186,6 +215,11 @@ public class DBAccess {
 
 	}
 
+	/**
+	 * da d alta al empleado pasado por parametro en la base de datos
+	 * 
+	 * @param emp empleado a dar de alta
+	 */
 	public static void createEmployee(Employee emp) {
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);
@@ -202,6 +236,11 @@ public class DBAccess {
 		}
 	}
 
+	/**
+	 * borra el empleado pasado por parametro de la base de datos
+	 * 
+	 * @param emp empleado a borrar
+	 */
 	public static void deleteEmployee(Employee emp) {
 		try {
 			conn = DriverManager.getConnection(driver, user, pwd);

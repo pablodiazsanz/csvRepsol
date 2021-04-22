@@ -1,6 +1,14 @@
 package csvRepsol.constants;
-
-public class EmployeeConstants {
+/**
+ * valores constantes que responden a las columnas de la BBDD
+ * 
+ * El nombre de las constantes es indetico al nombre de la BBDD y el valor numerico corresponde a la posiciopn de la columna
+ * 
+ * NOTA: los valores de columnas en BBDD empiezan en 1
+ * 
+ */
+public class DataBaseConstants {
+	
 	public final static int ID = 1;
 	public final static int NAME = 2;
 	public final static int SURNAME1 = 3;

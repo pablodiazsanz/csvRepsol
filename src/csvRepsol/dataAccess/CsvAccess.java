@@ -23,7 +23,7 @@ import csvRepsol.exceptions.SiaExceptionCodes;
 public class CsvAccess {
 
 	private Logger log = Logger.getLogger(CsvAccess.class);
-	private PropertyFile config;
+	private CsvProperty config;
 	private CsvLogic csvlogic = new CsvLogic();
 
 	private String id = "";
@@ -37,7 +37,7 @@ public class CsvAccess {
 	private String yearSalary = "";
 	private String sickLeave = "";
 
-	public CsvAccess(PropertyFile config) throws SiaException {
+	public CsvAccess(CsvProperty config) throws SiaException {
 		this.config = config;
 		try {
 			id = config.getProperty(PropertyConstants.CSV_HEAD_ID);
@@ -56,7 +56,7 @@ public class CsvAccess {
 		}
 	}
 
-	public void setConfig(PropertyFile config) throws SiaException {
+	public void setConfig(CsvProperty config) throws SiaException {
 		this.config = config;
 		try {
 			id = config.getProperty(PropertyConstants.CSV_HEAD_ID);
