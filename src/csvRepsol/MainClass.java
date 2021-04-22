@@ -19,13 +19,13 @@ public class MainClass {
 	public static void main(String[] args) {
 		// iniciamos los src de los properties
 
-		//String srcClient = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
-		//String srcServer = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
-		//String srcResult = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\resultConfig.properties";
+		String srcClient = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\clientConfig.properties";
+		String srcServer = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\serverConfig.properties";
+		String srcResult = "C:\\Users\\pdiazs\\eclipse-workspace\\csvRepsol\\src\\resultConfig.properties";
 
-		String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
-		String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
-		String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
+		//String srcClient = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\clientConfig.properties";
+		//String srcServer = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\serverConfig.properties";
+		//String srcResult = "C:\\Users\\mparrap\\git\\csvRepsol\\src\\resultConfig.properties";
 
 		// Inicializamos las propiedades del cliente y del servidor
 		clientConfig = new PropertyFile(srcClient);
@@ -60,15 +60,16 @@ public class MainClass {
 				csvAccess.setConfig(serverConfig);
 
 				// Obtenemos los datos del fichero del servidor
-				HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty(PropertyFile.PATH));
+				//HashMap<String, Employee> serverData = csvAccess.readCSV(serverConfig.getProperty(PropertyFile.PATH));
 				HashMap<String, Employee> serverDataDB = DBAccess.getEmployeesFromServer();
+				System.out.println(serverDataDB);
 				
 				log.trace("Se han obtenido los datos del  fichero del servidor correctamente");
 
 				// Comparamos los datos que obtenemos de ambos servidores y sacamos el tercer
 				// fichero CSV con las operaciones realizadas por el cliente.
 				csvAccess.setConfig(resultConfig);
-				manager.compare(clientData, serverData, csvAccess, true);
+				manager.compare(clientData, serverDataDB, csvAccess, true);
 				log.trace("Se han realizado las comparaciones correctamente y en el tercer CSV se "
 						+ "han metido las creaciones, modificaciones y eliminaciones de empleados");
 
