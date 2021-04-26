@@ -27,6 +27,26 @@ public class MainClass {
 	private static boolean csvToDatabase = false;
 
 	public static void main(String[] args) {
+		
+		
+		// Ller los empleados de un origen
+		//   - 	- leo de un CSV
+		
+		
+		// Leer mis empleado
+		//   	 - ller de un CSV
+		//		- Leer de base datos
+		
+		// Sincronizar ambos listados de empleados
+		//	- COmparo las listas y genero un objeto de operaciones a ejecutar
+		
+		// Ejecutar las operaciones de sincronizacion
+		//	- Ejecuto las operaciones
+		//		- Genero un CSV con las operaciones
+		//		- Ejecuto las operaciones contra la BBDD
+		
+		
+		
 
 		// Vemos si tenemos que comparar csv o sincronizar con la base de datos
 		// e iniciamos la aplicacion
